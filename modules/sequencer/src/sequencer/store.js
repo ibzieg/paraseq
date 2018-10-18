@@ -17,18 +17,20 @@
 
 const fs = require("fs");
 const path = require("path");
-const Log = require("../display/log-util");
+const Log = require("../../../shared").display.Console;
 const JSONFile = require("./json-file");
 const ExternalDevices = require("../midi/external-devices");
 
 /* eslint-disable prettier/prettier */
 /* eslint-disable indent */
+// TODO Maybe this should just pass in from the constructor, because now we're just hard coding a relative path.
 const SAVED_STATE_FILENAME = process.mainModule
   ? path.join(
       path.dirname(
         process.mainModule.filename),
         "..",
-          "..",
+        "..",
+        "..",
         "data",
         "saved-state.json")
   : "saved-state.json";

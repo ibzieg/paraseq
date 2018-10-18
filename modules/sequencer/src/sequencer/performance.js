@@ -15,7 +15,7 @@
  ******************************************************************************/
 const fs = require("fs");
 
-const Log = require("../display/log-util");
+const Log = require("../../../shared").display.Console;
 
 const MidiController = require("../midi/midi-controller");
 const MidiDevice = require("../midi/midi-device");

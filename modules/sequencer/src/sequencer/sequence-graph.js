@@ -15,7 +15,7 @@
  ******************************************************************************/
 
 const Store = require("./store");
-const Log = require("../display/log-util");
+const Log = require("../../../shared").display.Console;
 
 class SequenceGraph {
   get type() {

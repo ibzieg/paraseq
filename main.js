@@ -14,106 +14,88 @@
  * limitations under the License.
  ******************************************************************************/
 
-const colors = require("colors");
-const { fork, spawn } = require('child_process');
+const { fork, spawn } = require("child_process");
 
-const InterfaceAddress = require("./network/interface-address");
-const Console = require("./display/log-util");
-//const Screen = require("./display/screen");
-const Screen = require("../screen/lib/screen");
+const shared = require("./modules/shared");
+const Console = shared.display.Console;
+const InterfaceAddress = shared.network.InterfaceAddress;
+
+const Screen = require("./modules/screen/lib/screen");
 
 Screen.create({
-    onExit: () => {
-        stopAllThreads();
-        return process.exit(0);
-    },
-    onCommandInput: (cmd) => {
-        performanceThread.send({
-            type: "command",
-            script: cmd
-        });
-    },
-    onFunctionKey: (index) => {
-        performanceThread.send({
-            type: "functionKey",
-            index: index
-        });
+  onExit: () => {
+    stopAllThreads();
+    return process.exit(0);
+  },
+  onCommandInput: (cmd) => {
+    performanceThread.send({
+      type: "command",
+      script: cmd
+    });
+  },
+  onFunctionKey: (index) => {
+    performanceThread.send({
+      type: "functionKey",
+      index: index
+    });
+  }
+});
+
+const performanceThread = fork("./modules/sequencer/src/main.js");
+
+performanceThread.on("message", (message) => {
+  try {
+    switch (message.type) {
+      case "log":
+        Screen.Instance.log(message ? message.text : "");
+        break;
+      case "controllerMap":
+        Screen.Instance.updateControllerMap(message.map);
+        break;
+      case "state":
+        Screen.instance.updateState(message.state);
+        apiServerThread.send(message);
+        break;
+      case "scene":
+        Screen.instance.updateScene(message.data);
+        break;
+      default:
+        Screen.Instance.log(Console.errorStyle(`Unknown message type: ${JSON.stringify(message)}`));
+        break;
     }
-});
-
-const performanceThread = fork('./src/sequencer/performance-thread.js');
-
-performanceThread.on('message', (message) => {
-    try {
-        switch (message.type) {
-            case "log":
-                Screen.Instance.log(message ? message.text : "");
-                break;
-          //case "controller":
-          //    Screen.Instance.controller(message.status, message.d1, message.d2);
-          //    break;
-          case "controllerMap":
-              Screen.Instance.updateControllerMap(message.map);
-              break;
-          //case "deviceState":
-          //    Screen.Instance.updateDeviceState(message.deviceState);
-          //    break;
-          //case "sceneState":
-          //    Screen.Instance.updateSceneState(message.sceneState);
-          //    break;
-          //case "trackState":
-          //    Screen.Instance.updateTrackState(message.trackState);
-          //    break;
-          //case "arrangement":
-          //    Screen.Instance.arrangement(message.title);
-          //    break;
-          //case "clock":
-          //    Screen.Instance.updateClock(message.tickDuration);
-          //    break;
-            case "state":
-                Screen.instance.updateState(message.state);
-                apiServerThread.send(message);
-                break;
-            case "scene":
-                Screen.instance.updateScene(message.data);
-                break;
-            default:
-                Screen.Instance.log(`Unknown message type: ${JSON.stringify(message)}`);
-                break;
-        }
-    } catch (error) {
-        Screen.Instance.log(`${colors.red("\u2717")} [main] ${error} ${error.stack}`);
-    }
+  } catch (error) {
+    Screen.Instance.log(Console.errorStyle(`${error} ${error.stack}`));
+  }
 
 });
 
 
-const apiServerThread = fork('./server/bin/www', {
-    env: {
-        PORT: 3001
-    },
-    silent: true
+const apiServerThread = fork("./modules/server/bin/www", {
+  env: {
+    PORT: 3001
+  },
+  silent: true
 });
 
 
-const webServerThread = fork('./node_modules/react-scripts/scripts/start',{
-    env: {
-        PORT: 3000
-    },
-    cwd: './client/',
-    silent: true
+const webServerThread = fork("./node_modules/react-scripts/scripts/start", {
+  env: {
+    PORT: 3000
+  },
+  cwd: "./modules/client/",
+  silent: true
 });
 
-Screen.Instance.log(Console.successStyle(`HTTP server started at http://${InterfaceAddress.localAddress}:3000`));
+Screen.instance.log(Console.successStyle(`HTTP server started at http://${InterfaceAddress.localAddress}:3000`));
 
 function stopAllThreads() {
-    apiServerThread.kill();
-    webServerThread.kill();
-    performanceThread.kill("SIGINT");
+  apiServerThread.kill();
+  webServerThread.kill();
+  performanceThread.kill("SIGINT");
 }
 
 
-process.on('SIGTERM',function(){
-    stopAllThreads();
-    process.exit(1);
+process.on("SIGTERM", function() {
+  stopAllThreads();
+  process.exit(1);
 });

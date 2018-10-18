@@ -16,7 +16,7 @@
 
 let MidiDevice = require("./midi-device");
 
-const Log = require("./../display/log-util");
+const Log = require("../../../shared").display.Console;
 
 class MidiInstrument {
   static get instruments() {

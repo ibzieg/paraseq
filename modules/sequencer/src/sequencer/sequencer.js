@@ -14,7 +14,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-const Log = require("./../display/log-util");
+const Log = require("../../../shared").display.Console;
 const MidiDevice = require("./../midi/midi-device");
 const ExternalDevices = require("../midi/external-devices");
 const SequenceGraph = require("./sequence-graph");

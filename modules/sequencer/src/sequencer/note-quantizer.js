@@ -14,7 +14,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-const Log = require("../display/log-util");
+const Log = require("../../../shared").display.Console;
 
 const Store = require("./store");
 

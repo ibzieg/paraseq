@@ -16,7 +16,7 @@
 
 const midi = require("midi");
 const colors = require("colors");
-const Log = require("./../display/log-util");
+const Log = require("../../../shared").display.Console;
 const ExternalDevices = require("./external-devices");
 
 class MidiDevice {

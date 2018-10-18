@@ -14,7 +14,7 @@
  * limitations under the License.
  ******************************************************************************/
 const colors = require("colors");
-const Log = require("./../display/log-util");
+const Log = require("../../../shared").display.Console;
 const MidiDevice = require("./midi-device");
 
 class MidiController {

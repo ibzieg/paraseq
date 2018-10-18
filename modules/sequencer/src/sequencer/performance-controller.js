@@ -17,7 +17,7 @@
 const MidiController = require("../midi/midi-controller");
 const MidiDevice = require("../midi/midi-device");
 const EuropiMinion = require("../europi/europi-minion");
-const Log = require("../display/log-util");
+const Log = require("../../../shared").display.Console;
 const colors = require("colors");
 
 const Performance = require("./performance");

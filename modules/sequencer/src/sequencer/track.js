@@ -15,7 +15,7 @@
  ******************************************************************************/
 
 const fs = require("fs");
-const Log = require("../display/log-util");
+const Log = require("../../../shared").display.Console;
 const Sequencer = require("./sequencer");
 const SequenceData = require("./sequence-data");
 const Store = require("./store");

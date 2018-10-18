@@ -14,9 +14,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-const PerformanceController = require("./performance-controller");
-const Store = require("./store");
+const PerformanceController = require("./sequencer/performance-controller");
+const Store = require("./sequencer/store");
 
-Store.create().then(() => {
-  let p = new PerformanceController();
-});
+Store.create().then(() => new PerformanceController());
