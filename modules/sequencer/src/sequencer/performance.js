@@ -144,14 +144,14 @@ class Performance {
    */
   endEvent(index) {
     this.cvEvent("end", 1, index);
-    if (
-      Store.instance.scene.options.resetEvent === index &&
-      typeof this.queuedSceneIndex === "number"
-    ) {
-      this.resetAllTracks();
-      this.selectScene(this.queuedSceneIndex);
+    if (Store.instance.scene.options.resetEvent === index) {
+      if (this.playlistIsEnabled()) {
+        this.playlistClock();
+      } else if (typeof this.queuedSceneIndex === "number") {
+        this.resetAllTracks();
+        this.selectScene(this.queuedSceneIndex);
+      }
     }
-    // TODO Play from playlist here
   }
 
   /***
@@ -187,12 +187,65 @@ class Performance {
     }
   }
 
+  playlistIsEnabled() {
+    return Store.instance.state.playlistMode === true;
+  }
+
+  playlistClock() {
+    this.incrementPlaylistPosition();
+    this.applyPlaylistPosition();
+  }
+
+  resetPlaylistPosition() {
+    this.playlistIndex = 0;
+    this.playlistRepeatCount = 0;
+  }
+
+  /**
+   * Example element:
+     [
+       number: performance 1-12,
+       number: scene 1-16,
+       number: repeat count >= 1
+     ]
+   */
+  incrementPlaylistPosition() {
+    const playlist = Store.instance.state.playlist;
+    const currentElement = playlist[this.playlistIndex];
+    //const performanceIndex = currentElement[0];
+    //const sceneIndex = currentElement[1];
+    const repeatCount = currentElement[2];
+    this.playlistRepeatCount += 1;
+    if (this.playlistRepeatCount >= repeatCount) {
+      this.playlistRepeatCount = 0;
+      this.playlistIndex += 1;
+    }
+    if (this.playlistIndex >= playlist.length) {
+      this.resetPlaylistPosition();
+    }
+  }
+
+  applyPlaylistPosition() {
+    const playlist = Store.instance.state.playlist;
+    const currentElement = playlist[this.playlistIndex];
+    const performanceIndex = currentElement[0];
+    const sceneIndex = currentElement[1];
+    //const repeatCount = currentElement[2];
+    if (
+      performanceIndex - 1 !== Store.instance.state.selectedPerformance ||
+      sceneIndex - 1 !== Store.instance.performance.selectedScene
+    ) {
+      this.resetAllTracks();
+    }
+    this.select(performanceIndex - 1);
+    this.selectScene(sceneIndex - 1);
+  }
+
   /***
    *
    * @param index
    */
   select(index) {
-    // TODO Queue this for beat syncing
     Store.instance.setProperty("selectedPerformance", index);
   }
 
@@ -233,6 +286,10 @@ class Performance {
       this.tracks[i].stop();
     }
     this.eventScheduler.flushAllEvents();
+    this.resetPlaylistPosition();
+    if (this.playlistIsEnabled()) {
+      this.applyPlaylistPosition();
+    }
   }
 
   /***
