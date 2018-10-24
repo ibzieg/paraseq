@@ -399,6 +399,7 @@ class Store {
         resetEvent: 4, // perc1
         noteSetSize: 7,
         noteSet: [48, 56, 62, 68, 76],
+        repeat: 4,
         modA: 0.2,
         modB: 0.4,
         modC: 0.6,

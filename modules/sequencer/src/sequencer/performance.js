@@ -193,7 +193,7 @@ class Performance {
 
   playlistClock() {
     this.incrementPlaylistPosition();
-    this.applyPlaylistPosition();
+    //this.applyPlaylistPosition();
   }
 
   resetPlaylistPosition() {
@@ -210,22 +210,32 @@ class Performance {
      ]
    */
   incrementPlaylistPosition() {
-    const playlist = Store.instance.state.playlist;
-    const currentElement = playlist[this.playlistIndex];
-    //const performanceIndex = currentElement[0];
-    //const sceneIndex = currentElement[1];
-    const repeatCount = currentElement[2];
+    const repeatCount = Store.instance.scene.options.repeat;
     this.playlistRepeatCount += 1;
     if (this.playlistRepeatCount >= repeatCount) {
       this.playlistRepeatCount = 0;
-      this.playlistIndex += 1;
-    }
-    if (this.playlistIndex >= playlist.length) {
-      this.resetPlaylistPosition();
+      let performanceIndex = Store.instance.state.selectedPerformance;
+      let sceneIndex = Store.instance.performance.selectedScene;
+      if (sceneIndex === Store.SCENE_COUNT - 1) {
+        sceneIndex = 0;
+        if (performanceIndex === Store.PERFORMANCE_COUNT - 1) {
+          // reset back to zero if we're already on the last performance
+          performanceIndex = 0;
+        } else {
+          // increment to next performance
+          performanceIndex += 1;
+        }
+      } else {
+        sceneIndex += 1;
+      }
+
+      this.resetAllTracks();
+      this.select(performanceIndex);
+      this.selectScene(sceneIndex);
     }
   }
 
-  applyPlaylistPosition() {
+  /*  applyPlaylistPosition() {
     const playlist = Store.instance.state.playlist;
     const currentElement = playlist[this.playlistIndex];
     const performanceIndex = currentElement[0];
@@ -239,7 +249,7 @@ class Performance {
     }
     this.select(performanceIndex - 1);
     this.selectScene(sceneIndex - 1);
-  }
+  }*/
 
   /***
    *
@@ -287,9 +297,9 @@ class Performance {
     }
     this.eventScheduler.flushAllEvents();
     this.resetPlaylistPosition();
-    if (this.playlistIsEnabled()) {
+    /* if (this.playlistIsEnabled()) {
       this.applyPlaylistPosition();
-    }
+    }*/
   }
 
   /***
@@ -367,7 +377,11 @@ class Performance {
         Pad16: {
           label: "Play Mode",
           callback: velocity => {
-            return;
+            Store.instance.setProperty(
+              "playlistMode",
+              !Store.instance.state.playlistMode
+            );
+            return "";
           }
         },
         Pad1: {
