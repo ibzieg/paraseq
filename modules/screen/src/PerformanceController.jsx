@@ -36,6 +36,13 @@ const knobMap = [
   { label: "Playlist", name: "playlistMode", type: "root" }
 ];
 
+const getPropColor = (a, b, key) => {
+  if (a[key] !== undefined) {
+    return colors.magenta(b[key]);
+  }
+  return colors.green(b[key]);
+};
+
 export default class PerformanceController extends React.Component {
 
   get performance() {
@@ -50,8 +57,25 @@ export default class PerformanceController extends React.Component {
     return this.props.scene;
   }
 
+  get unmergedScene() {
+    if (this.performance && this.performance.scenes) {
+      return this.performance.scenes[this.performance.selectedScene];
+    } else {
+      return { options: {}, tracks: [] }
+    }
+  }
+
   get track() {
     let t = this.props.scene.tracks[this.performance.selectedTrack];
+    if (t) {
+      return t;
+    } else {
+      return {};
+    }
+  }
+
+  get unmergedTrack() {
+    let t = this.unmergedScene.tracks[this.performance.selectedTrack];
     if (t) {
       return t;
     } else {
@@ -80,19 +104,27 @@ export default class PerformanceController extends React.Component {
 
   getTrackStateText() {
     let state = Object.assign({
-      linearGraph: this.track.graphData ? this.track.graphData.linear : []
+      linearGraph: this.track.graphData ? this.track.graphData.linear : [],
+      seqData: "{...}"
     }, this.track);
+
+    let unmergedState = Object.assign({
+      linearGraph: this.unmergedTrack.graphData ? this.unmergedTrack.graphData.linear : undefined,
+      seqData: this.unmergedTrack.sequenceData ? "{...}" : undefined
+    }, this.unmergedTrack);
+
     let keys = [
       "instrument",
       "note",
       "velocity",
       "constants",
-      "linearGraph"
+      "linearGraph",
+      "seqData",
     ];
     let text = ``;
     text += colors.magenta.bold("Track:\n");
     for (let i = 0; i < keys.length; i++) {
-      text += `${keys[i]}: ${colors.green(state[keys[i]])}\n`;
+      text += `${keys[i]}: ${getPropColor(unmergedState, state, keys[i])}\n`;
     }
     return text;
   }
@@ -117,21 +149,23 @@ export default class PerformanceController extends React.Component {
     let text = ``;
     text += colors.magenta.bold("Scene:\n");
     for (let i = 0; i < keys.length; i++) {
-      text += `${keys[i]}: ${colors.green(this.scene.options[keys[i]])}\n`;
+      text += `${keys[i]}: ${ getPropColor(
+        this.unmergedScene.options, 
+        this.scene.options, keys[i]) }\n`;
     }
     return text;
   }
 
   render() {
 
-    const getValue = (item) => {
+    const getFormattedValue = (item) => {
       switch (item.type) {
         case "track":
-          return this.track[item.name];
+          return getPropColor(this.unmergedTrack, this.track, item.name);
         case "scene":
-          return this.scene.options[item.name];
+          return getPropColor(this.unmergedScene.options, this.scene.options, item.name);
         case "root":
-          return this.props.data[item.name];
+          return colors.yellow(this.props.data[item.name]);
         default:
           return null;
       }
@@ -159,7 +193,7 @@ export default class PerformanceController extends React.Component {
                tags={true}
                border={{ type: "line" }}
                style={{ border: { fg: "white" } }}>
-            {colors.green(getValue(item))}
+            {getFormattedValue(item)}
           </box>
         ))}
 

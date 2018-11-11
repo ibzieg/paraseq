@@ -25,16 +25,25 @@ const ExternalDevices = require("../midi/external-devices");
 // TODO Maybe this should just pass in from the constructor, because now we're just hard coding a relative path.
 const SAVED_STATE_FILENAME = process.mainModule
   ? path.join(
-      path.dirname(
-        process.mainModule.filename),
-        "..",
-        "..",
-        "..",
-        "data",
-        "saved-state.json")
+      path.dirname(process.mainModule.filename),
+      "..",
+      "..",
+      "..",
+      "data",
+      "saved-state.json")
   : "saved-state.json";
 /* eslint-disable prettier/prettier */
 /* eslint-enable indent */
+
+
+const getSaveFileName = (name) =>
+  path.join(
+    path.dirname(process.mainModule.filename),
+    "..",
+    "..",
+    "..",
+    "data",
+    `${name}.json`);
 
 /***
  * Ordered array of scene addresses with a loop count for each.
@@ -591,23 +600,29 @@ class Store {
     process.send({ type: "scene", data: this.scene });
   }
 
+
   /***
    *
    * @returns {Promise}
    */
-  saveState() {
-    return JSONFile.writeFile(SAVED_STATE_FILENAME, this.state);
+  saveState(name) {
+    return JSONFile.writeFile(
+      name
+        ? getSaveFileName(name)
+        : SAVED_STATE_FILENAME,
+      this.state);
   }
 
   /***
    *
    * @returns {Promise}
    */
-  loadState() {
-    return JSONFile.readFile(SAVED_STATE_FILENAME).then(newState => {
-      this._state = Store.mergeState(this.state, newState);
-      this.stateChanged();
-    });
+  loadState(name) {
+    return JSONFile.readFile(name ? getSaveFileName(name) : SAVED_STATE_FILENAME)
+      .then(newState => {
+        this._state = Store.mergeState(Store.getDefaultState(), newState);
+        this.stateChanged();
+      });
   }
 
   /***
