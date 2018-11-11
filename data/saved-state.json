@@ -27,7 +27,7 @@
   {
    "name": "Performance 1",
    "selectedTrack": 0,
-   "selectedScene": 3,
+   "selectedScene": 15,
    "scenes": [
     {
      "options": {
@@ -44,6 +44,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -3390,7 +3391,8 @@
     },
     {
      "options": {
-      "noteSet": []
+      "noteSet": [],
+      "modA": 0.22
      },
      "tracks": [
       {},
@@ -3407,7 +3409,8 @@
     },
     {
      "options": {
-      "noteSet": []
+      "noteSet": [],
+      "modA": 0.33
      },
      "tracks": [
       {},
@@ -3424,7 +3427,8 @@
     },
     {
      "options": {
-      "noteSet": []
+      "noteSet": [],
+      "modA": 0.44
      },
      "tracks": [
       {
@@ -3606,7 +3610,8 @@
     },
     {
      "options": {
-      "noteSet": []
+      "noteSet": [],
+      "modA": 0.1616
      },
      "tracks": [
       {},
@@ -3641,6 +3646,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -4859,6 +4865,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -6077,6 +6084,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -7295,6 +7303,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -8513,6 +8522,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -9731,6 +9741,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -10949,6 +10960,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -12167,6 +12179,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -13385,6 +13398,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -14603,6 +14617,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,
@@ -15821,6 +15836,7 @@
        68,
        76
       ],
+      "repeat": 4,
       "modA": 0.2,
       "modB": 0.4,
       "modC": 0.6,

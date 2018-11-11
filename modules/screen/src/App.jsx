@@ -59,6 +59,7 @@ export default class App extends React.Component {
                 log={this.state.log}
                 emitter={this.eventEmitter}
                 onCommandInput={this.props.onCommandInput}
+                onFunctionKey={this.props.onFunctionKey}
                 onExit={this.props.onExit}
             />
         );

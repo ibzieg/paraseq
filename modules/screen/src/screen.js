@@ -50,6 +50,7 @@ class Screen {
     this.component = render(
       <App
         onCommandInput={this.options.onCommandInput}
+        onFunctionKey={this.options.onFunctionKey}
         onExit={this.options.onExit}
       />, screen);
   }

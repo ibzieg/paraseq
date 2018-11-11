@@ -70,8 +70,6 @@ class PerformanceController {
         this.performance.cvEvent("cv", value, "d");
         break;
     }
-
-    this.performance.updateSceneState();
   }
 
   /***
@@ -134,6 +132,14 @@ class PerformanceController {
    * Scene Property accessors
    * @returns {*|number}
    */
+  get repeat() {
+    return Store.instance.scene.options.repeat;
+  }
+
+  set repeat(value) {
+    this.sceneProp("repeat", value);
+  }
+
   get modA() {
     return Store.instance.scene.options.modA;
   }
@@ -308,6 +314,59 @@ class PerformanceController {
     this.performance.stop();
   }
 
+  printCommandHelp() {
+    const getCmds = cmdList =>
+      cmdList.reduce((str, cmd) => `${str} ${colors.magenta(cmd)},`, "");
+
+    Log.info(colors.bold("Application:") + getCmds(["help", "exit"]));
+
+    Log.info(
+      colors.bold("Track Properties:") +
+        getCmds([
+          ".instrument",
+          ".note",
+          ".velocity",
+          ".constants",
+          ".linearGraph"
+        ])
+    );
+
+    Log.info(
+      colors.bold("Scene Properties:") +
+        getCmds([
+          ".repeat",
+          ".modA",
+          ".modB",
+          ".modC",
+          ".modD",
+          ".cvA",
+          ".cvB",
+          ".cvC",
+          ".cvD",
+          ".gateA",
+          ".gateB",
+          ".gateC",
+          ".gateD"
+        ])
+    );
+
+    Log.info(
+      colors.bold("Commands") +
+        getCmds([
+          "trackProp(name, value)",
+          "sceneProp(name, value)",
+          "save()",
+          "clearTrack()",
+          "clearScene()",
+          "cutScene()",
+          "insertScene()",
+          "copyTo(performanceIndex)",
+          "start()",
+          "stop()"
+        ])
+    );
+  }
+
   /***
    *
    * @param script
@@ -321,7 +380,10 @@ class PerformanceController {
     let trackProp = this.trackProp.bind(this);
     let sceneProp = this.sceneProp.bind(this);
     let save = Store.instance.saveState.bind(Store.instance);
-    let clear = Store.instance.clearActiveTrack.bind(Store.instance);
+    let clearTrack = Store.instance.clearActiveTrack.bind(Store.instance);
+    let clearScene = Store.instance.clearActiveScene.bind(Store.instance);
+    let cutScene = Store.instance.cutActiveScene.bind(Store.instance);
+    let insertScene = Store.instance.insertActiveScene.bind(Store.instance);
     let copyTo = i => {
       Store.instance.copySceneToPerformance(i - 1);
       return `Copied active scene into new Performance ${i}`;
@@ -336,15 +398,21 @@ class PerformanceController {
       return "Stop master clock";
     };
 
-    if (script && script[0] === ".") {
-      script = "this" + script;
-    }
-    try {
-      let result = eval(script);
-      Log.success(script);
-      Log.info(result);
-    } catch (error) {
-      Log.error(error);
+    const help = () => this.printCommandHelp();
+
+    if (script === "help") {
+      this.printCommandHelp();
+    } else {
+      if (script && script[0] === ".") {
+        script = "this" + script;
+      }
+      try {
+        let result = eval(script);
+        Log.success(script);
+        Log.info(result);
+      } catch (error) {
+        Log.error(error);
+      }
     }
   }
 

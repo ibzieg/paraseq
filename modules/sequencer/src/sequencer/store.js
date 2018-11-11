@@ -1,4 +1,3 @@
-
 /******************************************************************************
  * Copyright 2017 Ian Bertram Zieg
  *
@@ -59,6 +58,7 @@ const playlist = [
  *
  * state schema: {
  *     selectedPerformance: number (0-12 index)
+ *     TODO: Remove Playlist, add Repeat instead
  *     playlistMode: boolean (true for playlist playback, otherwise regular looping mode)
  *     playlist: [
  *         ...,
@@ -646,6 +646,46 @@ class Store {
       TRACK_DEFAULTS[perf.selectedTrack],
       perf.selectedScene > 0
     );
+    this.stateChanged();
+  }
+
+  /**
+   * Reset the active scene to defaults
+   */
+  clearActiveScene() {
+    let perf = this._state.performances[this.state.selectedPerformance];
+    let scene = perf.scenes[perf.selectedScene];
+    perf.scenes[perf.selectedScene] =
+      Store.getDefaultScene(scene.name,perf.selectedScene > 0);
+    this.stateChanged();
+  }
+
+  /**
+   * Remove the active from the scenes array and repair the array.
+   */
+  cutActiveScene() {
+    let perf = this._state.performances[this.state.selectedPerformance];
+    let scenes = perf.scenes;
+    scenes.splice(perf.selectedScene, 1);
+    scenes.push(Store.getDefaultScene(`scene ${scenes.length+1}`, true));
+    this.stateChanged();
+  }
+
+  /**
+   * Insert an empty scene at the current position and drop the last scene
+   */
+  insertActiveScene() {
+    let perf = this._state.performances[this.state.selectedPerformance];
+    let scenes = perf.scenes;
+    scenes.splice(
+      perf.selectedScene,
+      0,
+      Store.getDefaultScene("inserted scene", perf.selectedScene > 0)
+    );
+    if (scenes.length >= Store.SCENE_COUNT) {
+      scenes.slice(Store.SCENE_COUNT);
+    }
+
     this.stateChanged();
   }
 

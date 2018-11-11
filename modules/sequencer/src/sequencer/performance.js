@@ -28,6 +28,8 @@ const SequenceData = require("./sequence-data");
 const Track = require("./track");
 const EventScheduler = require("./event-scheduler");
 
+const { getNextRepeatableScene } = require("../utility/store-selectors");
+
 class Performance {
   get state() {
     return Store.instance.performance;
@@ -214,24 +216,14 @@ class Performance {
     this.playlistRepeatCount += 1;
     if (this.playlistRepeatCount >= repeatCount) {
       this.playlistRepeatCount = 0;
-      let performanceIndex = Store.instance.state.selectedPerformance;
-      let sceneIndex = Store.instance.performance.selectedScene;
-      if (sceneIndex === Store.SCENE_COUNT - 1) {
-        sceneIndex = 0;
-        if (performanceIndex === Store.PERFORMANCE_COUNT - 1) {
-          // reset back to zero if we're already on the last performance
-          performanceIndex = 0;
-        } else {
-          // increment to next performance
-          performanceIndex += 1;
-        }
-      } else {
-        sceneIndex += 1;
-      }
-
+      let position = getNextRepeatableScene(
+        Store.instance.state.selectedPerformance,
+        Store.instance.performance.selectedScene,
+        repeatCount
+      );
       this.resetAllTracks();
-      this.select(performanceIndex);
-      this.selectScene(sceneIndex);
+      this.select(position[0]);
+      this.selectScene(position[1]);
     }
   }
 

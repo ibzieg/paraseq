@@ -182,6 +182,7 @@ export default class PerformanceController extends React.Component {
           log={this.props.log}
           emitter={this.props.emitter}
           onCommandInput={this.props.onCommandInput}
+          onFunctionKey={this.props.onFunctionKey}
           onExit={this.props.onExit}/>
         <box
           top={11}
