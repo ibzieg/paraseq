@@ -70,7 +70,8 @@ class Sequencer {
     this.eventScheduler = new EventScheduler();
 
     this.graph = new SequenceGraph({
-      index: props.index
+      index: props.index,
+      createSequence: props.createSequence
     });
 
     this.reset();
@@ -99,6 +100,7 @@ class Sequencer {
     let arpMod = Math.floor(this.state.partsPerQuant / this.state.arpRate);
     let eventTriggered = false;
 
+    // TODO shouldLoop is the worst name.
     let shouldLoop = true;
     if (typeof this.state.follow === "number") {
       shouldLoop = !this._loopEnd;
@@ -110,6 +112,7 @@ class Sequencer {
       if (this._count % clockMod === 0) {
         let event = this.data[this._index];
         this.props.cvEvent("step", this._index / this.data.length);
+        this.props.cvEvent("ramp", this._index / this.data.length);
         if (event && event.length && this.state.enabled) {
           let note = event[0];
           if (typeof this.state.octave === "number") {

@@ -351,11 +351,28 @@ class PerformanceController {
     );
 
     Log.info(
+      colors.bold("Mod Sources:") +
+        getCmds([
+          "tog.n",
+          "gate.n",
+          "end.n",
+          "scene",
+          "pitch.n",
+          "vel.n",
+          "mod.n",
+          "step.n",
+          "cv.abcd",
+          "ramp.n"
+        ])
+    );
+
+    Log.info(
       colors.bold("Commands") +
         getCmds([
           "trackProp(name, value)",
           "sceneProp(name, value)",
-          "save()",
+          "save(name?)",
+          "load(name?)",
           "clearTrack()",
           "clearScene()",
           "cutScene()",
@@ -372,7 +389,7 @@ class PerformanceController {
    * @param script
    */
   processCommand(script) {
-    // local scope aliases for command line script:
+    // local scope aliases for command line script:fs
     let performance = this.performance;
     let track = this.performance.tracks[
       Store.instance.performance.selectedTrack
@@ -380,10 +397,12 @@ class PerformanceController {
     let trackProp = this.trackProp.bind(this);
     let sceneProp = this.sceneProp.bind(this);
     let save = Store.instance.saveState.bind(Store.instance);
+    let load = Store.instance.loadState.bind(Store.instance);
     let clearTrack = Store.instance.clearActiveTrack.bind(Store.instance);
     let clearScene = Store.instance.clearActiveScene.bind(Store.instance);
     let cutScene = Store.instance.cutActiveScene.bind(Store.instance);
     let insertScene = Store.instance.insertActiveScene.bind(Store.instance);
+    let tune = note => track.sequencer.playMidiNote(note, 127);
     let copyTo = i => {
       Store.instance.copySceneToPerformance(i - 1);
       return `Copied active scene into new Performance ${i}`;

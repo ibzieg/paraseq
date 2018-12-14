@@ -40,7 +40,8 @@ class Track {
       },
       end: () => {
         this.endEvent();
-      }
+      },
+      createSequence: this.createSequence.bind(this),
     });
   }
 
@@ -90,16 +91,19 @@ class Track {
     this.sequencer.generateGraphData();
   }
 
+  createSequence() {
+    return SequenceData.getSequence(
+      this.generateRandomNote.bind(this),
+      this.state
+    );
+  }
   /***
    * Generate a sequence of events based on selected sequence type
    * @param index
    */
   generateSequenceData(index) {
     let data = [...this.state.sequenceData];
-    data[index] = SequenceData.getSequence(
-      this.generateRandomNote.bind(this),
-      this.state
-    );
+    data[index] = this.createSequence();
     Store.instance.setTrackProperty(this.props.index, "sequenceData", data);
   }
 

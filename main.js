@@ -22,18 +22,20 @@ const InterfaceAddress = shared.network.InterfaceAddress;
 
 const Screen = require("./modules/screen/lib/screen");
 
+const WEB_SERVER_ENABLED = false;
+
 Screen.create({
   onExit: () => {
     stopAllThreads();
     return process.exit(0);
   },
-  onCommandInput: (cmd) => {
+  onCommandInput: cmd => {
     performanceThread.send({
       type: "command",
       script: cmd
     });
   },
-  onFunctionKey: (index) => {
+  onFunctionKey: index => {
     performanceThread.send({
       type: "functionKey",
       index: index
@@ -43,7 +45,7 @@ Screen.create({
 
 const performanceThread = fork("./modules/sequencer/src/main.js");
 
-performanceThread.on("message", (message) => {
+performanceThread.on("message", message => {
   try {
     switch (message.type) {
       case "log":
@@ -54,46 +56,57 @@ performanceThread.on("message", (message) => {
         break;
       case "state":
         Screen.instance.updateState(message.state);
-        apiServerThread.send(message);
+        if (WEB_SERVER_ENABLED) {
+          apiServerThread.send(message);
+        }
         break;
       case "scene":
         Screen.instance.updateScene(message.data);
         break;
       default:
-        Screen.Instance.log(Console.errorStyle(`Unknown message type: ${JSON.stringify(message)}`));
+        Screen.Instance.log(
+          Console.errorStyle(`Unknown message type: ${JSON.stringify(message)}`)
+        );
         break;
     }
   } catch (error) {
     Screen.Instance.log(Console.errorStyle(`${error} ${error.stack}`));
   }
-
 });
 
+let apiServerThread;
+let webServerThread;
 
-const apiServerThread = fork("./modules/server/bin/www", {
-  env: {
-    PORT: 3001
-  },
-  silent: true
-});
+if (WEB_SERVER_ENABLED) {
+  apiServerThread = fork("./modules/server/bin/www", {
+    env: {
+      PORT: 3001
+    },
+    silent: true
+  });
 
+  webServerThread = fork("./node_modules/react-scripts/scripts/start", {
+    env: {
+      PORT: 3000
+    },
+    cwd: "./modules/client/",
+    silent: true
+  });
 
-const webServerThread = fork("./node_modules/react-scripts/scripts/start", {
-  env: {
-    PORT: 3000
-  },
-  cwd: "./modules/client/",
-  silent: true
-});
-
-Screen.instance.log(Console.successStyle(`HTTP server started at http://${InterfaceAddress.localAddress}:3000`));
-
-function stopAllThreads() {
-  apiServerThread.kill();
-  webServerThread.kill();
-  performanceThread.kill("SIGINT");
+  Screen.instance.log(
+    Console.successStyle(
+      `HTTP server started at http://${InterfaceAddress.localAddress}:3000`
+    )
+  );
 }
 
+function stopAllThreads() {
+  if (WEB_SERVER_ENABLED) {
+    apiServerThread.kill();
+    webServerThread.kill();
+  }
+  performanceThread.kill("SIGINT");
+}
 
 process.on("SIGTERM", function() {
   stopAllThreads();

@@ -66,13 +66,13 @@ class SequenceData {
       case "ryk":
         data = SequenceData.getRykSequence(fn, config);
         break;
-      case "brmnghm":
-        data = SequenceData.getBrmnghmSequence(fn, config);
+      case "quadrant":
+        data = SequenceData.getQuadrantSequence(fn, config);
         break;
-      case "expfwd":
+      case "accel":
         data = SequenceData.getExponentialSequence(fn, config);
         break;
-      case "exprev":
+      case "ritard":
         data = SequenceData.getExponentialSequence(fn, config).reverse();
         break;
       case "random":
@@ -324,7 +324,7 @@ class SequenceData {
    * @param config
    * @returns {Array}
    */
-  static getBrmnghmSequence(nextNote, config) {
+  static getQuadrantSequence(nextNote, config) {
     let n = config.length;
     let k = config.steps;
 

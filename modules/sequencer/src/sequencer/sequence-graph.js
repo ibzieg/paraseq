@@ -15,22 +15,24 @@
  ******************************************************************************/
 
 const Store = require("./store");
+const SequenceData = require("./sequence-data");
 const Log = require("../../../shared").display.Console;
 
 class SequenceGraph {
+  get trackState() {
+    return Store.instance.scene.tracks[this.props.index];
+  }
+
   get type() {
-    let trackState = Store.instance.scene.tracks[this.props.index];
-    return trackState.graphType;
+    return this.trackState.graphType;
   }
 
   get data() {
-    let trackState = Store.instance.scene.tracks[this.props.index];
-    return trackState.graphData[this.type];
+    return this.trackState.graphData[this.type];
   }
 
   get sequence() {
-    let trackState = Store.instance.scene.tracks[this.props.index];
-    return trackState.sequenceData[this.index];
+    return this.state.sequence;
   }
 
   get index() {
@@ -39,13 +41,16 @@ class SequenceGraph {
 
   constructor(props) {
     this.props = {
-      index: props.index
+      index: props.index,
+      createSequence: props.createSequence
     };
 
     this.state = {
       index: 0,
       count: 0,
-      secondaryCounters: []
+      secondaryCounters: [],
+      sequence: [],
+      lastSequence: []
     };
   }
 
@@ -63,6 +68,7 @@ class SequenceGraph {
         this.state.secondaryCounters[primaryIndex] = j + 1;
         this.state.index = i[j % i.length];
       }
+      this.state.sequence = [...this.trackState.sequenceData[this.index]];
     } else if (this.type === "markov") {
       let p = this.data[this.index];
       if (p) {
@@ -78,6 +84,14 @@ class SequenceGraph {
       } else {
         Log.error("SequenceGraph: clock: markov data missing");
       }
+      this.state.sequence = [...this.trackState.sequenceData[this.index]];
+    } else if (this.type === "evolve") {
+      const nextSequence = this.props.createSequence();
+      this.state.sequence = SequenceData.evolveSequence(
+        this.state.sequence,
+        nextSequence,
+        this.data.probability
+      );
     } else if (parseInt(this.type) >= 0) {
       this.state.index = parseInt(this.type);
     }
@@ -91,7 +105,10 @@ class SequenceGraph {
   generateData() {
     let data = {
       linear: [],
-      markov: []
+      markov: [],
+      evolve: {
+        probability: 0.5
+      }
     };
     let i, j;
     // Linear
@@ -123,6 +140,7 @@ class SequenceGraph {
   reset() {
     this.state.count = 0;
     this.state.secondaryCounters = [];
+    this.clock();
   }
 }
 

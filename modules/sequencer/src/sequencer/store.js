@@ -162,20 +162,24 @@ const SCENE15_NAME = "Scene 16";
 const TRACK_DEFAULTS = [
   {
     name: "mono1",
-    instrument: "UnoBSPSeq1"
+    instrument: "UnoBSPSeq1",
+    sequenceType: "quadrant"
   },
   {
     name: "mono2",
-    instrument: "UnoBSPSeq2"
+    instrument: "UnoBSPSeq2",
+    sequenceType: "quadrant"
   },
   {
     name: "poly1",
     instrument: "UnoKorg",
+    sequenceType: "quadrant",
     velocity: 120
   },
   {
     name: "poly2",
-    instrument: "NordG2A"
+    instrument: "NordG2A",
+    sequenceType: "quadrant"
   },
   {
     name: "perc1",
@@ -199,7 +203,7 @@ const TRACK_DEFAULTS = [
   {
     name: "perc4",
     instrument: "UnoBSPDrum",
-    sequenceType: "perc",
+    sequenceType: "quadrant",
     note: ExternalDevices.drumMap[3]
   }
 ];
@@ -594,12 +598,32 @@ class Store {
    */
   stateChanged() {
     this._cachedScene = null;
+    this.throttledIpcUpdate();
+  }
 
-    // TODO is this slow?
+  throttledIpcUpdate() {
+    const IPC_UPDATE_THROTTLE_MILLISECONDS = 100;
+    const elapsedSinceUpdate = Number.isNaN(this.ipcLastUpdateTime)
+      ? IPC_UPDATE_THROTTLE_MILLISECONDS
+      : Number(new Date()) - this.ipcLastUpdateTime;
+
+    if (!this.ipcThrottleTimeout) {
+      if (elapsedSinceUpdate >= IPC_UPDATE_THROTTLE_MILLISECONDS) {
+        this.ipcUpdate();
+      } else {
+        this.ipcThrottleTimeout = setTimeout(() => {
+          this.ipcThrottleTimeout = null;
+          this.ipcUpdate();
+        }, IPC_UPDATE_THROTTLE_MILLISECONDS);
+      }
+    }
+  }
+
+  ipcUpdate() {
+    this.ipcLastUpdateTime = Number(new Date());
     process.send({ type: "state", state: this.state });
     process.send({ type: "scene", data: this.scene });
   }
-
 
   /***
    *

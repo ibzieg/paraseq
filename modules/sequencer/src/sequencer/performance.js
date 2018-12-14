@@ -137,6 +137,15 @@ class Performance {
       case "cv":
         minion.CVOutput(channel, value);
         break;
+      case "ramp":
+        let r = 0;
+        if (Store.instance.scene.options.repeat > 0) {
+          r =
+            this.playlistRepeatCount / Store.instance.scene.options.repeat +
+            value * (1 / Store.instance.scene.options.repeat);
+        }
+        minion.CVOutput(channel, r);
+        break;
     }
   }
 
@@ -538,9 +547,9 @@ class Performance {
               "quarterbeat",
               "halfbeat",
               "ryk",
-              "brmnghm",
-              "expfwd",
-              "exprev",
+              "quadrant",
+              "accel",
+              "ritard",
               "random"
             ];
             let i = data % algos.length;
