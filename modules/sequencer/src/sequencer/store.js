@@ -484,6 +484,7 @@ class Store {
         probability: true,
         sequenceData: Array.apply(null, Array(8)).map(() => []),
         graphData: {
+          probability: 0.5,
           linear: [0],
           markov: [
             [1, 1, 1, 1, 1, 1, 1, 1],

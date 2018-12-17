@@ -87,11 +87,13 @@ class SequenceGraph {
       this.state.sequence = [...this.trackState.sequenceData[this.index]];
     } else if (this.type === "evolve") {
       const nextSequence = this.props.createSequence();
-      this.state.sequence = SequenceData.evolveSequence(
-        this.state.sequence,
-        nextSequence,
-        this.data.probability
-      );
+      if (this.data && this.data.probability && nextSequence) {
+        this.state.sequence = SequenceData.evolveSequence(
+          this.state.sequence,
+          nextSequence,
+          this.data.probability
+        );
+      }
     } else if (parseInt(this.type) >= 0) {
       this.state.index = parseInt(this.type);
     }

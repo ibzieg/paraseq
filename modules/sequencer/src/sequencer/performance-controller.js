@@ -402,7 +402,7 @@ class PerformanceController {
     let clearScene = Store.instance.clearActiveScene.bind(Store.instance);
     let cutScene = Store.instance.cutActiveScene.bind(Store.instance);
     let insertScene = Store.instance.insertActiveScene.bind(Store.instance);
-    let tune = note => track.sequencer.playMidiNote(note, 127);
+    let tune = note => track.sequencer.playMidiNote(note, 127, 127);
     let copyTo = i => {
       Store.instance.copySceneToPerformance(i - 1);
       return `Copied active scene into new Performance ${i}`;
