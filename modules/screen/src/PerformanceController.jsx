@@ -118,6 +118,8 @@ export default class PerformanceController extends React.Component {
       "note",
       "velocity",
       "constants",
+      "arpLoop",
+      "arpProb",
       "linearGraph",
       "seqData",
     ];

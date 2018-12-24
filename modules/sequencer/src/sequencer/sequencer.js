@@ -121,8 +121,12 @@ class Sequencer {
 
           this._lastEvent = [...event];
           // Set up arpeggiator for this note event
-          this._arpSeq = this.generateArpSeq(note);
-          this._arpIndex = 1;
+          if (this.testArpProbability()) {
+            this._arpSeq = this.generateArpSeq(note);
+            this._arpIndex = 1;
+          } else {
+            this._arpSeq = null;
+          }
 
           if (this.state.arp) {
             // override duration with arp note length
@@ -152,15 +156,31 @@ class Sequencer {
         this._arpSeq.length > 0
       ) {
         let note = this._arpSeq[this._arpIndex];
+        if (this.state.note) {
+          note = this.state.note;
+        }
         let velocity = this._lastEvent[1];
         let duration = this.getArpNoteDuration();
         this.play(note, velocity, duration, this._lastEvent[3]);
 
-        this._arpIndex = (this._arpIndex + 1) % this._arpSeq.length;
+        if (this._arpIndex === this._arpSeq.length - 1 && !this.state.arpLoop) {
+          this._arpSeq = null;
+        } else {
+          this._arpIndex = (this._arpIndex + 1) % this._arpSeq.length;
+        }
       }
     }
 
     this._count++;
+  }
+
+  /**
+   * Generate a random number and test it against the arpeggiator probability.
+   * @returns {boolean}
+   */
+  testArpProbability() {
+    const prob = this.state.arpProb;
+    return Math.random() <= prob;
   }
 
   /***

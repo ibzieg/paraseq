@@ -460,6 +460,7 @@ class Store {
       let state = {
         name: "",
         instrument: "",
+        enabled: true,
 
         partsPerQuant: 24,
         rate: 4,
@@ -469,8 +470,6 @@ class Store {
         steps: 4,
         graphType: "linear",
         sequenceType: "random",
-        arp: "none",
-        arpRate: 2,
 
         loop: true, // reset count back to zero after end
         follow: null, // reset this track every time the Follow track plays an event
@@ -479,9 +478,11 @@ class Store {
         velocity: null, // always play with this velocity
         constants: [], // always trigger event at these steps (e.g. always trigger Kick drum on first step)
 
-        enabled: true,
+        arp: "none",
+        arpRate: 2,
         arpLoop: true,
-        probability: true,
+        arpProb: 1.0,
+        //probability: true,
         sequenceData: Array.apply(null, Array(8)).map(() => []),
         graphData: {
           probability: 0.5,

@@ -45,7 +45,6 @@ class PerformanceController {
    */
   trackProp(key, value) {
     Store.instance.setSelectedTrackProperty(key, value);
-    this.performance.updateTrackState();
   }
 
   /***

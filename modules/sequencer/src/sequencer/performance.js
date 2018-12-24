@@ -608,7 +608,7 @@ class Performance {
         Knob8: {
           label: "ArpRate",
           callback: data => {
-            let rate = data % 8;
+            let rate = data % 9;
             Store.instance.setSelectedTrackProperty("arpRate", rate);
             return rate.toString();
           }
