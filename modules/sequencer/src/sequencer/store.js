@@ -46,24 +46,6 @@ const getSaveFileName = (name) =>
     `${name}.json`);
 
 /***
- * Ordered array of scene addresses with a loop count for each.
- * Uses a 1-based index to refer to Performance and Scene because it's more
- * intuitive with the UI.
- * Example element:
-     [ number: performance 1-12,
-       number: scene 1-16,
-       number: repeat count >= 1 ]
- * @type {*[]}
- */
-const playlist = [
-
-  [1, 1, 4],
-  [1, 2, 4],
-  [1, 3, 1],
-  [1, 4, 8]
-];
-
-/***
  *
  * state schema: {
  *     selectedPerformance: number (0-12 index)

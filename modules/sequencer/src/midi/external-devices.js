@@ -92,6 +92,14 @@ const instruments = {
   IAC1ch1: {
     device: devices.IAC1,
     channel: 1
+  },
+  IAC1ch2: {
+    device: devices.IAC1,
+    channel: 2
+  },
+  IAC1drum: {
+    device: devices.IAC1,
+    channel: 14
   }
 };
 

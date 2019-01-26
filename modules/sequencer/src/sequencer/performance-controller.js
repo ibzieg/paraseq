@@ -372,6 +372,7 @@ class PerformanceController {
           "sceneProp(name, value)",
           "save(name?)",
           "load(name?)",
+          "selectTrack(n)",
           "clearTrack()",
           "clearScene()",
           "cutScene()",
@@ -398,6 +399,10 @@ class PerformanceController {
     let save = Store.instance.saveState.bind(Store.instance);
     let load = Store.instance.loadState.bind(Store.instance);
     let clearTrack = Store.instance.clearActiveTrack.bind(Store.instance);
+    let selectTrack = index =>
+      Store.instance.setPerformanceProperty("selectedTrack", index);
+    let playlistMode = enabled =>
+      Store.instance.setProperty("playlistMode", enabled);
     let clearScene = Store.instance.clearActiveScene.bind(Store.instance);
     let cutScene = Store.instance.cutActiveScene.bind(Store.instance);
     let insertScene = Store.instance.insertActiveScene.bind(Store.instance);
