@@ -51,8 +51,8 @@ class Performance {
         cvEvent: (eventType, value) => {
           this.cvEvent(eventType, value, i);
         },
-        playEvent: (note, velocity, duration) => {
-          this.playEvent(i, note, velocity, duration);
+        playEvent: (noteEvent) => {
+          this.playEvent(i, noteEvent);
         },
         endEvent: () => {
           this.endEvent(i);
@@ -177,11 +177,9 @@ class Performance {
   /***
    *
    * @param index
-   * @param note
-   * @param velocity
-   * @param duration
+   * @param noteEvent
    */
-  playEvent(index, note, velocity, duration) {
+  playEvent(index, noteEvent) {
     this.notifyFollowers(index);
   }
 

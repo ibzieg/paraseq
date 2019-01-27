@@ -110,19 +110,18 @@ class Sequencer {
 
     if (shouldLoop) {
       if (this._count % clockMod === 0) {
-        let event = this.data[this._index];
         this.props.cvEvent("step", this._index / this.data.length);
         this.props.cvEvent("ramp", this._index / this.data.length);
-        if (event && event.length && this.state.enabled) {
-          let note = event[0];
+        if (this.data[this._index] && this.state.enabled) {
+          let event = { ...this.data[this._index] };
+          this._lastEvent = { ...event };
           if (typeof this.state.octave === "number") {
-            note += this.state.octave * 12;
+            event.pitch += this.state.octave * 12;
           }
 
-          this._lastEvent = [...event];
           // Set up arpeggiator for this note event
           if (this.testArpProbability()) {
-            this._arpSeq = this.generateArpSeq(note);
+            this._arpSeq = this.generateArpSeq(event.pitch);
             this._arpIndex = 1;
           } else {
             this._arpSeq = null;
@@ -130,16 +129,17 @@ class Sequencer {
 
           if (this.state.arp) {
             // override duration with arp note length
-            event[2] = this.getArpNoteDuration();
+            event.duration = this.getArpNoteDuration();
           }
 
           // Execute the event
           eventTriggered = true;
           if (typeof this.props.play === "function") {
             // TODO this is the unquantized note value
-            this.props.play(note, event[1], event[2], event[3]);
+            //this.props.play(pitch, event[1], event[2], event[3]);
+            this.props.play({ ...event });
           }
-          this.play(note, event[1], event[2], event[3]);
+          this.play({ ...event });
         }
         this._index =
           (this._index + 1) % Math.min(this.data.length, this.state.end);
@@ -155,13 +155,13 @@ class Sequencer {
         this._arpSeq &&
         this._arpSeq.length > 0
       ) {
-        let note = this._arpSeq[this._arpIndex];
-        if (this.state.note) {
-          note = this.state.note;
-        }
-        let velocity = this._lastEvent[1];
-        let duration = this.getArpNoteDuration();
-        this.play(note, velocity, duration, this._lastEvent[3]);
+        this.play({
+          pitch: this.state.note
+            ? this.state.note
+            : this._arpSeq[this._arpIndex],
+          duration: this.getArpNoteDuration(),
+          ...this._lastEvent
+        });
 
         if (this._arpIndex === this._arpSeq.length - 1 && !this.state.arpLoop) {
           this._arpSeq = null;
@@ -220,34 +220,40 @@ class Sequencer {
     const bpm = this._bpm;
 
     let millisPerQuarter = millisPerMin / bpm;
-    let duration = (4.0 / quant) * millisPerQuarter;
-
-    return duration;
+    return (4.0 / quant) * millisPerQuarter;
   }
 
   /***
    *
-   * @param note
-   * @param velocity
-   * @param duration
    * @returns {void}
+   * @param noteEvent
    */
-  play(note, velocity, duration, mod) {
+  play(noteEvent) {
     if (this.midiDevice) {
-      let chord = NoteQuantizer.makeChord(note);
+      let chord = NoteQuantizer.makeChord(noteEvent.pitch);
       if (this.state.note || !chord || chord.length < 1) {
-        this.playMidiNote(note, velocity);
-        this.playCVNote(note, velocity, mod);
+        this.playMidiNote(noteEvent);
+        this.playCVNote(noteEvent);
       } else {
         if (this.state.scaleFirst !== false) {
-          this.playMidiNote(chord[0], velocity);
-          this.playCVNote(chord[0], velocity, mod);
+          const event = {
+            pitch: chord[0],
+            ...noteEvent
+          };
+          this.playMidiNote(event);
+          this.playCVNote(event);
         }
         if (this.state.scaleThird && chord[1]) {
-          this.playMidiNote(chord[1], velocity);
+          this.playMidiNote({
+            pitch: chord[1],
+            ...noteEvent
+          });
         }
         if (this.state.scaleFifth && chord[2]) {
-          this.playMidiNote(chord[2], velocity);
+          this.playMidiNote({
+            pitch: chord[2],
+            ...noteEvent
+          });
         }
       }
     }
@@ -255,28 +261,51 @@ class Sequencer {
 
   /***
    *
-   * @param note
-   * @param velocity
+   * @param noteEvent
    */
-  playMidiNote(note, velocity) {
-    let ticks = Math.floor(this.state.partsPerQuant / this.state.rate / 2);
+  playMidiNote(noteEvent) {
+    const ticks = Math.floor(this.state.partsPerQuant / this.state.rate / 2);
+
+    if (this.state.cc) {
+      if (this.state.cc[0] > 0) {
+        this.midiDevice.controlChange(
+          this.midiChannel,
+          this.state.cc[0],
+          noteEvent.controlChange1
+        );
+      }
+      if (this.state.cc[1] > 0) {
+        this.midiDevice.controlChange(
+          this.midiChannel,
+          this.state.cc[1],
+          noteEvent.controlChange1
+        );
+      }
+    }
+
     this.eventScheduler.schedule(ticks, () => {
-      this.midiDevice.noteOff(this.midiChannel, note, velocity);
+      this.midiDevice.noteOff(
+        this.midiChannel,
+        noteEvent.pitch,
+        noteEvent.velocity
+      );
     });
-    this.midiDevice.noteOn(this.midiChannel, note, velocity);
+    this.midiDevice.noteOn(
+      this.midiChannel,
+      noteEvent.pitch,
+      noteEvent.velocity
+    );
   }
 
   /***
    *
-   * @param note
-   * @param velocity
-   * @param mod
+   * @param noteEvent
    */
-  playCVNote(note, velocity, mod) {
+  playCVNote(noteEvent) {
     let ticks = Math.floor(this.state.partsPerQuant / this.state.rate / 2);
-    this.props.cvEvent("pitch", note);
-    this.props.cvEvent("vel", velocity);
-    this.props.cvEvent("mod", mod);
+    this.props.cvEvent("pitch", noteEvent.pitch);
+    this.props.cvEvent("vel", noteEvent.velocity);
+    this.props.cvEvent("mod", noteEvent.controlVoltage1);
     this.props.cvEvent("gate", ticks);
     this.props.cvEvent("tog", ticks);
   }

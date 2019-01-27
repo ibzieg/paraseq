@@ -19,6 +19,8 @@ const Log = require("../../../shared").display.Console;
 const Sequencer = require("./sequencer");
 const SequenceData = require("./sequence-data");
 const Store = require("./store");
+const Random = require("../utility/random");
+const NoteEvent = require("./note-event");
 
 class Track {
   get state() {
@@ -41,7 +43,7 @@ class Track {
       end: () => {
         this.endEvent();
       },
-      createSequence: this.createSequence.bind(this),
+      createSequence: this.createSequence.bind(this)
     });
   }
 
@@ -127,28 +129,21 @@ class Track {
    * @returns {[*,*,string,*]}
    */
   generateRandomNote() {
-    let note;
+    const noteEvent = NoteEvent.makeRandom();
+
     if (typeof this.state.note === "number") {
-      note = this.state.note;
+      noteEvent.pitch = this.state.note;
     } else {
-      let noteSet = Store.instance.scene.options.noteSet;
-      let i = Math.round(Math.random() * (noteSet.length - 1));
-      note = noteSet[i];
+      const noteSet = Store.instance.scene.options.noteSet;
+      const i = Random.getInt(0, noteSet.length - 1);
+      noteEvent.pitch = noteSet[i];
     }
 
-    let velocity;
     if (typeof this.state.velocity === "number") {
-      velocity = this.state.velocity;
-    } else {
-      velocity = Math.round(Math.random() * 127);
+      noteEvent.velocity = this.state.velocity;
     }
 
-    return [
-      note,
-      velocity,
-      "8n", // duration
-      Math.random() // cv
-    ];
+    return noteEvent;
   }
 }
 
