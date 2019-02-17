@@ -16,6 +16,8 @@
 
 const MidiController = require("../midi/midi-controller");
 const MidiDevice = require("../midi/midi-device");
+const NoteEvent = require("./note-event");
+const NoteQuantizer = require("./note-quantizer");
 const EuropiMinion = require("../europi/europi-minion");
 const Log = require("../../../shared").display.Console;
 const colors = require("colors");
@@ -406,7 +408,13 @@ class PerformanceController {
     let clearScene = Store.instance.clearActiveScene.bind(Store.instance);
     let cutScene = Store.instance.cutActiveScene.bind(Store.instance);
     let insertScene = Store.instance.insertActiveScene.bind(Store.instance);
-    let tune = note => track.sequencer.playMidiNote(note, 127, 127);
+    let tune = note =>
+      track.sequencer.playMidiNote(
+        NoteEvent.makeRandom({
+          pitch: note,
+          velocity: 127
+        })
+      );
     let copyTo = i => {
       Store.instance.copySceneToPerformance(i - 1);
       return `Copied active scene into new Performance ${i}`;
@@ -419,6 +427,14 @@ class PerformanceController {
     let stop = () => {
       this.masterClock.stop();
       return "Stop master clock";
+    };
+    let listFreqs = octave => {
+      const freqList = NoteQuantizer.getFreqList(octave);
+      freqList.forEach(item =>
+        Log.music(
+          `${item.midi} = ${item.name}${octave} = ${item.freq.toFixed(2)}Hz`
+        )
+      );
     };
 
     const help = () => this.printCommandHelp();

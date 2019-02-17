@@ -156,11 +156,12 @@ class Sequencer {
         this._arpSeq.length > 0
       ) {
         this.play({
-          pitch: this.state.note
-            ? this.state.note
-            : this._arpSeq[this._arpIndex],
-          duration: this.getArpNoteDuration(),
-          ...this._lastEvent
+          ...this._lastEvent,
+          pitch:
+            this.state.note > 0
+              ? this.state.note
+              : this._arpSeq[this._arpIndex],
+          duration: this.getArpNoteDuration()
         });
 
         if (this._arpIndex === this._arpSeq.length - 1 && !this.state.arpLoop) {
@@ -237,22 +238,22 @@ class Sequencer {
       } else {
         if (this.state.scaleFirst !== false) {
           const event = {
-            pitch: chord[0],
-            ...noteEvent
+            ...noteEvent,
+            pitch: chord[0]
           };
           this.playMidiNote(event);
           this.playCVNote(event);
         }
         if (this.state.scaleThird && chord[1]) {
           this.playMidiNote({
-            pitch: chord[1],
-            ...noteEvent
+            ...noteEvent,
+            pitch: chord[1]
           });
         }
         if (this.state.scaleFifth && chord[2]) {
           this.playMidiNote({
-            pitch: chord[2],
-            ...noteEvent
+            ...noteEvent,
+            pitch: chord[2]
           });
         }
       }

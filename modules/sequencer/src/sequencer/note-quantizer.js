@@ -73,6 +73,24 @@ class NoteQuantizer {
     );
   }
 
+  static mtof(m) {
+    return Math.pow(2, (m - 69) / 12) * 440;
+  }
+
+  static getFreqList(octave) {
+    return NoteQuantizer.activeScale
+      .map(name => ({
+        name,
+        index: NoteQuantizer.getNoteIndexFromName(name)
+      }))
+      .sort((a, b) => a.index > b.index)
+      .map(item => ({
+        name: item.name,
+        midi: octave * 12 + item.index,
+        freq: NoteQuantizer.mtof(octave * 12 + item.index)
+      }));
+  }
+
   /***
    *
    * @param noteName
