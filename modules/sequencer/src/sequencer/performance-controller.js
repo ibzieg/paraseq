@@ -121,7 +121,7 @@ class PerformanceController {
   set linearGraph(data) {
     let graphData = Object.assign(
       {},
-      graphData,
+      data,
       Store.instance.scene.tracks[Store.instance.performance.selectedTrack]
         .graphData
     );
