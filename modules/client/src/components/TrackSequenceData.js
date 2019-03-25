@@ -10,6 +10,7 @@ import ReactJson from 'react-json-view';
 
 import '../styles/scene-options.css';
 import PianoRoll from "./PianoRoll";
+import { createNoteEvent} from "../support/sequence-data";
 
 class TrackSequenceData extends Component {
 
@@ -31,7 +32,7 @@ class TrackSequenceData extends Component {
 
     get track() {
         if (this.scene && this.scene.tracks) {
-            return this.scene.tracks[this.trackId];
+            return this.scene.tracks[this.trackId] || {};
         } else {
             return {};
         }
@@ -39,14 +40,28 @@ class TrackSequenceData extends Component {
 
     render() {
         // TODO should scene/track inherit from previous scenes?
+        const sequenceData = this.track.sequenceData || [];
         return (
             <div className="track-options">
                 {/*<ReactJson src={this.track.sequenceData}/>*/}
 
-                { this.track.sequenceData.map((v, i) =>
+                { sequenceData.map((v, i) =>
                     (<div>
                         <h3>{`Sequence ${i+1}`}</h3>
-                        <PianoRoll key={i} scene={this.scene.options} track={this.track} data={v}/>
+                        <PianoRoll
+                          key={i}
+                          scene={this.scene.options}
+                          track={this.track}
+                          data={v}
+                          createNote={(noteId, pitch) => {
+                            createNoteEvent({
+                              ...this.props.match.params,
+                              seqId: i,
+                              noteId,
+                              pitch
+                            })
+                          }}
+                        />
                     </div>)
                 )}
 

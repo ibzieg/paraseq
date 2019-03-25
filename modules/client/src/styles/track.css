@@ -49,6 +49,7 @@
 }
 
 .piano-roll-cell {
+    cursor: pointer;
     padding: 5px;
     display: inline-block;
     flex: 1;
@@ -59,6 +60,14 @@
 
     font-size: 9px;
     font-family: 'Inconsolata', monospace;
+}
+
+.piano-roll-cell:hover {
+    background-color: #ffa500AA
+}
+
+.piano-cell-selected {
+    background-color: #ffa50044;
 }
 
 .piano-cell-note {

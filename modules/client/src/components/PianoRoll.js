@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { first } from 'lodash';
 
 
 import ReactJson from 'react-json-view';
@@ -9,62 +10,103 @@ import NoteQuantizer from '../linked-classes/note-quantizer';
 
 export default class PianoRoll extends Component {
 
-    getNoteText(value) {
-        const scale = NoteQuantizer.getSceneScale(this.props.scene);
+  state = { selectedNoteIndex: null };
 
-        value--;
-        let note = value % 12;
-        let octave = Math.floor(value / 12);
-        note = note % 6; // keep it on a 7 note scale
+  setNoteIndex = (index) => {
+    this.setState({ selectedNoteIndex: index });
+  };
 
-        // Use incoming note 0-11 as an index into the current master scale;
-        note = NoteQuantizer.getNoteIndexFromName(scale[note]);
-        let chord = NoteQuantizer.getHarmonizedChord(note, scale);
+  getNoteText(value) {
+    const { scene, track } = this.props;
 
-        if (chord) {
-            return `${value} (${chord[0]})`;
-        } else {
-            return `${value}`;
-        }
+    const scale = NoteQuantizer.getSceneScale(scene);
+    const hasConstantNote = Number.isFinite(track.note);
+    let chord;
+    if (!hasConstantNote) {
+      let note = (value-1) % 12;
+      let octave = Math.floor(value / 12);
+      note = note % 6; // keep it on a 7 note scale
+
+      // Use incoming note 0-11 as an index into the current master scale;
+      note = NoteQuantizer.getNoteIndexFromName(scale[note]);
+      chord = NoteQuantizer.getHarmonizedChord(note, scale);
     }
 
-    render() {
-        let noteRange = [];
-        if (this.props.track.note) {
-            noteRange.push(this.props.track.note);
-        } else {
-            for (let i = this.props.scene.maxNote; i >= this.props.scene.minNote; i--) {
-                noteRange.push(i);
-            }
-        }
 
-        let w = `${100.0 / (this.props.data.length+1)}%`;
+    return `${value}` + (chord ? ` (${first(chord)})` : '');
+  }
 
-        return (
-            <div className="piano-roll">
-                {noteRange.map((v, i) =>
-                    (<div className="piano-roll-row">
-                        <div style={{width: w, maxWidth: w}} className="piano-roll-cell piano-cell-highlight">
-                            {this.getNoteText(v)}
-                        </div>
-                        {this.props.data.map((note, j) => {
+  render() {
+    let noteRange = [];
+    if (this.props.track.note) {
+      noteRange.push(this.props.track.note);
+    } else {
+      for (let i = this.props.scene.maxNote; i >= this.props.scene.minNote; i--) {
+        noteRange.push(i);
+      }
+    }
 
-                            //let className = `piano-roll-cell ${note && note[0] === v ? 'piano-cell-note' : ''}`;
-                            let className = `piano-roll-cell`;
-                            if (note && note[0] === v) {
-                                className += ` piano-cell-note`;
-                            } else if ((j % 4) === 0) {
-                                className += ` piano-cell-quarter`;
-                            }
+    const { noteSet } = this.props.scene;
 
-                            return (<div style={{width: w, maxWidth: w}} className={className}>
-                                { note && note[0] === v ? <span>{this.getNoteText(note[0])}</span>
-                                    : <span>{'-'}</span>}
+    let w = `${100.0 / (this.props.data.length+1)}%`;
 
-                            </div>)
-                        })}
-                    </div>))}
+    return (
+      <div className="piano-roll">
+        {noteRange.map((v, i) => {
+
+          return (
+            <div className="piano-roll-row">
+              <div
+                className="piano-roll-cell piano-cell-highlight"
+                style={{
+                  width: w,
+                  maxWidth: w,
+
+                }}
+              >
+                {this.getNoteText(v)}
+              </div>
+              {this.props.data.map((note, j) => {
+
+                //let className = `piano-roll-cell ${note && note[0] === v ? 'piano-cell-note' : ''}`;
+                let className = `piano-roll-cell`;
+
+                if (note && note.pitch === v) {
+                  className += ` piano-cell-note`;
+                } else {
+                  if (this.state.selectedNoteIndex === j) {
+                    className += ` piano-cell-selected`;
+                  } else if ((j % 4) === 0) {
+                    className += ` piano-cell-quarter`;
+                  }
+                }
+
+                return (
+                  <div
+                    onMouseLeave={() => { this.setNoteIndex(null) }}
+                    onMouseEnter={() => { this.setNoteIndex(j) }}
+                    onMouseDown={() => {
+                      this.props.createNote({noteIndex: j, pitch: v});
+                    }}
+                    className={className}
+                    style={{
+                      width: w,
+                      maxWidth: w
+                    }}
+                  >
+                    <span>
+                      {note && note.pitch === v
+                        ? this.getNoteText(note.pitch)
+                        : '-'
+                      }
+                    </span>
+                  </div>
+                )
+              })}
             </div>
-        );
-    }
+          );
+        })}
+      </div>
+    );
+  }
 }

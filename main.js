@@ -22,7 +22,7 @@ const InterfaceAddress = shared.network.InterfaceAddress;
 
 const Screen = require("./modules/screen/lib/screen");
 
-const WEB_SERVER_ENABLED = false;
+const WEB_SERVER_ENABLED = true;
 
 Screen.create({
   onExit: () => {
@@ -83,6 +83,10 @@ if (WEB_SERVER_ENABLED) {
       PORT: 3001
     },
     silent: true
+  });
+
+  apiServerThread.on("message", message => {
+    performanceThread.send(message);
   });
 
   webServerThread = fork("./node_modules/react-scripts/scripts/start", {

@@ -249,6 +249,8 @@ class PerformanceController {
       } else if (message.type === "functionKey") {
         this.performance.select(message.index);
         Log.info(`Selected performance ${message.index + 1}`);
+      } else if (message.type === "createNote") {
+        Log.info(`createNote: ${JSON.stringify(message)}`);
       }
     });
   }
