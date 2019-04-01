@@ -19,7 +19,7 @@ const wsInstance = expressWs(app, server);
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
 const sequencerRouter = require("./routes/sequencer");
-const performancesRouter = require("./routes/performances");
+const performanceRouter = require("./routes/performance");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/sequencer", sequencerRouter);
-app.use("/performances", performancesRouter);
+app.use("/performance", performanceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

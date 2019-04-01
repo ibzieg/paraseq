@@ -251,6 +251,50 @@ class PerformanceController {
         Log.info(`Selected performance ${message.index + 1}`);
       } else if (message.type === "createNote") {
         Log.info(`createNote: ${JSON.stringify(message)}`);
+
+        const { sequenceData } = Store.instance.getTrack(
+          message.perfId,
+          message.sceneId,
+          message.trackId
+        );
+
+        const seq = [...sequenceData[message.seqId]];
+        seq[message.noteId] = NoteEvent.makeRandom({
+          pitch: message.pitch
+        });
+
+        const newData = [...sequenceData];
+        newData[message.seqId] = seq;
+
+        Store.instance.setPropertyForTrack(
+          message.perfId,
+          message.sceneId,
+          message.trackId,
+          "sequenceData",
+          newData
+        );
+      } else if (message.type === "deleteNote") {
+        Log.info(`createNote: ${JSON.stringify(message)}`);
+
+        const { sequenceData } = Store.instance.getTrack(
+          message.perfId,
+          message.sceneId,
+          message.trackId
+        );
+
+        const seq = [...sequenceData[message.seqId]];
+        seq[message.noteId] = null;
+
+        const newData = [...sequenceData];
+        newData[message.seqId] = seq;
+
+        Store.instance.setPropertyForTrack(
+          message.perfId,
+          message.sceneId,
+          message.trackId,
+          "sequenceData",
+          newData
+        );
       }
     });
   }

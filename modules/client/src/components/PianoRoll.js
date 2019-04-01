@@ -71,7 +71,9 @@ export default class PianoRoll extends Component {
                 //let className = `piano-roll-cell ${note && note[0] === v ? 'piano-cell-note' : ''}`;
                 let className = `piano-roll-cell`;
 
-                if (note && note.pitch === v) {
+                const hasNoteEvent = note && note.pitch === v;
+
+                if (hasNoteEvent) {
                   className += ` piano-cell-note`;
                 } else {
                   if (this.state.selectedNoteIndex === j) {
@@ -86,7 +88,11 @@ export default class PianoRoll extends Component {
                     onMouseLeave={() => { this.setNoteIndex(null) }}
                     onMouseEnter={() => { this.setNoteIndex(j) }}
                     onMouseDown={() => {
-                      this.props.createNote({noteIndex: j, pitch: v});
+                      if (hasNoteEvent) {
+                        this.props.deleteNote(j);
+                      } else {
+                        this.props.createNote(j, v);
+                      }
                     }}
                     className={className}
                     style={{

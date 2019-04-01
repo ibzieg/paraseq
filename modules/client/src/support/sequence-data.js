@@ -3,16 +3,27 @@
 
 export function createNoteEvent({ perfId, sceneId, trackId, seqId, noteId, pitch }) {
   fetch(
-    `/performances/${perfId}/scenes/${sceneId}/tracks/${trackId}/sequences/${seqId}/data`,
+    `/performance/${perfId}/scene/${sceneId}/track/${trackId}/sequence/${seqId}/note/${noteId}`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        noteIndex: noteId,
         pitch: pitch
       })
+    }
+  );
+}
+
+export function deleteNoteEvent({ perfId, sceneId, trackId, seqId, noteId }) {
+  fetch(
+    `/performance/${perfId}/scene/${sceneId}/track/${trackId}/sequence/${seqId}/note/${noteId}`,
+    {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
     }
   );
 }

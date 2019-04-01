@@ -10,7 +10,7 @@ import ReactJson from 'react-json-view';
 
 import '../styles/scene-options.css';
 import PianoRoll from "./PianoRoll";
-import { createNoteEvent} from "../support/sequence-data";
+import { createNoteEvent, deleteNoteEvent } from "../support/sequence-data";
 
 class TrackSequenceData extends Component {
 
@@ -55,11 +55,22 @@ class TrackSequenceData extends Component {
                           data={v}
                           createNote={(noteId, pitch) => {
                             createNoteEvent({
-                              ...this.props.match.params,
+                              perfId: this.props.match.params.perfId - 1,
+                              sceneId: this.props.match.params.sceneId - 1,
+                              trackId: this.props.match.params.trackId - 1,
                               seqId: i,
                               noteId,
                               pitch
                             })
+                          }}
+                          deleteNote={(noteId) => {
+                            deleteNoteEvent({
+                              perfId: this.props.match.params.perfId - 1,
+                              sceneId: this.props.match.params.sceneId - 1,
+                              trackId: this.props.match.params.trackId - 1,
+                              seqId: i,
+                              noteId
+                            });
                           }}
                         />
                     </div>)

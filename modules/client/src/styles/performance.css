@@ -3,26 +3,30 @@
     border: 1px solid #807974;
     margin-top: -1px;
     margin-bottom: -1px;
-
+    background-color: white;
     display: flex;
 }
 
 .performance-content {
     display: flex;
+    flex-direction: column;
 }
 
 .performance-content-detail {
-    width: 50%;
+    background-color: white;
     border: 1px solid #807974;
-    margin-left: -1px;
+    border-radius: 4px;
+    margin: 8px;
 }
 
 .performance-tabs-container {
-    width: 50%;
-    /*border: 1px solid red;*/
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    margin: 8px;
 }
 
 .performance-tab {

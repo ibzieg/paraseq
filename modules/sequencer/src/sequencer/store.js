@@ -759,6 +759,21 @@ class Store {
     this.stateChanged();
   }
 
+  setPropertyForTrack(perfId, sceneId, trackId, key, value) {
+    const perf = this.state.performances[perfId];
+    const scene = perf.scenes[perf.selectedScene];
+    const track = scene.tracks[trackId];
+    track[key] = value;
+    this.stateChanged();
+  }
+
+  getTrack(perfId, sceneId, trackId) {
+    const perf = this.state.performances[perfId];
+    const scene = perf.scenes[perf.selectedScene];
+    const track = scene.tracks[trackId];
+    return track;
+  }
+
   /***
    *
    * @param key

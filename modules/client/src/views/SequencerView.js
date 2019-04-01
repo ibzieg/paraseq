@@ -13,61 +13,65 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { Switch, Route, Redirect } from "react-router";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
-import ActionCreators from '../store/action-creators';
-import '../styles/sequencer.css';
+import ActionCreators from "../store/action-creators";
+import "../styles/sequencer.css";
 
-import PerformanceView from './PerformanceView';
+import PerformanceView from "./PerformanceView";
 
 class SequencerView extends Component {
 
-    render() {
-        return (
-            <div>
-                <div className="sequencer-tabs-container" >
-                    {this.props.sequencerDefinition.performances.map((value, index) =>
-                        <NavLink key={index}
-                                 className="sequencer-tab color-tone1"
-                                 to={`/performances/${index+1}`}
-                                 activeClassName="sequencer-tab-route color-white">
-                            { this.props.sequencerDefinition.selectedPerformance === index ?
-                                <h2 className="color-success">{`P${index+1}`}</h2>
-                                : <h2>{`P${index+1}`}</h2>}
-                        </NavLink>
-                    )}
-                </div>
-                <Switch>
-                    <Route path="/performances/:id" component={PerformanceView} />
-                    <Redirect exact={true} from="/" to="/performances/1"/>
-                    <Redirect exact={true} from="/performances" to="/performances/1" />
-                </Switch>
-            </div>
-        );
-    }
+  render() {
+    const { sequencerDefinition } = this.props;
+    return (
+      <div>
+        <div className="sequencer-tabs-container">
+          { sequencerDefinition.performances.map((value, index) =>
+            <NavLink
+              key={index}
+              className="sequencer-tab color-tone1"
+              to={`/performances/${index + 1}`}
+              activeClassName="sequencer-tab-route color-white"
+            >
+              { sequencerDefinition.selectedPerformance === index
+                ? <h2 className="color-highlight">{`P${index + 1}`}</h2>
+                : <h2>{`P${index + 1}`}</h2>
+              }
+            </NavLink>
+          )}
+        </div>
+        <Switch>
+          <Route path="/performances/:id" component={PerformanceView}/>
+          <Redirect exact={true} from="/" to="/performances/1"/>
+          <Redirect exact={true} from="/performances" to="/performances/1"/>
+        </Switch>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = state => {
-    const {
-        wsConnected,
-        sequencerDefinition
-    } = state;
-    return {
-        wsConnected,
-        sequencerDefinition
-    }
+  const {
+    wsConnected,
+    sequencerDefinition
+  } = state;
+  return {
+    wsConnected,
+    sequencerDefinition
+  };
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-        setSequencerDefinition: bindActionCreators(ActionCreators.setSequencerDefinition, dispatch),
-        setConnectionStatus: bindActionCreators(ActionCreators.setConnectionStatus, dispatch)
-    }
+  return {
+    setSequencerDefinition: bindActionCreators(ActionCreators.setSequencerDefinition, dispatch),
+    setConnectionStatus: bindActionCreators(ActionCreators.setConnectionStatus, dispatch)
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SequencerView);
