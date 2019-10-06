@@ -5,7 +5,7 @@
  "performances": [
   {
    "name": "Performance 1",
-   "selectedTrack": 3,
+   "selectedTrack": 1,
    "selectedScene": 0,
    "scenes": [
     {
@@ -58,7 +58,7 @@
        "velocity": null,
        "constants": [],
        "arp": "none",
-       "arpRate": 2,
+       "arpRate": 4,
        "arpLoop": false,
        "arpProb": 1,
        "sequenceData": [
@@ -591,7 +591,7 @@
        "enabled": true,
        "partsPerQuant": 24,
        "rate": 4,
-       "octave": 0,
+       "octave": -1,
        "length": 16,
        "end": 16,
        "steps": 4,
@@ -749,12 +749,12 @@
          null,
          null,
          {
-          "pitch": 63,
-          "velocity": 78,
+          "pitch": 61,
+          "velocity": 64,
           "duration": "8n",
-          "controlVoltage1": 0.7274043874933875,
-          "controlChange1": 94,
-          "controlChange2": 31
+          "controlVoltage1": 0.4054433459522959,
+          "controlChange1": 21,
+          "controlChange2": 93
          },
          null,
          null,
@@ -769,25 +769,32 @@
          },
          null,
          {
-          "pitch": 53,
-          "velocity": 101,
+          "pitch": 57,
+          "velocity": 25,
           "duration": "8n",
-          "controlVoltage1": 0.41064996733304415,
-          "controlChange1": 42,
-          "controlChange2": 85
+          "controlVoltage1": 0.5706854239535559,
+          "controlChange1": 16,
+          "controlChange2": 93
          },
          null,
          null,
          null,
-         null,
+         {
+          "pitch": 53,
+          "velocity": 99,
+          "duration": "8n",
+          "controlVoltage1": 0.9928911479849656,
+          "controlChange1": 15,
+          "controlChange2": 29
+         },
          null,
          {
           "pitch": 48,
-          "velocity": 122,
+          "velocity": 91,
           "duration": "8n",
-          "controlVoltage1": 0.2527875062834788,
-          "controlChange1": 26,
-          "controlChange2": 69
+          "controlVoltage1": 0.2615797135011806,
+          "controlChange1": 67,
+          "controlChange2": 44
          },
          null
         ],
@@ -2158,22 +2165,22 @@
          null,
          {
           "pitch": 36,
-          "velocity": 84,
+          "velocity": 75,
           "duration": "8n",
-          "controlVoltage1": 0.5287578913952717,
-          "controlChange1": 55,
-          "controlChange2": 96
+          "controlVoltage1": 0.49866846439573664,
+          "controlChange1": 63,
+          "controlChange2": 99
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 109,
+          "velocity": 53,
           "duration": "8n",
-          "controlVoltage1": 0.6133574716911812,
-          "controlChange1": 73,
-          "controlChange2": 27
+          "controlVoltage1": 0.05365946654835607,
+          "controlChange1": 112,
+          "controlChange2": 46
          },
          null,
          null,
@@ -2342,11 +2349,11 @@
          null,
          {
           "pitch": 36,
-          "velocity": 49,
+          "velocity": 94,
           "duration": "8n",
-          "controlVoltage1": 0.04348209074086662,
-          "controlChange1": 112,
-          "controlChange2": 62
+          "controlVoltage1": 0.11494526113542292,
+          "controlChange1": 90,
+          "controlChange2": 111
          },
          null,
          null,
@@ -2430,41 +2437,48 @@
           "controlChange2": 106
          },
          null,
-         null,
-         null,
          {
           "pitch": 36,
-          "velocity": 63,
+          "velocity": 127,
           "duration": "8n",
-          "controlVoltage1": 0.2484282508442952,
-          "controlChange1": 102,
-          "controlChange2": 21
+          "controlVoltage1": 0.09910924784848274,
+          "controlChange1": 73,
+          "controlChange2": 52
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 96,
+          "velocity": 82,
           "duration": "8n",
-          "controlVoltage1": 0.7341271492605057,
-          "controlChange1": 98,
-          "controlChange2": 66
+          "controlVoltage1": 0.7199063686129292,
+          "controlChange1": 42,
+          "controlChange2": 90
          },
+         null,
+         null,
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 90,
+          "velocity": 119,
           "duration": "8n",
-          "controlVoltage1": 0.6174425456719634,
-          "controlChange1": 44,
-          "controlChange2": 60
+          "controlVoltage1": 0.15779634111717167,
+          "controlChange1": 49,
+          "controlChange2": 50
          },
          null,
          null,
-         null
+         {
+          "pitch": 36,
+          "velocity": 78,
+          "duration": "8n",
+          "controlVoltage1": 0.46790680120473227,
+          "controlChange1": 59,
+          "controlChange2": 13
+         }
         ],
         [
          {
@@ -2476,14 +2490,12 @@
           "controlChange2": 60
          },
          null,
-         null,
-         null,
          {
           "pitch": 36,
-          "velocity": 107,
+          "velocity": 82,
           "duration": "8n",
-          "controlVoltage1": 0.5852912944764963,
-          "controlChange1": 89,
+          "controlVoltage1": 0.11386985305798314,
+          "controlChange1": 38,
           "controlChange2": 40
          },
          null,
@@ -2491,12 +2503,14 @@
          null,
          {
           "pitch": 36,
-          "velocity": 78,
+          "velocity": 108,
           "duration": "8n",
-          "controlVoltage1": 0.9341781448716144,
-          "controlChange1": 27,
-          "controlChange2": 69
+          "controlVoltage1": 0.4200066896632917,
+          "controlChange1": 19,
+          "controlChange2": 73
          },
+         null,
+         null,
          null,
          null,
          null,
@@ -2514,11 +2528,12 @@
         ]
        ],
        "graphData": {
+        "0": 6,
+        "1": 7,
         "probability": 0.5,
         "linear": [
-         [
-          6
-         ]
+         6,
+         7
         ],
         "markov": [
          [

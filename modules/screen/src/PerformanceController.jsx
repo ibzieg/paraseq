@@ -213,7 +213,7 @@ export default class PerformanceController extends React.Component {
         <CommandBox
           top={11}
           left={1}
-          height={19}
+          height={26}
           width={49}
           log={this.props.log}
           emitter={this.props.emitter}
@@ -223,7 +223,7 @@ export default class PerformanceController extends React.Component {
         <box
           top={11}
           left={49}
-          height={18}
+          height={25}
           width={25}
           border={{ type: "line" }}
           style={{ border: { fg: "white" } }}>
@@ -232,7 +232,7 @@ export default class PerformanceController extends React.Component {
         <box
           top={11}
           left={73}
-          height={18}
+          height={25}
           width={25}
           border={{ type: "line" }}
           style={{ border: { fg: "white" } }}>
