@@ -13,26 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-import React, { Component } from "react";
+import React from "react";
 import { Switch, Route, Redirect } from "react-router";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import ActionCreators from "../store/action-creators";
-import "../styles/sequencer.css";
 
+import "../styles/sequencer.css";
 import PerformanceView from "./PerformanceView";
 
-class SequencerView extends Component {
+export default function SequencerView () {
 
-  render() {
-    const { sequencerDefinition } = this.props;
-    return (
-      <div>
-        <div className="sequencer-tabs-container">
-          { sequencerDefinition.performances.map((value, index) =>
+  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
+
+  return (
+    <div>
+      <div className="sequencer-tabs-container">
+        { sequencerDefinition.performances.map((value, index) =>
             <NavLink
               key={index}
               className="sequencer-tab color-tone1"
@@ -44,34 +41,13 @@ class SequencerView extends Component {
                 : <h2>{`P${index + 1}`}</h2>
               }
             </NavLink>
-          )}
-        </div>
-        <Switch>
-          <Route path="/performances/:id" component={PerformanceView}/>
-          <Redirect exact={true} from="/" to="/performances/1"/>
-          <Redirect exact={true} from="/performances" to="/performances/1"/>
-        </Switch>
+        )}
       </div>
-    );
-  }
+      <Switch>
+        <Route path="/performances/:id" component={PerformanceView}/>
+        <Redirect exact={true} from="/" to="/performances/1"/>
+        <Redirect exact={true} from="/performances" to="/performances/1"/>
+      </Switch>
+    </div>
+  );
 }
-
-const mapStateToProps = state => {
-  const {
-    wsConnected,
-    sequencerDefinition
-  } = state;
-  return {
-    wsConnected,
-    sequencerDefinition
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setSequencerDefinition: bindActionCreators(ActionCreators.setSequencerDefinition, dispatch),
-    setConnectionStatus: bindActionCreators(ActionCreators.setConnectionStatus, dispatch)
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SequencerView);

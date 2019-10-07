@@ -1,64 +1,26 @@
-import React, { Component } from 'react';
-
-
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import ActionCreators from '../store/action-creators';
-import { Switch, Route, Redirect } from 'react-router';
-
+import React from 'react';
 import ReactJson from 'react-json-view';
+import { useSelector } from "react-redux";
 
 import '../styles/scene-options.css';
 
-class TrackOptions extends Component {
 
-    get trackId() {
-        return parseInt(this.props.match.params.trackId)-1;
-    }
+export default function TrackOptions ({ match }) {
+  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
 
-    get performance() {
-        return this.props.sequencerDefinition.performances[parseInt(this.props.match.params.perfId) - 1];
-    }
+  const trackId = parseInt(match.params.trackId)-1;
 
-    get scene() {
-        if (this.performance) {
-            return this.performance.scenes[parseInt(this.props.match.params.sceneId) - 1]
-        } else {
-            return {};
-        }
-    }
+  const performance = sequencerDefinition.performances[parseInt(match.params.perfId) - 1];
+  const scene = performance
+    ? performance.scenes[parseInt(match.params.sceneId) - 1]
+    : {};
+  const track = scene && scene.tracks
+    ? scene.tracks[trackId]
+    : {};
 
-    get track() {
-        if (this.scene && this.scene.tracks) {
-            return this.scene.tracks[this.trackId];
-        } else {
-            return {};
-        }
-    }
-
-    render() {
-        return (
-            <div className="track-options">
-                <ReactJson src={this.track}/>
-            </div>
-        );
-    }
+  return (
+    <div className="track-options">
+      <ReactJson src={track}/>
+    </div>
+  );
 }
-
-const mapStateToProps = state => {
-    const {
-        sequencerDefinition
-    } = state;
-    return {
-        sequencerDefinition
-    }
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        setSequencerDefinition: bindActionCreators(ActionCreators.setSequencerDefinition, dispatch),
-        setConnectionStatus: bindActionCreators(ActionCreators.setConnectionStatus, dispatch)
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TrackOptions);

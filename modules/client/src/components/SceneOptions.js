@@ -1,61 +1,28 @@
 import React, { Component } from 'react';
-
-
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import ActionCreators from '../store/action-creators';
-import { Switch, Route, Redirect } from 'react-router';
-
+import { useSelector } from 'react-redux';
 import ReactJson from 'react-json-view';
 
 import '../styles/scene-options.css';
 
-class SceneOptions extends Component {
 
-    get performance() {
-        return this.props.sequencerDefinition.performances[parseInt(this.props.match.params.perfId) - 1];
-    }
+export default function SceneOptions ({ match }) {
 
-    get scene() {
-        if (this.performance) {
-            return this.performance.scenes[parseInt(this.props.match.params.sceneId) - 1]
-        } else {
-            return {};
-        }
-    }
+  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
 
-    get options() {
-        if (this.scene) {
-            return this.scene.options;
-        } else {
-            return {};
-        }
-    }
+  const performance = sequencerDefinition.performances[parseInt(match.params.perfId) - 1];
 
-    render() {
-        return (
-            <div className="scene-options">
-                <h2>{`Scene ${this.props.match.params.sceneId} options`}</h2>
-                <ReactJson src={this.options}/>
-            </div>
-        );
-    }
+  const scene = performance
+    ? performance.scenes[parseInt(match.params.sceneId) - 1]
+    : {};
+
+  const options = scene
+    ? scene.options
+    : {};
+
+  return (
+    <div className="scene-options">
+      <h2>{`Scene ${match.params.sceneId} options`}</h2>
+      <ReactJson src={options}/>
+    </div>
+  );
 }
-
-const mapStateToProps = state => {
-    const {
-        sequencerDefinition
-    } = state;
-    return {
-        sequencerDefinition
-    }
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        setSequencerDefinition: bindActionCreators(ActionCreators.setSequencerDefinition, dispatch),
-        setConnectionStatus: bindActionCreators(ActionCreators.setConnectionStatus, dispatch)
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SceneOptions);

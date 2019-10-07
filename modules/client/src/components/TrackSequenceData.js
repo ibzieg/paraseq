@@ -1,100 +1,61 @@
-import React, { Component } from 'react';
-
-
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import ActionCreators from '../store/action-creators';
-import { Switch, Route, Redirect } from 'react-router';
-
-import ReactJson from 'react-json-view';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 import '../styles/scene-options.css';
 import PianoRoll from "./PianoRoll";
 import { createNoteEvent, deleteNoteEvent } from "../support/sequence-data";
 
-class TrackSequenceData extends Component {
 
-    get trackId() {
-        return parseInt(this.props.match.params.trackId)-1;
-    }
+export default function TrackSequenceData ({ match }) {
+  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
 
-    get performance() {
-        return this.props.sequencerDefinition.performances[parseInt(this.props.match.params.perfId) - 1];
-    }
+  const trackId = parseInt(match.params.trackId) - 1;
+  const perfId = parseInt(match.params.perfId) - 1;
+  const sceneId = parseInt(match.params.sceneId) - 1;
 
-    get scene() {
-        if (this.performance) {
-            return this.performance.scenes[parseInt(this.props.match.params.sceneId) - 1]
-        } else {
-            return {};
-        }
-    }
+  const performance = sequencerDefinition.performances[perfId];
+  const scene = performance
+    ? performance.scenes[sceneId]
+    : {};
+  const track = scene && scene.tracks
+    ?  scene.tracks[trackId] || {}
+    : {};
 
-    get track() {
-        if (this.scene && this.scene.tracks) {
-            return this.scene.tracks[this.trackId] || {};
-        } else {
-            return {};
-        }
-    }
+  // TODO should scene/track inherit from previous scenes?
+  const sequenceData = track.sequenceData || [];
 
-    render() {
-        // TODO should scene/track inherit from previous scenes?
-        const sequenceData = this.track.sequenceData || [];
-        return (
-            <div className="track-options">
-                {/*<ReactJson src={this.track.sequenceData}/>*/}
-
-                { sequenceData.map((v, i) =>
-                    (<div>
-                        <h3>{`Sequence ${i+1}`}</h3>
-                        <PianoRoll
-                          key={i}
-                          scene={this.scene.options}
-                          track={this.track}
-                          data={v}
-                          createNote={(noteId, pitch) => {
-                            createNoteEvent({
-                              perfId: this.props.match.params.perfId - 1,
-                              sceneId: this.props.match.params.sceneId - 1,
-                              trackId: this.props.match.params.trackId - 1,
-                              seqId: i,
-                              noteId,
-                              pitch
-                            })
-                          }}
-                          deleteNote={(noteId) => {
-                            deleteNoteEvent({
-                              perfId: this.props.match.params.perfId - 1,
-                              sceneId: this.props.match.params.sceneId - 1,
-                              trackId: this.props.match.params.trackId - 1,
-                              seqId: i,
-                              noteId
-                            });
-                          }}
-                        />
-                    </div>)
-                )}
-
-            </div>
-        );
-    }
+  return (
+    <div className="track-options">
+      { sequenceData.map((v, i) =>
+          (<div>
+            <h3>{`Sequence ${i+1}`}</h3>
+            <PianoRoll
+              key={i}
+              scene={scene.options}
+              track={track}
+              data={v}
+              createNote={(noteId, pitch) => {
+                createNoteEvent({
+                  perfId,
+                  sceneId,
+                  trackId,
+                  seqId: i,
+                  noteId,
+                  pitch
+                })
+              }}
+              deleteNote={(noteId) => {
+                deleteNoteEvent({
+                  perfId,
+                  sceneId,
+                  trackId,
+                  seqId: i,
+                  noteId
+                });
+              }}
+            />
+          </div>)
+      )}
+    </div>
+  );
 }
-
-const mapStateToProps = state => {
-    const {
-        sequencerDefinition
-    } = state;
-    return {
-        sequencerDefinition
-    }
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        setSequencerDefinition: bindActionCreators(ActionCreators.setSequencerDefinition, dispatch),
-        setConnectionStatus: bindActionCreators(ActionCreators.setConnectionStatus, dispatch)
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TrackSequenceData);

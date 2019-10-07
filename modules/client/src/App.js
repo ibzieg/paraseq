@@ -13,39 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-import React, { Component } from 'react';
-import './styles/app.css';
-import reducer from './store/reducer';
-
+import React from 'react';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-
-import { Switch, Route, Redirect } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { Route } from 'react-router';
 
+import './styles/app.css';
+import Runtime from './runtime';
 import SequencerView from './views/SequencerView';
 import Header from "./components/Header";
 
-const store = createStore(reducer);
 
-class App extends Component {
+Runtime.create();
 
-    constructor(props, context) {
-        super(props, context);
-    }
 
-    render() {
-        return (
-            <Provider store={store}>
-                <BrowserRouter>
-                    <div className="app">
-                        <Header/>
-                        <Route path="/" component={SequencerView}/>
-                    </div>
-                </BrowserRouter>
-            </Provider>
-        );
-    }
+export default function App () {
+
+  return (
+    <Provider store={Runtime.instance.store}>
+      <BrowserRouter>
+        <div className="app">
+          <Header/>
+          <Route path="/" component={SequencerView}/>
+        </div>
+      </BrowserRouter>
+    </Provider>
+  );
 }
-
-export default App;

@@ -761,7 +761,7 @@ class Store {
 
   setPropertyForTrack(perfId, sceneId, trackId, key, value) {
     const perf = this.state.performances[perfId];
-    const scene = perf.scenes[perf.selectedScene];
+    const scene = perf.scenes[sceneId];
     const track = scene.tracks[trackId];
     track[key] = value;
     this.stateChanged();
