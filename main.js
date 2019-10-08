@@ -89,7 +89,7 @@ if (WEB_SERVER_ENABLED) {
     performanceThread.send(message);
   });
 
-  webServerThread = fork("./node_modules/react-scripts/scripts/start", {
+  webServerThread = fork("./scripts/start", {
     env: {
       PORT: 3000
     },

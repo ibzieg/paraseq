@@ -13,40 +13,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
+import "../styles/sequencer.css";
+
 import React from "react";
-import { Switch, Route, Redirect } from "react-router";
 import { useSelector } from "react-redux";
+import { Redirect, Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
 
-
-import "../styles/sequencer.css";
 import PerformanceView from "./PerformanceView";
 
-export default function SequencerView () {
-
+export default function SequencerView() {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);
 
   return (
     <div>
       <div className="sequencer-tabs-container">
-        { sequencerDefinition.performances.map((value, index) =>
-            <NavLink
-              key={index}
-              className="sequencer-tab color-tone1"
-              to={`/performances/${index + 1}`}
-              activeClassName="sequencer-tab-route color-white"
-            >
-              { sequencerDefinition.selectedPerformance === index
-                ? <h2 className="color-highlight">{`P${index + 1}`}</h2>
-                : <h2>{`P${index + 1}`}</h2>
-              }
-            </NavLink>
-        )}
+        {sequencerDefinition.performances.map((value, index) => (
+          <NavLink
+            key={index}
+            className="sequencer-tab color-tone1"
+            to={`/performances/${index + 1}`}
+            activeClassName="sequencer-tab-route color-white"
+          >
+            {sequencerDefinition.selectedPerformance === index ? (
+              <h2 className="color-highlight">{`P${index + 1}`}</h2>
+            ) : (
+              <h2>{`P${index + 1}`}</h2>
+            )}
+          </NavLink>
+        ))}
       </div>
       <Switch>
-        <Route path="/performances/:id" component={PerformanceView}/>
-        <Redirect exact={true} from="/" to="/performances/1"/>
-        <Redirect exact={true} from="/performances" to="/performances/1"/>
+        <Route path="/performances/:id" component={PerformanceView} />
+        <Redirect exact={true} from="/" to="/performances/1" />
+        <Redirect exact={true} from="/performances" to="/performances/1" />
       </Switch>
     </div>
   );

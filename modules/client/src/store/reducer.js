@@ -1,4 +1,4 @@
-import ActionTypes from './action-types';
+import ActionTypes from "./action-types";
 
 const initialState = {
   wsConnected: false,
@@ -7,21 +7,21 @@ const initialState = {
   }
 };
 
-function applySetSequencerDefinition (state, action) {
+function applySetSequencerDefinition(state, action) {
   return {
     ...state,
     sequencerDefinition: action.payload
-  }
+  };
 }
 
-function applySetConnectionStatus (state, action) {
+function applySetConnectionStatus(state, action) {
   return {
     ...state,
     wsConnected: action.payload
-  }
+  };
 }
 
-function reducer (state = initialState, action) {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.SET_SEQUENCER_DEFINITION:
       return applySetSequencerDefinition(state, action);

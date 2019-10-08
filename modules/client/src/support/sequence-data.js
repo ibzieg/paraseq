@@ -1,7 +1,11 @@
-
-
-
-export function createNoteEvent({ perfId, sceneId, trackId, seqId, noteId, pitch }) {
+export function createNoteEvent({
+  perfId,
+  sceneId,
+  trackId,
+  seqId,
+  noteId,
+  pitch
+}) {
   fetch(
     `/performance/${perfId}/scene/${sceneId}/track/${trackId}/sequence/${seqId}/note/${noteId}`,
     {

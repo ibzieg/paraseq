@@ -5,17 +5,25 @@
     "es6": true
   },
   "extends": ["plugin:prettier/recommended"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "simple-import-sort"
   ],
   "rules": {
-    "sort-imports": ["error"],
+    "import/extensions": 0,
+    "import/orer": "off",
+    "import/prefer-default-export": 0,
+    "sort-imports": "off",
+    "simple-import-sort/sort": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js",".jsx"] }],
     "indent": [
       "error",
       2,

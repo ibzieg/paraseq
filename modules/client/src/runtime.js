@@ -13,37 +13,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-import reducer from './store/reducer';
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
-import { setSequencerDefinition, setConnectionStatus } from './store/action-creators';
+import {
+  setConnectionStatus,
+  setSequencerDefinition
+} from "./store/action-creators";
+import reducer from "./store/reducer";
 
 let _instance = null;
 
 export default class Runtime {
-
-  static create () {
+  static create() {
     if (_instance) {
-      throw new Error('Instance of Runtime already exists');
+      throw new Error("Instance of Runtime already exists");
     }
     _instance = new Runtime();
   }
 
-  static get instance () {
+  static get instance() {
     return _instance;
   }
 
-  constructor () {
+  constructor() {
     this.store = createStore(reducer);
     this.connection = Runtime.createWebSocket(this.store.dispatch);
   }
 
-  static createWebSocket (dispatch) {
-    const connection = new WebSocket(`ws://${window.location.hostname}:3001/sequencer/state`);
+  static createWebSocket(dispatch) {
+    const connection = new WebSocket(
+      `ws://${window.location.hostname}:3001/sequencer/state`
+    );
     connection.onopen = () => {
       dispatch(setConnectionStatus(true));
     };
-    connection.onmessage = (message) => {
+    connection.onmessage = message => {
       dispatch(setSequencerDefinition(JSON.parse(message.data)));
     };
     connection.onclose = () => {

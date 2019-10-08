@@ -14,16 +14,16 @@
  * limitations under the License.
  ******************************************************************************/
 
-import React, { Component } from 'react';
-import ConnectionManager from './ConnectionManager';
-export default class Header extends Component {
-    render() {
-        return (
-            <header className="app-header">
-                <h1 className="app-title">paraseq</h1>
-                <ConnectionManager/>
-            </header>
-        );
-    }
-}
+import React, { Component } from "react";
 
+import ConnectionManager from "./ConnectionManager";
+export default class Header extends Component {
+  render() {
+    return (
+      <header className="app-header">
+        <h1 className="app-title">paraseq</h1>
+        <ConnectionManager />
+      </header>
+    );
+  }
+}

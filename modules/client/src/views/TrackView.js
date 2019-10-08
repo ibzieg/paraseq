@@ -1,30 +1,26 @@
-import React from "react";
-import { useSelector } from 'react-redux';
+import "../styles/scene-options.css";
 
-import { Switch, Route } from "react-router";
+import React from "react";
+import { useSelector } from "react-redux";
+import { Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
 
-import "../styles/scene-options.css";
 import TrackOptions from "../components/TrackOptions";
 import TrackSequenceData from "../components/TrackSequenceData";
 
-
-export default function TrackView ({ match }) {
-
+export default function TrackView({ match }) {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);
   const trackId = parseInt(match.params.trackId) - 1;
 
-  const performance = sequencerDefinition.performances[parseInt(match.params.perfId) - 1];
-
+  const performance =
+    sequencerDefinition.performances[parseInt(match.params.perfId) - 1];
 
   const scene = performance
-      ? performance.scenes[parseInt(match.params.sceneId) - 1]
+    ? performance.scenes[parseInt(match.params.sceneId) - 1]
     : {};
-  const track = scene && scene.tracks
-    ? scene.tracks[trackId]
-    : {};
+  const track = scene && scene.tracks ? scene.tracks[trackId] : {};
 
-  const { params  } = match;
+  const { params } = match;
 
   return (
     <div>
@@ -34,14 +30,20 @@ export default function TrackView ({ match }) {
       <div className="track-tab-container">
         <NavLink
           className="track-tab color-tone1"
-          to={`/performances/${params.perfId}/scene/${params.sceneId}/track/${params.trackId}/options`}
-          activeClassName="track-tab-route color-white">
+          to={`/performances/${params.perfId}/scene/${params.sceneId}/track/${
+            params.trackId
+          }/options`}
+          activeClassName="track-tab-route color-white"
+        >
           <h3>OPTIONS</h3>
         </NavLink>
         <NavLink
           className="track-tab color-tone1"
-          to={`/performances/${params.perfId}/scene/${params.sceneId}/track/${params.trackId}/`}
-          activeClassName="track-tab-route color-white">
+          to={`/performances/${params.perfId}/scene/${params.sceneId}/track/${
+            params.trackId
+          }/`}
+          activeClassName="track-tab-route color-white"
+        >
           <h3>SEQUENCE DATA</h3>
         </NavLink>
       </div>
@@ -50,10 +52,12 @@ export default function TrackView ({ match }) {
           <Switch>
             <Route
               path="/performances/:perfId/scene/:sceneId/track/:trackId/options"
-              component={TrackOptions}/>
+              component={TrackOptions}
+            />
             <Route
               path="/performances/:perfId/scene/:sceneId/track/:trackId"
-              component={TrackSequenceData}/>
+              component={TrackSequenceData}
+            />
           </Switch>
         </Switch>
       </div>
