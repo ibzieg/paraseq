@@ -20,22 +20,24 @@ import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
 
+import { sequencerDefinitionSelector } from "../store/selectors";
 import Performance from "./performance";
 
-export default function SequencerView() {
-  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
+export default function Sequencer() {
+  const sequencerDefinition = useSelector(sequencerDefinitionSelector);
+  const { performances, selectedPerformance } = sequencerDefinition;
 
   return (
     <div>
       <div className="sequencer-tabs-container">
-        {sequencerDefinition.performances.map((value, index) => (
+        {performances.map((value, index) => (
           <NavLink
             key={index}
             className="sequencer-tab color-tone1"
             to={`/performances/${index + 1}`}
             activeClassName="sequencer-tab-route color-white"
           >
-            {sequencerDefinition.selectedPerformance === index ? (
+            {selectedPerformance === index ? (
               <h2 className="color-highlight">{`P${index + 1}`}</h2>
             ) : (
               <h2>{`P${index + 1}`}</h2>
@@ -44,7 +46,7 @@ export default function SequencerView() {
         ))}
       </div>
       <Switch>
-        <Route path="/performances/:id" component={Performance} />
+        <Route path="/performances/:perfId" component={Performance} />
         <Redirect exact={true} from="/" to="/performances/1" />
         <Redirect exact={true} from="/performances" to="/performances/1" />
       </Switch>

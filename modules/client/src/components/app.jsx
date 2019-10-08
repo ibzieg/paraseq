@@ -22,7 +22,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import Runtime from "../runtime";
 import Header from "./header";
-import SequencerView from "./sequencer";
+import Sequencer from "./sequencer";
 
 Runtime.create();
 
@@ -32,7 +32,7 @@ export default function App() {
       <BrowserRouter>
         <div className="app">
           <Header />
-          <Route path="/" component={SequencerView} />
+          <Route path="/" component={Sequencer} />
         </div>
       </BrowserRouter>
     </Provider>

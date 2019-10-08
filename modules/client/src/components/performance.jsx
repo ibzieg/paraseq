@@ -1,20 +1,18 @@
 import "./performance.scss";
 
+import { get } from "lodash";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
-import { NavLink } from "react-router-dom";
 
-import Scene from "./scene";
+import { makePerformanceSelector } from "../store/selectors";
+import SceneList from "./scene-list";
 import SceneOptions from "./scene-options";
 import Track from "./track";
 
-export default function Performance({ match, location }) {
-  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
-  const performance =
-    match.params.id >= 1
-      ? sequencerDefinition.performances[parseInt(match.params.id) - 1]
-      : {};
+export default function Performance({ location, match: { params } }) {
+  const { perfId } = params;
+  const { performance } = useSelector(makePerformanceSelector(params));
 
   return (
     <div>
@@ -22,38 +20,7 @@ export default function Performance({ match, location }) {
         <div>
           <div className="performance-header">{performance["name"]}</div>
           <div className="performance-content">
-            <div className="performance-tabs-container">
-              {performance.scenes.map((value, index) => (
-                <div className="performance-tab-wrapper">
-                  <NavLink
-                    key={index}
-                    className="performance-tab color-tone1"
-                    to={`/performances/${match.params.id}/scene/${index + 1}`}
-                    activeClassName="performance-tab-route color-white"
-                  >
-                    <h3
-                      style={{
-                        color:
-                          performance.selectedScene === index
-                            ? "magenta"
-                            : undefined
-                      }}
-                    >
-                      {`SCENE ${index + 1}`}
-                    </h3>
-                  </NavLink>
-                  <Route
-                    path="/"
-                    location={{
-                      ...location,
-                      performanceId: match.params.id,
-                      sceneId: index
-                    }}
-                    component={Scene}
-                  />
-                </div>
-              ))}
-            </div>
+            <SceneList perfId={perfId} />
             <div className="performance-content-detail">
               <Switch>
                 <Route
