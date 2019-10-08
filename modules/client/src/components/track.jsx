@@ -1,14 +1,14 @@
-import "../styles/scene-options.css";
+import "./scene-options.scss";
 
 import React from "react";
 import { useSelector } from "react-redux";
 import { Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
 
-import TrackOptions from "../components/TrackOptions";
-import TrackSequenceData from "../components/TrackSequenceData";
+import TrackOptions from "./track-options";
+import TrackSequenceData from "./track-sequence-data";
 
-export default function TrackView({ match }) {
+export default function Track({ match }) {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);
   const trackId = parseInt(match.params.trackId) - 1;
 

@@ -13,17 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
+import "./app.scss";
 
-import React, { Component } from "react";
+import React from "react";
+import { Provider } from "react-redux";
+import { Route } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 
-import ConnectionManager from "./ConnectionManager";
-export default class Header extends Component {
-  render() {
-    return (
-      <header className="app-header">
-        <h1 className="app-title">paraseq</h1>
-        <ConnectionManager />
-      </header>
-    );
-  }
+import Runtime from "../runtime";
+import Header from "./header";
+import SequencerView from "./sequencer";
+
+Runtime.create();
+
+export default function App() {
+  return (
+    <Provider store={Runtime.instance.store}>
+      <BrowserRouter>
+        <div className="app">
+          <Header />
+          <Route path="/" component={SequencerView} />
+        </div>
+      </BrowserRouter>
+    </Provider>
+  );
 }

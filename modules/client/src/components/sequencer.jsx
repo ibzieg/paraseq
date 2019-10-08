@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-import "../styles/sequencer.css";
+import "./sequencer.scss";
 
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
 
-import PerformanceView from "./PerformanceView";
+import Performance from "./performance";
 
 export default function SequencerView() {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);
@@ -44,7 +44,7 @@ export default function SequencerView() {
         ))}
       </div>
       <Switch>
-        <Route path="/performances/:id" component={PerformanceView} />
+        <Route path="/performances/:id" component={Performance} />
         <Redirect exact={true} from="/" to="/performances/1" />
         <Redirect exact={true} from="/performances" to="/performances/1" />
       </Switch>

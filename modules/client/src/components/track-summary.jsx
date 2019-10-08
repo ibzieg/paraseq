@@ -1,4 +1,4 @@
-import "../styles/track.css";
+import "./track.scss";
 
 import React, { Component } from "react";
 import ReactJson from "react-json-view";

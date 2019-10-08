@@ -1,11 +1,11 @@
-import "../styles/scene.css";
+import "./scene.scss";
 
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import SceneSummary from "../components/SceneSummary";
-import TrackSummary from "../components/TrackSummary";
+import SceneSummary from "./scene-summary";
+import TrackSummary from "./track-summary";
 
 export default function SceneView({ location }) {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);
@@ -24,7 +24,7 @@ export default function SceneView({ location }) {
 
   return (
     <div className="scene-container">
-      <SceneSummary style={{ width: w }} options={options} />
+      {/*<SceneSummary style={{ width: w }} options={options} />*/}
       {tracks.map((track, i) => {
         return (
           <NavLink

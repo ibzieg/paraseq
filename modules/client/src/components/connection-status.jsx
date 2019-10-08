@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-export default function ConnectionManager({ connect }) {
+export default function ConnectionStatus({ connect }) {
   const isConnected = useSelector(state => state.wsConnected);
 
   const indicator = isConnected ? (

@@ -1,15 +1,15 @@
-import "../styles/performance.css";
+import "./performance.scss";
 
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
 import { NavLink } from "react-router-dom";
 
-import SceneOptions from "../components/SceneOptions";
-import SceneView from "./SceneView";
-import TrackView from "./TrackView";
+import Scene from "./scene";
+import SceneOptions from "./scene-options";
+import Track from "./track";
 
-export default function PerformanceView({ match, location }) {
+export default function Performance({ match, location }) {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);
   const performance =
     match.params.id >= 1
@@ -49,7 +49,7 @@ export default function PerformanceView({ match, location }) {
                       performanceId: match.params.id,
                       sceneId: index
                     }}
-                    component={SceneView}
+                    component={Scene}
                   />
                 </div>
               ))}
@@ -58,7 +58,7 @@ export default function PerformanceView({ match, location }) {
               <Switch>
                 <Route
                   path="/performances/:perfId/scene/:sceneId/track/:trackId"
-                  component={TrackView}
+                  component={Track}
                 />
                 <Route
                   path="/performances/:perfId/scene/:sceneId"

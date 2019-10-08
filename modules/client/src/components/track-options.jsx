@@ -1,4 +1,4 @@
-import "../styles/scene-options.css";
+import "./scene-options.scss";
 
 import React from "react";
 import ReactJson from "react-json-view";

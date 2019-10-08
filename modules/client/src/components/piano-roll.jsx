@@ -1,4 +1,4 @@
-import "../styles/track.css";
+import "./track.scss";
 
 import { first } from "lodash";
 import React, { useState } from "react";

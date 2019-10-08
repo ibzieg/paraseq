@@ -1,10 +1,10 @@
-import "../styles/scene-options.css";
+import "./scene-options.scss";
 
 import React from "react";
 import { useSelector } from "react-redux";
 
 import { createNoteEvent, deleteNoteEvent } from "../support/sequence-data";
-import PianoRoll from "./PianoRoll";
+import PianoRoll from "./piano-roll";
 
 export default function TrackSequenceData({ match }) {
   const sequencerDefinition = useSelector(state => state.sequencerDefinition);

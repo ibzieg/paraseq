@@ -1,6 +1,6 @@
-import "../styles/scene-options.css";
+import "./scene-options.scss";
 
-import React, { Component } from "react";
+import React from "react";
 import ReactJson from "react-json-view";
 import { useSelector } from "react-redux";
 
