@@ -18,31 +18,26 @@ import "./sequencer.scss";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
-import { NavLink } from "react-router-dom";
 
 import { sequencerDefinitionSelector } from "../store/selectors";
+import NavButton from "./nav-button";
 import Performance from "./performance";
 
 export default function Sequencer() {
-  const sequencerDefinition = useSelector(sequencerDefinitionSelector);
-  const { performances, selectedPerformance } = sequencerDefinition;
+  const { performances, selectedPerformance } = useSelector(
+    sequencerDefinitionSelector
+  );
 
   return (
     <div>
       <div className="sequencer-tabs-container">
         {performances.map((value, index) => (
-          <NavLink
+          <NavButton
             key={index}
-            className="sequencer-tab color-tone1"
-            to={`/performances/${index + 1}`}
-            activeClassName="sequencer-tab-route color-white"
-          >
-            {selectedPerformance === index ? (
-              <h2 className="color-highlight">{`P${index + 1}`}</h2>
-            ) : (
-              <h2>{`P${index + 1}`}</h2>
-            )}
-          </NavLink>
+            route={`/performances/${index + 1}`}
+            selected={selectedPerformance === index}
+            text={`P${index + 1}`}
+          />
         ))}
       </div>
       <Switch>

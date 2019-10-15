@@ -1,52 +1,28 @@
 import "./track.scss";
 
-import React, { Component } from "react";
-import ReactJson from "react-json-view";
-import { connect } from "react-redux";
-import { Redirect, Route, Switch } from "react-router";
-import { bindActionCreators } from "redux";
+import React from "react";
 
-import ActionCreators from "../store/action-creators";
+export default function TrackSummary({ index, first, track }) {
+  const changedProps = Object.keys(track);
+  const changedPropsCount = changedProps.length;
+  const { name } = track;
 
-const TrackSummary = ({ style, index, first, selected, track }) => (
-  <div style={{ ...style }} className="track-summary">
-    {first ? (
-      <h4
-        style={{
-          flex: 1,
-          color: selected && first ? "magenta" : "inherit"
-        }}
-      >
-        {`Track ${index + 1}`}
-      </h4>
-    ) : (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          fontSize: 10
-        }}
-      >
-        <ReactJson
-          style={{}}
-          src={track}
-          name={null}
-          indentWidth={2}
-          shouldCollapse={f => {
-            switch (f.name) {
-              case "graphData":
-              case "sequenceData":
-                return true;
-              default:
-                return false;
-            }
-          }}
-          displayDataTypes={false}
-          displayObjectSize={false}
-        />
-      </div>
-    )}
-  </div>
-);
-
-export default TrackSummary;
+  return first ? (
+    <h4>{name}</h4>
+  ) : (
+    <span
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        alignChildren: "center",
+        fontSize: 10
+      }}
+    >
+      <h4>{changedPropsCount > 0 ? `Δ${changedPropsCount}` : "{}"}</h4>
+      <h4>{changedProps.toString()}</h4>
+    </span>
+  );
+}

@@ -1,10 +1,15 @@
+@import "../theme";
+
+body {
+  background-color: $color-light-background;
+}
 
 .app {
   text-align: center;
 }
 
 .app-header {
-  background-color: #86867A;
+  background-color: $color-dark-background;
   border-bottom: 1px solid #807974;
   padding: 20px;
   display: flex;
@@ -15,7 +20,7 @@
 }
 
 .app-title {
-  color: white;
+  color: $color-foreground;
 }
 
 h1 {

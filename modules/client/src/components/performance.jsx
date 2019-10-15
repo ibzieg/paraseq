@@ -1,6 +1,5 @@
 import "./performance.scss";
 
-import { get } from "lodash";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
@@ -10,15 +9,18 @@ import SceneList from "./scene-list";
 import SceneOptions from "./scene-options";
 import Track from "./track";
 
-export default function Performance({ location, match: { params } }) {
+export default function Performance({ match: { params } }) {
   const { perfId } = params;
   const { performance } = useSelector(makePerformanceSelector(params));
+  const { name } = performance;
 
   return (
     <div>
       {performance ? (
         <div>
-          <div className="performance-header">{performance["name"]}</div>
+          <div className="performance-header">
+            <h3>{name}</h3>
+          </div>
           <div className="performance-content">
             <SceneList perfId={perfId} />
             <div className="performance-content-detail">

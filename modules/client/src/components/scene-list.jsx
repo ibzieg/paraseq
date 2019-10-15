@@ -1,12 +1,13 @@
 import "./performance.scss";
+import "./scene-list.scss";
 
 import { get } from "lodash";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Route } from "react-router";
-import { NavLink } from "react-router-dom";
 
 import { makePerformanceSelector } from "../store/selectors";
+import NavButton from "./nav-button";
 import Scene from "./scene";
 
 export default function SceneList({ perfId }) {
@@ -14,23 +15,46 @@ export default function SceneList({ perfId }) {
   const scenes = get(performance, "scenes", []);
 
   return (
-    <div className="performance-tabs-container">
+    <div className="scene-list-container">
+      {scenes.map((value, index) => (
+        <div className="performance-tab-wrapper">
+          <NavButton
+            key={index}
+            selected={performance.selectedScene === index}
+            route={`/performances/${perfId}/scene/${index + 1}`}
+            text={`SCENE ${index + 1}`}
+          />
+          <Route
+            path="/"
+            location={{
+              ...location,
+              perfId: perfId,
+              sceneId: index + 1
+            }}
+            component={Scene}
+          />
+        </div>
+      ))}
+    </div>
+  );
+  /*
+  return (
+    <div className="scene-list-container">
       {scenes.map((value, index) => (
         <div className="performance-tab-wrapper">
           <NavLink
             key={index}
-            className="performance-tab color-tone1"
+            className={`scene-tab ${
+              performance.selectedScene === index
+                ? "scene-tab-selected"
+                : "scene-tab-unselected"
+            }`}
             to={`/performances/${perfId}/scene/${index + 1}`}
-            activeClassName="performance-tab-route color-white"
+            activeClassName="scene-tab-active"
           >
-            <h3
-              style={{
-                color:
-                  performance.selectedScene === index ? "magenta" : undefined
-              }}
-            >
-              {`SCENE ${index + 1}`}
-            </h3>
+            <div>
+              <h3>{`SCENE ${index + 1}`}</h3>
+            </div>
           </NavLink>
           <Route
             path="/"
@@ -45,4 +69,5 @@ export default function SceneList({ perfId }) {
       ))}
     </div>
   );
+  */
 }

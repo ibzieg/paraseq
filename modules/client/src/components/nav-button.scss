@@ -1,0 +1,45 @@
+@import '../theme';
+
+
+.nav-button {
+  display: inline-block;
+  flex: 1;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  text-decoration: none;
+  div {
+    border: (1/2)*$layout-unit solid transparent;
+    border-radius: $layout-unit * 2;
+    margin: $layout-unit * 2;
+    padding: $layout-unit * 2;
+    h3 {
+      color: $color-foreground;
+      border-radius: $layout-unit * 2;
+      padding: $layout-unit * $phi;
+    }
+  }
+}
+
+.nav-button-active {
+  div {
+    h3 {
+      background-color: $color-dark-background;
+      box-shadow: #807974 2px 2px 8px;
+    }
+  }
+}
+
+.nav-button-unselected {
+  div {
+    h3 {
+    }
+  }
+}
+
+.nav-button-selected {
+  div {
+    border: (1/2)*$layout-unit solid $color-highlight;
+    h3 {
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../theme';
+
+.scene-list-container {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.scene-tab {
+  display: inline-block;
+  flex: 1;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  text-decoration: none;
+  div {
+    border: (1/2)*$layout-unit solid transparent;
+    border-radius: $layout-unit * 2;
+    margin: $layout-unit * 2;
+    padding: $layout-unit * 2;
+
+    h3 {
+      color: $color-foreground;
+      border-radius: $layout-unit * 2;
+      padding: $layout-unit * $phi;
+    }
+  }
+}
+
+.scene-tab-active {
+  div {
+    h3 {
+      background-color: $color-dark-background;
+      box-shadow: #807974 2px 2px 8px;
+    }
+  }
+}
+
+.scene-tab-unselected {
+  div {
+    h3 {
+    }
+  }
+}
+
+.scene-tab-selected {
+  div {
+    border: (1/2)*$layout-unit solid $color-highlight;
+
+    h3 {
+    }
+  }
+}
