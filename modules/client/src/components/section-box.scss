@@ -1,0 +1,24 @@
+@import "../theme";
+
+.section-box {
+  @extend %shadow;
+  border: 1px solid $color-medium-background;
+  border-radius: $layout-unit;
+  margin: $layout-unit * 4;
+  background-color: $color-medium-background;
+}
+
+.section-box-header {
+  padding: $layout-unit * 3;
+  color: $color-dark-background;
+  justify-content: space-around;
+  display: flex;
+}
+
+.section-box-content {
+  border: 1px solid $color-medium-background;
+  border-radius: $layout-unit;
+  background-color: $color-light-background;
+  display: flex;
+  flex-direction: column;
+}

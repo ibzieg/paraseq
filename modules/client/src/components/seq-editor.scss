@@ -1,0 +1,39 @@
+@import '../theme';
+
+.event-list {
+  display: inline-flex;
+  flex-direction: row;
+  border: 1px dotted $color-foreground;
+  border-top: none;
+  border-left: none;
+}
+
+.event {
+
+}
+
+.note {
+  user-select: none;
+  cursor: pointer;
+  border-left: 1px dotted $color-foreground;
+  border-top: 1px dotted $color-foreground;
+  color: $color-foreground;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $layout-unit * 12;
+  height: $layout-unit * 6;
+}
+
+.note-quarter {
+  border-left: 1px solid $color-highlight;
+}
+
+.note-selected {
+  background-color: $color-medium-background;
+}
+
+.note:hover {
+  background-color: $color-highlight;
+}
+

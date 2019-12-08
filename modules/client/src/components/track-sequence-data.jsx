@@ -1,56 +1,53 @@
 import "./scene-options.scss";
 
+import { get } from "lodash";
 import React from "react";
 import { useSelector } from "react-redux";
 
+import { makePerformanceSelector } from "../store/selectors";
 import { createNoteEvent, deleteNoteEvent } from "../support/sequence-data";
-import PianoRoll from "./piano-roll";
+import SectionBox from "./section-box";
+import SeqEditor from "./seq-editor";
 
-export default function TrackSequenceData({ match }) {
-  const sequencerDefinition = useSelector(state => state.sequencerDefinition);
-
-  const trackId = parseInt(match.params.trackId) - 1;
-  const perfId = parseInt(match.params.perfId) - 1;
-  const sceneId = parseInt(match.params.sceneId) - 1;
-
-  const performance = sequencerDefinition.performances[perfId];
-  const scene = performance ? performance.scenes[sceneId] : {};
-  const track = scene && scene.tracks ? scene.tracks[trackId] || {} : {};
-
-  // TODO should scene/track inherit from previous scenes?
-  const sequenceData = track.sequenceData || [];
+export default function TrackSequenceData({ match: { params } }) {
+  const { scene, mergedScene, track, mergedTrack } = useSelector(
+    makePerformanceSelector(params)
+  );
+  const { trackId, perfId, sceneId } = params;
+  const sequenceData = get(track, "sequenceData", []);
 
   return (
-    <div className="track-options">
-      {sequenceData.map((v, i) => (
-        <div>
-          <h3>{`Sequence ${i + 1}`}</h3>
-          <PianoRoll
-            key={i}
+    <div>
+      {sequenceData.map((v, seqId) => (
+        <SectionBox title={`Sequence ${seqId + 1}`}>
+          <SeqEditor
+            key={seqId}
             scene={scene.options}
+            mergedScene={mergedScene.options}
             track={track}
+            mergedTrack={mergedTrack}
             data={v}
             createNote={(noteId, pitch) => {
               createNoteEvent({
-                perfId,
-                sceneId,
-                trackId,
-                seqId: i,
+                perfId: perfId - 1,
+                sceneId: sceneId - 1,
+                trackId: trackId - 1,
+                seqId,
                 noteId,
                 pitch
               });
             }}
             deleteNote={noteId => {
               deleteNoteEvent({
-                perfId,
-                sceneId,
-                trackId,
-                seqId: i,
+                perfId: perfId - 1,
+                sceneId: sceneId - 1,
+                trackId: trackId - 1,
+                seqId,
                 noteId
               });
             }}
           />
-        </div>
+        </SectionBox>
       ))}
     </div>
   );

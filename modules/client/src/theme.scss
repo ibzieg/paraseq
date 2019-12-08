@@ -3,7 +3,7 @@ $layout-unit: 4px;
 $phi: 1.618033988749895;
 
 
-$hue: 179deg;
+$hue: 190deg;
 $saturation: 60%;
 $lightness: 42%;
 
@@ -13,3 +13,9 @@ $color-foreground: hsl($hue, $saturation, $lightness * 1.2);
 $color-middle: hsl($hue, $saturation, $lightness);
 $color-dark-background: hsl($hue, $saturation, $lightness * 0.6);
 $color-light-background: hsl($hue, $saturation, 95%);
+$color-medium-background: hsl($hue, $saturation * 0.7, 86%);
+
+
+%shadow {
+  box-shadow: 3px 3px 6px rgba(68, 68, 68, 0.4);
+}

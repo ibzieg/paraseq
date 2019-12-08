@@ -5,7 +5,7 @@
  "performances": [
   {
    "name": "Performance 1",
-   "selectedTrack": 4,
+   "selectedTrack": 1,
    "selectedScene": 0,
    "scenes": [
     {
@@ -17,13 +17,13 @@
       "resetEvent": 4,
       "noteSetSize": 7,
       "noteSet": [
-       60,
-       50,
-       62,
+       54,
+       63,
+       49,
        56,
-       64,
-       61,
-       48
+       51,
+       48,
+       53
       ],
       "repeat": 4,
       "modA": 0.2,
@@ -46,7 +46,7 @@
        "enabled": true,
        "partsPerQuant": 24,
        "rate": 4,
-       "octave": -3,
+       "octave": 0,
        "length": 16,
        "end": 16,
        "steps": 4,
@@ -57,470 +57,527 @@
        "note": null,
        "velocity": null,
        "constants": [],
-       "arp": "down1",
-       "arpRate": 2,
+       "arp": "none",
+       "arpRate": 4,
        "arpLoop": false,
        "arpProb": 1,
        "sequenceData": [
         [
          null,
+         {
+          "pitch": 55,
+          "velocity": 107,
+          "duration": "8n",
+          "controlVoltage1": 0.2468848603696996,
+          "controlChange1": 107,
+          "controlChange2": 67
+         },
+         {
+          "pitch": 56,
+          "velocity": 57,
+          "duration": "8n",
+          "controlVoltage1": 0.14339177191116104,
+          "controlChange1": 29,
+          "controlChange2": 88
+         },
+         null,
          null,
          {
-          "pitch": 64,
-          "velocity": 124,
+          "pitch": 60,
+          "velocity": 68,
           "duration": "8n",
-          "controlVoltage1": 0.9706574924096663,
-          "controlChange1": 46,
+          "controlVoltage1": 0.9608309401871111,
+          "controlChange1": 40,
+          "controlChange2": 25
+         },
+         null,
+         null,
+         {
+          "pitch": 58,
+          "velocity": 105,
+          "duration": "8n",
+          "controlVoltage1": 0.4592367581268961,
+          "controlChange1": 91,
+          "controlChange2": 88
+         },
+         null,
+         null,
+         {
+          "pitch": 57,
+          "velocity": 101,
+          "duration": "8n",
+          "controlVoltage1": 0.5996025465720842,
+          "controlChange1": 57,
+          "controlChange2": 72
+         },
+         null,
+         null,
+         {
+          "pitch": 59,
+          "velocity": 60,
+          "duration": "8n",
+          "controlVoltage1": 0.517539473720807,
+          "controlChange1": 95,
+          "controlChange2": 81
+         },
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 48,
+          "velocity": 57,
+          "duration": "8n",
+          "controlVoltage1": 0.42643038211150674,
+          "controlChange1": 51,
+          "controlChange2": 90
+         },
+         null,
+         {
+          "pitch": 52,
+          "velocity": 93,
+          "duration": "8n",
+          "controlVoltage1": 0.1686810044644964,
+          "controlChange1": 71,
+          "controlChange2": 91
+         },
+         {
+          "pitch": 57,
+          "velocity": 96,
+          "duration": "8n",
+          "controlVoltage1": 0.11906077105602053,
+          "controlChange1": 36,
+          "controlChange2": 80
+         },
+         null,
+         {
+          "pitch": 54,
+          "velocity": 110,
+          "duration": "8n",
+          "controlVoltage1": 0.7853309177964718,
+          "controlChange1": 31,
+          "controlChange2": 49
+         },
+         null,
+         null,
+         {
+          "pitch": 56,
+          "velocity": 36,
+          "duration": "8n",
+          "controlVoltage1": 0.8125775799483548,
+          "controlChange1": 91,
+          "controlChange2": 40
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 109,
+          "duration": "8n",
+          "controlVoltage1": 0.7099960342108895,
+          "controlChange1": 97,
+          "controlChange2": 89
+         },
+         null
+        ],
+        [
+         null,
+         {
+          "pitch": 53,
+          "velocity": 113,
+          "duration": "8n",
+          "controlVoltage1": 0.9643305806127811,
+          "controlChange1": 49,
+          "controlChange2": 95
+         },
+         null,
+         {
+          "pitch": 57,
+          "velocity": 72,
+          "duration": "8n",
+          "controlVoltage1": 0.6686964283803245,
+          "controlChange1": 74,
+          "controlChange2": 70
+         },
+         null,
+         {
+          "pitch": 54,
+          "velocity": 50,
+          "duration": "8n",
+          "controlVoltage1": 0.27526438371518314,
+          "controlChange1": 42,
+          "controlChange2": 58
+         },
+         null,
+         {
+          "pitch": 58,
+          "velocity": 48,
+          "duration": "8n",
+          "controlVoltage1": 0.8921588035303696,
+          "controlChange1": 38,
+          "controlChange2": 97
+         },
+         null,
+         {
+          "pitch": 60,
+          "velocity": 63,
+          "duration": "8n",
+          "controlVoltage1": 0.7812822444208931,
+          "controlChange1": 92,
           "controlChange2": 24
          },
          null,
          null,
-         null,
-         {
-          "pitch": 61,
-          "velocity": 86,
-          "duration": "8n",
-          "controlVoltage1": 0.13094983485139555,
-          "controlChange1": 60,
-          "controlChange2": 90
-         },
-         null,
-         null,
          {
           "pitch": 56,
-          "velocity": 85,
+          "velocity": 126,
           "duration": "8n",
-          "controlVoltage1": 0.32017899126848515,
-          "controlChange1": 47,
-          "controlChange2": 62
+          "controlVoltage1": 0.8462027193936081,
+          "controlChange1": 69,
+          "controlChange2": 41
          },
-         null,
-         null,
-         null,
          {
           "pitch": 61,
-          "velocity": 76,
-          "duration": "8n",
-          "controlVoltage1": 0.7656044264509192,
-          "controlChange1": 21,
-          "controlChange2": 100
-         },
-         null,
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 56,
-          "velocity": 29,
-          "duration": "8n",
-          "controlVoltage1": 0.18661133604808877,
-          "controlChange1": 74,
-          "controlChange2": 111
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.7677586949337405,
-          "controlChange1": 58,
-          "controlChange2": 102
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 101,
-          "duration": "8n",
-          "controlVoltage1": 0.18172636741580983,
-          "controlChange1": 83,
-          "controlChange2": 22
-         },
-         null,
-         null,
-         {
-          "pitch": 60,
           "velocity": 103,
           "duration": "8n",
-          "controlVoltage1": 0.7726234755184058,
-          "controlChange1": 72,
-          "controlChange2": 82
+          "controlVoltage1": 0.8986648216134481,
+          "controlChange1": 57,
+          "controlChange2": 106
          },
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 56,
-          "velocity": 62,
-          "duration": "8n",
-          "controlVoltage1": 0.00019942923495896991,
-          "controlChange1": 34,
-          "controlChange2": 85
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 107,
-          "duration": "8n",
-          "controlVoltage1": 0.3992616759458474,
-          "controlChange1": 53,
-          "controlChange2": 110
-         },
-         null,
-         {
-          "pitch": 50,
-          "velocity": 65,
-          "duration": "8n",
-          "controlVoltage1": 0.594080879132602,
-          "controlChange1": 56,
-          "controlChange2": 94
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 56,
-          "velocity": 106,
-          "duration": "8n",
-          "controlVoltage1": 0.7334221580381768,
-          "controlChange1": 67,
-          "controlChange2": 103
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         null,
-         null,
-         {
-          "pitch": 56,
-          "velocity": 45,
-          "duration": "8n",
-          "controlVoltage1": 0.3146517371913222,
-          "controlChange1": 37,
-          "controlChange2": 33
-         },
-         {
-          "pitch": 64,
-          "velocity": 83,
-          "duration": "8n",
-          "controlVoltage1": 0.07502808423060969,
-          "controlChange1": 101,
-          "controlChange2": 78
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 56,
-          "duration": "8n",
-          "controlVoltage1": 0.1681961761518629,
-          "controlChange1": 70,
-          "controlChange2": 64
-         },
-         null,
-         {
-          "pitch": 60,
-          "velocity": 109,
-          "duration": "8n",
-          "controlVoltage1": 0.5593771567653256,
-          "controlChange1": 35,
-          "controlChange2": 21
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 61,
-          "velocity": 25,
-          "duration": "8n",
-          "controlVoltage1": 0.907965394366198,
-          "controlChange1": 96,
-          "controlChange2": 16
-         },
-         null,
-         null,
-         {
-          "pitch": 48,
-          "velocity": 109,
-          "duration": "8n",
-          "controlVoltage1": 0.7263367045320215,
-          "controlChange1": 31,
-          "controlChange2": 68
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 48,
-          "velocity": 45,
-          "duration": "8n",
-          "controlVoltage1": 0.49230821035239036,
-          "controlChange1": 48,
-          "controlChange2": 23
-         },
-         null,
-         null,
          {
           "pitch": 62,
-          "velocity": 98,
+          "velocity": 40,
           "duration": "8n",
-          "controlVoltage1": 0.6783523720682396,
-          "controlChange1": 105,
-          "controlChange2": 57
+          "controlVoltage1": 0.8924797352666676,
+          "controlChange1": 56,
+          "controlChange2": 34
          },
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 109,
+          "duration": "8n",
+          "controlVoltage1": 0.30935471273348325,
+          "controlChange1": 102,
+          "controlChange2": 106
+         },
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 43,
+          "duration": "8n",
+          "controlVoltage1": 0.9237386209527021,
+          "controlChange1": 16,
+          "controlChange2": 54
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 94,
+          "duration": "8n",
+          "controlVoltage1": 0.7627905020698302,
+          "controlChange1": 24,
+          "controlChange2": 72
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 62,
+          "duration": "8n",
+          "controlVoltage1": 0.8624670484743506,
+          "controlChange1": 102,
+          "controlChange2": 58
+         },
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 104,
+          "duration": "8n",
+          "controlVoltage1": 0.5759890598772346,
+          "controlChange1": 99,
+          "controlChange2": 84
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 33,
+          "duration": "8n",
+          "controlVoltage1": 0.4468419785507305,
+          "controlChange1": 77,
+          "controlChange2": 39
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 111,
+          "duration": "8n",
+          "controlVoltage1": 0.38521784662659075,
+          "controlChange1": 62,
+          "controlChange2": 58
+         },
+         {
+          "pitch": 51,
+          "velocity": 43,
+          "duration": "8n",
+          "controlVoltage1": 0.7520486155434303,
+          "controlChange1": 60,
+          "controlChange2": 108
+         },
+         null,
          null,
          null
         ],
         [
          null,
          null,
+         {
+          "pitch": 51,
+          "velocity": 94,
+          "duration": "8n",
+          "controlVoltage1": 0.30244462600502864,
+          "controlChange1": 83,
+          "controlChange2": 55
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 56,
+          "velocity": 33,
+          "duration": "8n",
+          "controlVoltage1": 0.2759976365745329,
+          "controlChange1": 17,
+          "controlChange2": 99
+         },
+         null,
+         null,
          null,
          {
           "pitch": 48,
-          "velocity": 94,
+          "velocity": 70,
           "duration": "8n",
-          "controlVoltage1": 0.03723976440353738,
-          "controlChange1": 13,
-          "controlChange2": 20
-         },
-         {
-          "pitch": 56,
-          "velocity": 74,
-          "duration": "8n",
-          "controlVoltage1": 0.5511711475725691,
-          "controlChange1": 94,
-          "controlChange2": 83
+          "controlVoltage1": 0.6264021513623472,
+          "controlChange1": 34,
+          "controlChange2": 48
          },
          null,
-         null,
-         null,
          {
-          "pitch": 61,
-          "velocity": 111,
+          "pitch": 51,
+          "velocity": 66,
           "duration": "8n",
-          "controlVoltage1": 0.5434694232564927,
-          "controlChange1": 53,
+          "controlVoltage1": 0.03934134005692935,
+          "controlChange1": 82,
           "controlChange2": 81
          },
          null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 115,
-          "duration": "8n",
-          "controlVoltage1": 0.7145895662339121,
-          "controlChange1": 96,
-          "controlChange2": 50
-         },
-         null,
          null
         ],
         [
          null,
-         null,
          {
-          "pitch": 62,
-          "velocity": 126,
+          "pitch": 54,
+          "velocity": 27,
           "duration": "8n",
-          "controlVoltage1": 0.5593187574298839,
-          "controlChange1": 78,
-          "controlChange2": 22
+          "controlVoltage1": 0.29069678393296416,
+          "controlChange1": 62,
+          "controlChange2": 20
          },
          null,
          null,
          null,
-         null,
          {
-          "pitch": 50,
-          "velocity": 76,
-          "duration": "8n",
-          "controlVoltage1": 0.33108643711879604,
-          "controlChange1": 29,
-          "controlChange2": 76
-         },
-         null,
-         null,
-         {
-          "pitch": 64,
+          "pitch": 49,
           "velocity": 46,
           "duration": "8n",
-          "controlVoltage1": 0.1387735078686705,
-          "controlChange1": 24,
-          "controlChange2": 54
+          "controlVoltage1": 0.784940361939527,
+          "controlChange1": 22,
+          "controlChange2": 70
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 106,
+          "duration": "8n",
+          "controlVoltage1": 0.4065269061254879,
+          "controlChange1": 65,
+          "controlChange2": 12
          },
          null,
          null,
          {
-          "pitch": 64,
-          "velocity": 24,
+          "pitch": 54,
+          "velocity": 35,
           "duration": "8n",
-          "controlVoltage1": 0.7383770882256206,
-          "controlChange1": 50,
-          "controlChange2": 110
+          "controlVoltage1": 0.6521723469815515,
+          "controlChange1": 94,
+          "controlChange2": 16
          },
          null,
          null
         ],
         [
          {
-          "pitch": 64,
-          "velocity": 73,
-          "duration": "8n",
-          "controlVoltage1": 0.4193858916866071,
-          "controlChange1": 32,
-          "controlChange2": 52
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 65,
-          "duration": "8n",
-          "controlVoltage1": 0.3624031785759003,
-          "controlChange1": 32,
-          "controlChange2": 71
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 122,
-          "duration": "8n",
-          "controlVoltage1": 0.5564421337105652,
-          "controlChange1": 70,
-          "controlChange2": 33
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
           "pitch": 56,
-          "velocity": 58,
+          "velocity": 25,
           "duration": "8n",
-          "controlVoltage1": 0.8160257680279672,
+          "controlVoltage1": 0.4227007065746766,
+          "controlChange1": 112,
+          "controlChange2": 40
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 48,
+          "velocity": 46,
+          "duration": "8n",
+          "controlVoltage1": 0.9135309856925167,
+          "controlChange1": 61,
+          "controlChange2": 68
+         },
+         {
+          "pitch": 54,
+          "velocity": 88,
+          "duration": "8n",
+          "controlVoltage1": 0.4755271605599658,
+          "controlChange1": 14,
+          "controlChange2": 45
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 79,
+          "duration": "8n",
+          "controlVoltage1": 0.1373751627780435,
           "controlChange1": 54,
-          "controlChange2": 54
-         }
+          "controlChange2": 12
+         },
+         null,
+         null,
+         null
         ]
        ],
        "graphData": {
+        "0": 0,
+        "1": 1,
         "probability": 0.5,
         "linear": [
+         0,
          [
-          6
-         ],
-         [
-          1
+          1,
+          2
          ]
         ],
         "markov": [
          [
-          0.42516654466750725,
-          0.33557091944841977,
-          0.5967128658513949,
-          0.3899729594595591,
-          0.3148373952918353,
-          0.6010772799747599,
-          0.6567224123501094,
-          0.15094175495856899
+          0.19819939587118096,
+          0.04926884909903784,
+          0.17538062633454277,
+          0.10056482646242637,
+          0.005983125889217122,
+          0.23285587829449117,
+          0.8669941285638902,
+          0.41616632491360694
          ],
          [
-          0.7612124411746541,
-          0.3992999557733399,
-          0.792890567731311,
-          0.7908309259491699,
-          0.642383564270758,
-          0.9200602694915727,
-          0.5933527098738975,
-          0.015076423282667228
+          0.3936350154682666,
+          0.1838883996339853,
+          0.579290608942973,
+          0.9962523417363909,
+          0.9276651740408057,
+          0.9822342494722409,
+          0.4412664940024349,
+          0.7157011928903019
          ],
          [
-          0.33225752116926777,
-          0.22898280555697026,
-          0.5190715068746088,
-          0.3885876647459445,
-          0.12146517291613912,
-          0.48167752671702635,
-          0.045242109480883475,
-          0.1874611542030198
+          0.9730957368349509,
+          0.16616820090308937,
+          0.2808548175876697,
+          0.08809376934990376,
+          0.491665530499132,
+          0.32268791377239014,
+          0.2118559619230871,
+          0.8578922842411747
          ],
          [
-          0.6147454269298229,
-          0.6332754174628199,
-          0.09831633726677658,
-          0.041409336891651716,
-          0.6346629497588896,
-          0.11755451501693148,
-          0.9822276266386267,
-          0.927037233823742
+          0.6808893635238971,
+          0.5460939150955726,
+          0.3234831962867435,
+          0.5146660459757042,
+          0.010127230270591703,
+          0.5996298685984236,
+          0.46431528230468166,
+          0.27305527590842216
          ],
          [
-          0.995349652600054,
-          0.3777170988050862,
-          0.6998146385887913,
-          0.9202604926161742,
-          0.3387629560362708,
-          0.726735208247679,
-          0.23391474203770657,
-          0.9681746334823709
+          0.1702003169072157,
+          0.48754009299701884,
+          0.9358232449074393,
+          0.2847776466869909,
+          0.7054517084752143,
+          0.623305475365119,
+          0.43877047361881916,
+          0.4979204755936699
          ],
          [
-          0.9182170540165941,
-          0.3199584952578671,
-          0.6649095134626515,
-          0.29794036771978405,
-          0.5597422367595868,
-          0.688827242210978,
-          0.9640935550520842,
-          0.11133196764249575
+          0.8862807927706167,
+          0.22338346234212247,
+          0.7967929194488772,
+          0.07043844584136627,
+          0.33790088598982715,
+          0.5933753639215502,
+          0.7413330941386045,
+          0.0499516621177194
          ],
          [
-          0.793261542293906,
-          0.26200489171193486,
-          0.6081493922160164,
-          0.7396152476585551,
-          0.9804296089753988,
-          0.713626804151412,
-          0.5917245269142521,
-          0.4374507291759395
+          0.6390660630350675,
+          0.120345409265048,
+          0.18412176486663312,
+          0.4274587824632974,
+          0.8672962647336186,
+          0.3943156070643625,
+          0.8940990456961397,
+          0.9870793280604495
          ],
          [
-          0.004105205724886041,
-          0.9620359682156787,
-          0.6870115100121059,
-          0.9457046143236161,
-          0.1538139734663455,
-          0.7992034939765698,
-          0.1127547557414943,
-          0.8025689658513862
+          0.15174376223523467,
+          0.7887567710671186,
+          0.19738073030147874,
+          0.9123598933514148,
+          0.08554146940730423,
+          0.78381864690826,
+          0.9863638022830787,
+          0.7079775938509023
          ]
         ],
         "evolve": {
@@ -531,10 +588,10 @@
       {
        "name": "mono2",
        "instrument": "UnoBSPSeq2",
-       "enabled": false,
+       "enabled": true,
        "partsPerQuant": 24,
        "rate": 4,
-       "octave": 0,
+       "octave": -1,
        "length": 16,
        "end": 16,
        "steps": 4,
@@ -551,14 +608,82 @@
        "arpProb": 1,
        "sequenceData": [
         [
+         {
+          "pitch": 54,
+          "velocity": 78,
+          "duration": "8n",
+          "controlVoltage1": 0.6866839922924901,
+          "controlChange1": 90,
+          "controlChange2": 44
+         },
+         null,
+         null,
+         null,
          null,
          null,
          {
-          "pitch": 60,
-          "velocity": 101,
+          "pitch": 51,
+          "velocity": 61,
           "duration": "8n",
-          "controlVoltage1": 0.9519438846652803,
-          "controlChange1": 87,
+          "controlVoltage1": 0.15246048680700808,
+          "controlChange1": 66,
+          "controlChange2": 75
+         },
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 84,
+          "duration": "8n",
+          "controlVoltage1": 0.4961504070037668,
+          "controlChange1": 68,
+          "controlChange2": 81
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 92,
+          "duration": "8n",
+          "controlVoltage1": 0.1792807325269825,
+          "controlChange1": 62,
+          "controlChange2": 27
+         },
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 48,
+          "velocity": 115,
+          "duration": "8n",
+          "controlVoltage1": 0.2694095194250268,
+          "controlChange1": 48,
+          "controlChange2": 94
+         },
+         null,
+         {
+          "pitch": 49,
+          "velocity": 93,
+          "duration": "8n",
+          "controlVoltage1": 0.45244807949816845,
+          "controlChange1": 77,
+          "controlChange2": 21
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 68,
+          "duration": "8n",
+          "controlVoltage1": 0.5101902151462643,
+          "controlChange1": 42,
           "controlChange2": 42
          },
          null,
@@ -566,157 +691,258 @@
          null,
          null,
          {
-          "pitch": 64,
-          "velocity": 120,
+          "pitch": 48,
+          "velocity": 34,
           "duration": "8n",
-          "controlVoltage1": 0.6865210952635405,
-          "controlChange1": 110,
-          "controlChange2": 12
-         },
-         {
-          "pitch": 61,
-          "velocity": 43,
-          "duration": "8n",
-          "controlVoltage1": 0.12763824373955224,
-          "controlChange1": 81,
-          "controlChange2": 75
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.6733390810425213,
-          "controlChange1": 60,
-          "controlChange2": 106
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 62,
-          "velocity": 92,
-          "duration": "8n",
-          "controlVoltage1": 0.6165994228957281,
-          "controlChange1": 44,
-          "controlChange2": 48
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 114,
-          "duration": "8n",
-          "controlVoltage1": 0.24956386737733238,
-          "controlChange1": 91,
-          "controlChange2": 30
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 77,
-          "duration": "8n",
-          "controlVoltage1": 0.48500186239128573,
-          "controlChange1": 71,
-          "controlChange2": 40
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 61,
-          "velocity": 68,
-          "duration": "8n",
-          "controlVoltage1": 0.1546012889586008,
-          "controlChange1": 87,
-          "controlChange2": 104
-         },
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 62,
-          "velocity": 66,
-          "duration": "8n",
-          "controlVoltage1": 0.0020971464997450173,
-          "controlChange1": 48,
-          "controlChange2": 96
-         },
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 32,
-          "duration": "8n",
-          "controlVoltage1": 0.7162357765641236,
-          "controlChange1": 58,
-          "controlChange2": 38
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 94,
-          "duration": "8n",
-          "controlVoltage1": 0.6896918502055647,
-          "controlChange1": 27,
-          "controlChange2": 88
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 61,
-          "duration": "8n",
-          "controlVoltage1": 0.06437911689845555,
-          "controlChange1": 25,
-          "controlChange2": 71
+          "controlVoltage1": 0.8821984440470303,
+          "controlChange1": 42,
+          "controlChange2": 14
          }
         ],
         [
          null,
          {
-          "pitch": 60,
-          "velocity": 48,
+          "pitch": 54,
+          "velocity": 126,
           "duration": "8n",
-          "controlVoltage1": 0.12834504252916834,
-          "controlChange1": 52,
-          "controlChange2": 95
+          "controlVoltage1": 0.35579279538057706,
+          "controlChange1": 67,
+          "controlChange2": 39
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 114,
+          "duration": "8n",
+          "controlVoltage1": 0.2818379713469841,
+          "controlChange1": 96,
+          "controlChange2": 82
+         },
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 26,
+          "duration": "8n",
+          "controlVoltage1": 0.8983991082521796,
+          "controlChange1": 81,
+          "controlChange2": 101
          },
          null,
          null,
          null,
          null,
+         null,
+         null,
          {
-          "pitch": 56,
-          "velocity": 77,
+          "pitch": 53,
+          "velocity": 125,
           "duration": "8n",
-          "controlVoltage1": 0.8697696911703281,
-          "controlChange1": 111,
-          "controlChange2": 40
+          "controlVoltage1": 0.9329480074332395,
+          "controlChange1": 80,
+          "controlChange2": 108
+         }
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 61,
+          "velocity": 64,
+          "duration": "8n",
+          "controlVoltage1": 0.4054433459522959,
+          "controlChange1": 21,
+          "controlChange2": 93
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 99,
+          "duration": "8n",
+          "controlVoltage1": 0.013710350955788098,
+          "controlChange1": 57,
+          "controlChange2": 67
+         },
+         null,
+         {
+          "pitch": 57,
+          "velocity": 25,
+          "duration": "8n",
+          "controlVoltage1": 0.5706854239535559,
+          "controlChange1": 16,
+          "controlChange2": 93
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 99,
+          "duration": "8n",
+          "controlVoltage1": 0.9928911479849656,
+          "controlChange1": 15,
+          "controlChange2": 29
          },
          null,
          {
           "pitch": 48,
-          "velocity": 61,
+          "velocity": 91,
           "duration": "8n",
-          "controlVoltage1": 0.5198700736040494,
-          "controlChange1": 77,
+          "controlVoltage1": 0.2615797135011806,
+          "controlChange1": 67,
+          "controlChange2": 44
+         },
+         null
+        ],
+        [
+         {
+          "pitch": 53,
+          "velocity": 52,
+          "duration": "8n",
+          "controlVoltage1": 0.091006870120099,
+          "controlChange1": 40,
+          "controlChange2": 61
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 108,
+          "duration": "8n",
+          "controlVoltage1": 0.29622583233388466,
+          "controlChange1": 84,
+          "controlChange2": 106
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 26,
+          "duration": "8n",
+          "controlVoltage1": 0.4916583165349062,
+          "controlChange1": 97,
+          "controlChange2": 63
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 31,
+          "duration": "8n",
+          "controlVoltage1": 0.101479046606884,
+          "controlChange1": 98,
+          "controlChange2": 78
+         }
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 126,
+          "duration": "8n",
+          "controlVoltage1": 0.044527093719443744,
+          "controlChange1": 45,
+          "controlChange2": 45
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 126,
+          "duration": "8n",
+          "controlVoltage1": 0.3609470166863793,
+          "controlChange1": 101,
+          "controlChange2": 37
+         },
+         null,
+         {
+          "pitch": 56,
+          "velocity": 53,
+          "duration": "8n",
+          "controlVoltage1": 0.36040172493948686,
+          "controlChange1": 36,
+          "controlChange2": 99
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 33,
+          "duration": "8n",
+          "controlVoltage1": 0.9583650872389144,
+          "controlChange1": 13,
+          "controlChange2": 42
+         },
+         null
+        ],
+        [
+         {
+          "pitch": 63,
+          "velocity": 30,
+          "duration": "8n",
+          "controlVoltage1": 0.2526178603874898,
+          "controlChange1": 29,
+          "controlChange2": 100
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 48,
+          "velocity": 108,
+          "duration": "8n",
+          "controlVoltage1": 0.6825430845739315,
+          "controlChange1": 36,
+          "controlChange2": 37
+         },
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 117,
+          "duration": "8n",
+          "controlVoltage1": 0.8063675311221281,
+          "controlChange1": 54,
+          "controlChange2": 107
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 125,
+          "duration": "8n",
+          "controlVoltage1": 0.6439214156664759,
+          "controlChange1": 24,
+          "controlChange2": 105
+         }
+        ],
+        [
+         {
+          "pitch": 53,
+          "velocity": 99,
+          "duration": "8n",
+          "controlVoltage1": 0.37573632125990875,
+          "controlChange1": 88,
           "controlChange2": 20
          },
          null,
@@ -726,196 +952,34 @@
          null,
          null,
          {
-          "pitch": 61,
-          "velocity": 96,
+          "pitch": 53,
+          "velocity": 28,
           "duration": "8n",
-          "controlVoltage1": 0.4303196304561676,
-          "controlChange1": 75,
-          "controlChange2": 30
-         }
-        ],
-        [
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 112,
-          "duration": "8n",
-          "controlVoltage1": 0.628684327683386,
-          "controlChange1": 90,
+          "controlVoltage1": 0.3740478480466194,
+          "controlChange1": 41,
           "controlChange2": 103
          },
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 96,
-          "duration": "8n",
-          "controlVoltage1": 0.2812579710847498,
-          "controlChange1": 61,
-          "controlChange2": 75
-         },
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 49,
-          "duration": "8n",
-          "controlVoltage1": 0.4530773953611087,
-          "controlChange1": 109,
-          "controlChange2": 42
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 41,
-          "duration": "8n",
-          "controlVoltage1": 0.09335743211175096,
-          "controlChange1": 92,
-          "controlChange2": 88
-         },
-         null,
-         null
-        ],
-        [
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 122,
-          "duration": "8n",
-          "controlVoltage1": 0.015304645235190595,
-          "controlChange1": 61,
-          "controlChange2": 82
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 61,
-          "velocity": 43,
-          "duration": "8n",
-          "controlVoltage1": 0.27233543865001897,
-          "controlChange1": 60,
-          "controlChange2": 94
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 54,
-          "duration": "8n",
-          "controlVoltage1": 0.6023735793394485,
-          "controlChange1": 69,
-          "controlChange2": 89
-         },
-         null,
-         null,
          {
           "pitch": 48,
-          "velocity": 45,
+          "velocity": 73,
           "duration": "8n",
-          "controlVoltage1": 0.662161923927892,
-          "controlChange1": 14,
-          "controlChange2": 69
+          "controlVoltage1": 0.35504066214694996,
+          "controlChange1": 54,
+          "controlChange2": 48
          },
          null,
-         null
-        ],
-        [
          null,
          null,
          null,
-         {
-          "pitch": 64,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.4399146148783699,
-          "controlChange1": 79,
-          "controlChange2": 43
-         },
          null,
          null,
          {
           "pitch": 56,
-          "velocity": 56,
-          "duration": "8n",
-          "controlVoltage1": 0.9699220261530388,
-          "controlChange1": 33,
-          "controlChange2": 67
-         },
-         null,
-         {
-          "pitch": 64,
           "velocity": 41,
           "duration": "8n",
-          "controlVoltage1": 0.12935328623920284,
-          "controlChange1": 85,
-          "controlChange2": 51
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 26,
-          "duration": "8n",
-          "controlVoltage1": 0.2646451238972043,
-          "controlChange1": 26,
-          "controlChange2": 107
-         },
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 56,
-          "velocity": 74,
-          "duration": "8n",
-          "controlVoltage1": 0.9866893301584452,
-          "controlChange1": 42,
-          "controlChange2": 43
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 48,
-          "velocity": 97,
-          "duration": "8n",
-          "controlVoltage1": 0.5211620657919804,
-          "controlChange1": 47,
-          "controlChange2": 83
-         },
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 46,
-          "duration": "8n",
-          "controlVoltage1": 0.888018170309032,
-          "controlChange1": 105,
-          "controlChange2": 15
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 83,
-          "duration": "8n",
-          "controlVoltage1": 0.33860022952055413,
-          "controlChange1": 86,
-          "controlChange2": 55
+          "controlVoltage1": 0.16289858664308765,
+          "controlChange1": 71,
+          "controlChange2": 81
          }
         ]
        ],
@@ -923,89 +987,89 @@
         "probability": 0.5,
         "linear": [
          [
-          6
+          3
          ]
         ],
         "markov": [
          [
-          0.13748936915895915,
-          0.7499131534189583,
-          0.10535031657328675,
-          0.8102510525094908,
-          0.992506112480928,
-          0.10278583856873347,
-          0.3021028880572949,
-          0.9178710397281225
+          0.46269230443693177,
+          0.042526151557199965,
+          0.1893263309085702,
+          0.888026029036167,
+          0.1002482610110913,
+          0.9326281796421259,
+          0.19307477952076524,
+          0.3357853677030944
          ],
          [
-          0.09972075806088809,
-          0.21007061326202425,
-          0.605604470557568,
-          0.07468171843986471,
-          0.6391051093610702,
-          0.49869383280197277,
-          0.22842021828982495,
-          0.6377222740772008
+          0.5224987698819383,
+          0.5304690260072316,
+          0.8909800193902446,
+          0.303782795369965,
+          0.2014716607743694,
+          0.9916831473919641,
+          0.24202198572846467,
+          0.6394907985267211
          ],
          [
-          0.9991566728693189,
-          0.7011632513345409,
-          0.34685801561358187,
-          0.8065939063936558,
-          0.47045230313487796,
-          0.7577941508287049,
-          0.14902670923552397,
-          0.7868580189598107
+          0.6875564409110486,
+          0.8365575954656896,
+          0.12453174311312876,
+          0.8270370577404267,
+          0.32494612101418285,
+          0.32726977392166545,
+          0.8685470665159614,
+          0.22567839196781847
          ],
          [
-          0.2795026207968614,
-          0.8305863830698692,
-          0.22879811504804826,
-          0.6833893410271086,
-          0.2914608607849227,
-          0.44944175062481384,
-          0.8404598596296515,
-          0.8218757267622523
+          0.26859079471148606,
+          0.7232448209591107,
+          0.5705755794259255,
+          0.483211531392999,
+          0.33621949544012586,
+          0.837421061027956,
+          0.06716842283252866,
+          0.41610347435169714
          ],
          [
-          0.8966184790701182,
-          0.04003131101126978,
-          0.7972928991711803,
-          0.8866372815004688,
-          0.23276910671316364,
-          0.45103852647740394,
-          0.704784571304566,
-          0.7783381227742827
+          0.5209884852120965,
+          0.8665182862627641,
+          0.46439601473337144,
+          0.08863181006624288,
+          0.4654592084217679,
+          0.7457715991176512,
+          0.20481891525281593,
+          0.9159948149913608
          ],
          [
-          0.5968070654652697,
-          0.9875240034014277,
-          0.3319870289800806,
-          0.02418788437212105,
-          0.12721616389301182,
-          0.3031664875622333,
-          0.8301145622055748,
-          0.6507001086720576
+          0.19805890214017352,
+          0.7138117663792045,
+          0.5729514119365489,
+          0.31292944239208365,
+          0.6042268011404688,
+          0.6446969316144295,
+          0.6812693612281389,
+          0.8746115384060837
          ],
          [
-          0.9812301188462647,
-          0.766727394213846,
-          0.38129801505530647,
-          0.9236783459265003,
-          0.9261781562985283,
-          0.4094510633103061,
-          0.1603175611525005,
-          0.5695288902732962
+          0.5773072684857972,
+          0.05135951602658029,
+          0.9462109228663258,
+          0.6614835616042496,
+          0.42517206474908753,
+          0.7275607614753759,
+          0.9622143299600439,
+          0.4102574389039002
          ],
          [
-          0.15594663944651832,
-          0.5519679736187812,
-          0.05993275793555286,
-          0.8817708014221355,
-          0.09614707722397409,
-          0.2228275493907319,
-          0.9358710880026153,
-          0.7927853964988765
+          0.621424285056486,
+          0.24858557583598717,
+          0.42583080694714615,
+          0.4107753381377006,
+          0.6192043818904456,
+          0.03988239170631713,
+          0.14303609294235242,
+          0.42639403801862286
          ]
         ],
         "evolve": {
@@ -1019,10 +1083,10 @@
        "enabled": true,
        "partsPerQuant": 24,
        "rate": 4,
-       "octave": -1,
+       "octave": 0,
        "length": 16,
        "end": 16,
-       "steps": 6,
+       "steps": 4,
        "graphType": "linear",
        "sequenceType": "quadrant",
        "loop": true,
@@ -1030,361 +1094,157 @@
        "note": null,
        "velocity": 120,
        "constants": [],
-       "arp": "down1",
-       "arpRate": 4,
-       "arpLoop": false,
+       "arp": "none",
+       "arpRate": 2,
+       "arpLoop": true,
        "arpProb": 1,
        "sequenceData": [
         [
          null,
          {
-          "pitch": 62,
+          "pitch": 49,
           "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.569022216084413,
-          "controlChange1": 28,
-          "controlChange2": 59
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.6063565976874552,
-          "controlChange1": 56,
-          "controlChange2": 105
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.8528547482756821,
-          "controlChange1": 43,
-          "controlChange2": 71
-         },
-         null,
-         null,
-         {
-          "pitch": 56,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.027361402313564875,
-          "controlChange1": 112,
-          "controlChange2": 38
-         },
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 50,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.4647905417865057,
-          "controlChange1": 36,
-          "controlChange2": 108
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.25547815116159334,
-          "controlChange1": 12,
-          "controlChange2": 29
-         },
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.6840228365215726,
-          "controlChange1": 73,
-          "controlChange2": 61
-         },
-         null,
-         {
-          "pitch": 48,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.7283189996243502,
-          "controlChange1": 65,
-          "controlChange2": 80
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.4914748447467978,
-          "controlChange1": 112,
-          "controlChange2": 72
-         },
-         null,
-         {
-          "pitch": 50,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.36889735087473197,
-          "controlChange1": 109,
-          "controlChange2": 74
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.7823066813601949,
-          "controlChange1": 36,
-          "controlChange2": 59
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.3449349829636883,
-          "controlChange1": 71,
-          "controlChange2": 109
-         },
-         null
-        ],
-        [
-         null,
-         {
-          "pitch": 56,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.5022709905036664,
-          "controlChange1": 56,
-          "controlChange2": 34
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.7538639848317239,
-          "controlChange1": 19,
-          "controlChange2": 37
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.11203002109807225,
+          "controlVoltage1": 0.7118749381901228,
           "controlChange1": 29,
-          "controlChange2": 85
+          "controlChange2": 54
          },
          null,
          null,
          null,
          null,
          {
-          "pitch": 61,
+          "pitch": 49,
           "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.9334317771722664,
-          "controlChange1": 73,
-          "controlChange2": 16
-         }
-        ],
-        [
-         {
-          "pitch": 61,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.28834013740436903,
-          "controlChange1": 79,
-          "controlChange2": 32
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 56,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.2953088807199986,
-          "controlChange1": 85,
-          "controlChange2": 37
-         },
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.37151277296043306,
-          "controlChange1": 57,
-          "controlChange2": 84
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 56,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.020242594100596367,
-          "controlChange1": 39,
-          "controlChange2": 69
-         },
-         null
-        ],
-        [
-         {
-          "pitch": 56,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.7273042477655187,
-          "controlChange1": 66,
-          "controlChange2": 102
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.7815484705054323,
-          "controlChange1": 74,
-          "controlChange2": 85
-         },
-         null,
-         null,
-         {
-          "pitch": 61,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.9506681198733142,
-          "controlChange1": 86,
-          "controlChange2": 25
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.1954048020514032,
-          "controlChange1": 21,
-          "controlChange2": 43
-         }
-        ],
-        [
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.5795587662507327,
-          "controlChange1": 23,
-          "controlChange2": 74
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 61,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.8074555310476998,
-          "controlChange1": 95,
-          "controlChange2": 67
-         },
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.5480248281926274,
-          "controlChange1": 54,
+          "controlVoltage1": 0.8775747576218877,
+          "controlChange1": 26,
           "controlChange2": 87
          },
          null,
          null,
          null,
-         null,
-         null,
          {
-          "pitch": 50,
+          "pitch": 63,
           "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.20366776417042054,
-          "controlChange1": 77,
-          "controlChange2": 109
-         }
-        ],
-        [
-         null,
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 120,
-          "duration": "8n",
-          "controlVoltage1": 0.6890508964121458,
-          "controlChange1": 39,
-          "controlChange2": 98
+          "controlVoltage1": 0.6943946790197277,
+          "controlChange1": 25,
+          "controlChange2": 91
          },
          null,
          {
-          "pitch": 61,
+          "pitch": 51,
           "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.4031921376786467,
-          "controlChange1": 96,
+          "controlVoltage1": 0.9198287897351909,
+          "controlChange1": 110,
+          "controlChange2": 102
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.8351776011747727,
+          "controlChange1": 30,
+          "controlChange2": 86
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.7660137448666804,
+          "controlChange1": 16,
           "controlChange2": 101
          },
          null,
          null,
+         null,
+         null,
+         null,
+         null,
          {
-          "pitch": 48,
+          "pitch": 51,
           "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.4770684502222904,
+          "controlVoltage1": 0.0075794208499937454,
+          "controlChange1": 106,
+          "controlChange2": 18
+         },
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.776256082628666,
+          "controlChange1": 90,
+          "controlChange2": 39
+         },
+         null
+        ],
+        [
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.6018040301081211,
+          "controlChange1": 27,
+          "controlChange2": 20
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.14558029974243358,
+          "controlChange1": 43,
+          "controlChange2": 22
+         },
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.1614008149601851,
+          "controlChange1": 39,
+          "controlChange2": 91
+         },
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.7875419251424174,
+          "controlChange1": 64,
+          "controlChange2": 101
+         },
+         null,
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.309428171280429,
           "controlChange1": 44,
           "controlChange2": 23
          },
@@ -1392,110 +1252,312 @@
          null,
          null,
          {
-          "pitch": 50,
+          "pitch": 54,
           "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.9313264402907948,
-          "controlChange1": 57,
-          "controlChange2": 55
+          "controlVoltage1": 0.8602520769791178,
+          "controlChange1": 51,
+          "controlChange2": 72
          },
          null,
          null,
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.4296073755931695,
+          "controlChange1": 20,
+          "controlChange2": 91
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.8575689072252042,
+          "controlChange1": 24,
+          "controlChange2": 43
+         }
+        ],
+        [
+         {
+          "pitch": 54,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.15485256330551334,
+          "controlChange1": 34,
+          "controlChange2": 27
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.17774180599342593,
+          "controlChange1": 13,
+          "controlChange2": 30
+         },
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.3752226846018063,
+          "controlChange1": 56,
+          "controlChange2": 28
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.07661941629831048,
+          "controlChange1": 90,
+          "controlChange2": 73
+         },
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 56,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.01661237466710075,
+          "controlChange1": 108,
+          "controlChange2": 86
+         },
+         null,
+         {
+          "pitch": 54,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.5495573069541901,
+          "controlChange1": 88,
+          "controlChange2": 23
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.36927042886751615,
+          "controlChange1": 105,
+          "controlChange2": 109
+         },
+         null,
+         null,
+         {
+          "pitch": 51,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.10394370948684228,
+          "controlChange1": 48,
+          "controlChange2": 95
+         },
+         null,
+         null
+        ],
+        [
+         {
+          "pitch": 48,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.9716306570142832,
+          "controlChange1": 44,
+          "controlChange2": 20
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.2911262715254277,
+          "controlChange1": 79,
+          "controlChange2": 106
+         },
+         null,
+         {
+          "pitch": 49,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.11383601417444833,
+          "controlChange1": 17,
+          "controlChange2": 27
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.6239922409012968,
+          "controlChange1": 27,
+          "controlChange2": 27
+         },
+         null,
+         null
+        ],
+        [
+         null,
+         {
+          "pitch": 56,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.17345105305233566,
+          "controlChange1": 30,
+          "controlChange2": 108
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.03003524054066342,
+          "controlChange1": 89,
+          "controlChange2": 50
+         },
+         null,
+         {
+          "pitch": 54,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.6806963941374906,
+          "controlChange1": 109,
+          "controlChange2": 96
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 63,
+          "velocity": 120,
+          "duration": "8n",
+          "controlVoltage1": 0.07165171614098598,
+          "controlChange1": 23,
+          "controlChange2": 80
+         },
          null
         ]
        ],
        "graphData": {
-        "0": 1,
-        "1": 2,
-        "2": 1,
-        "3": 3,
         "probability": 0.5,
         "linear": [
-         1,
-         2,
-         1,
-         3
+         [
+          4
+         ],
+         [
+          7
+         ]
         ],
         "markov": [
          [
-          0.30921724233464465,
-          0.19931636392963492,
-          0.4385185889077945,
-          0.767286966923387,
-          0.014243342451022656,
-          0.9539553308663633,
-          0.1475130070774069,
-          0.8612820425176413
+          0.27312560041325074,
+          0.7690413477415432,
+          0.07282568026813818,
+          0.9876314175850416,
+          0.8789546535697244,
+          0.9266127311022465,
+          0.14450503332627007,
+          0.7138127662948919
          ],
          [
-          0.5092971320935682,
-          0.2555511466802214,
-          0.2967457114869769,
-          0.276423131808631,
-          0.5259280897136398,
-          0.2516199349649073,
-          0.7853690314051622,
-          0.20414195450622596
+          0.35027847127787437,
+          0.08107978868362475,
+          0.4878799655042607,
+          0.6455921827503048,
+          0.07364547569965141,
+          0.5936511987876374,
+          0.2584258632391474,
+          0.6794134387731388
          ],
          [
-          0.16787513767932216,
-          0.2215050782698993,
-          0.3500831495911063,
-          0.0035858004916853314,
-          0.6012386039062501,
-          0.3481909930049678,
-          0.23251408453076694,
-          0.7310298821616854
+          0.15385720008248582,
+          0.23616285934686632,
+          0.5232665025076662,
+          0.7624095068408996,
+          0.21082592522071475,
+          0.38903798814705226,
+          0.8315356491027623,
+          0.910774286816221
          ],
          [
-          0.8009200463089283,
-          0.46560682879666704,
-          0.8361117540569192,
-          0.5246219379026922,
-          0.6666681747387644,
-          0.4257304478213415,
-          0.8059902287672864,
-          0.8172514663496935
+          0.12745558624966047,
+          0.07597999150105439,
+          0.3040872648011015,
+          0.6976644282707933,
+          0.5094871392106888,
+          0.8486763296332414,
+          0.4461439126492315,
+          0.9877358516230208
          ],
          [
-          0.7902523084752597,
-          0.6727663252074136,
-          0.5968540524540409,
-          0.09261559561206267,
-          0.6318009976191015,
-          0.0937979833871656,
-          0.929827029287241,
-          0.3687556433238277
+          0.24058345788683155,
+          0.5697335229548794,
+          0.43172167165926,
+          0.23010818423449164,
+          0.4131412985323626,
+          0.2972372927942366,
+          0.36412853000642986,
+          0.6666220921449921
          ],
          [
-          0.2831652296361862,
-          0.5445980891901145,
-          0.2491825708569908,
-          0.5003457278292052,
-          0.4338882918238658,
-          0.9742258759267282,
-          0.6703550673660832,
-          0.2208340796491981
+          0.8195543899957161,
+          0.9794598425384915,
+          0.7251474215391578,
+          0.45807609678321226,
+          0.6157852844400726,
+          0.1567410235997413,
+          0.6559702110621379,
+          0.90139196926344
          ],
          [
-          0.2055584976037279,
-          0.6163017316022741,
-          0.7300774045033063,
-          0.9432240304753066,
-          0.8667602143697162,
-          0.102496871337038,
-          0.48987445426097675,
-          0.8968732978356588
+          0.452845018770087,
+          0.9680690387231248,
+          0.5954071109025563,
+          0.4712561196388523,
+          0.31125586774387526,
+          0.3068874392463259,
+          0.1359614888915166,
+          0.22523851250577298
          ],
          [
-          0.5497329395486612,
-          0.6756519095814186,
-          0.51745741242532,
-          0.4168433482905296,
-          0.5917180104225241,
-          0.931559472109422,
-          0.8260455714736876,
-          0.4308210028862749
+          0.5648601755254412,
+          0.061178956488919356,
+          0.5563324754302881,
+          0.590365770800614,
+          0.7358508368578291,
+          0.4725195186199005,
+          0.9171562959048978,
+          0.8124488465303463
          ]
         ],
         "evolve": {
@@ -1505,8 +1567,8 @@
       },
       {
        "name": "poly2",
-       "instrument": "NordG2A",
-       "enabled": false,
+       "instrument": "IAC1ch1",
+       "enabled": true,
        "partsPerQuant": 24,
        "rate": 4,
        "octave": 0,
@@ -1527,464 +1589,537 @@
        "sequenceData": [
         [
          {
-          "pitch": 62,
-          "velocity": 78,
+          "pitch": 57,
+          "velocity": 63,
           "duration": "8n",
-          "controlVoltage1": 0.3913753236989772,
-          "controlChange1": 55,
-          "controlChange2": 52
+          "controlVoltage1": 0.1329942428585731,
+          "controlChange1": 12,
+          "controlChange2": 95
          },
          null,
          null,
          null,
          {
-          "pitch": 62,
-          "velocity": 78,
+          "pitch": 59,
+          "velocity": 110,
           "duration": "8n",
-          "controlVoltage1": 0.5728083655959866,
-          "controlChange1": 39,
-          "controlChange2": 34
+          "controlVoltage1": 0.8385461488308541,
+          "controlChange1": 112,
+          "controlChange2": 69
+         },
+         null,
+         {
+          "pitch": 57,
+          "velocity": 72,
+          "duration": "8n",
+          "controlVoltage1": 0.9866099244369206,
+          "controlChange1": 46,
+          "controlChange2": 47
+         },
+         null,
+         {
+          "pitch": 59,
+          "velocity": 79,
+          "duration": "8n",
+          "controlVoltage1": 0.08456205732864341,
+          "controlChange1": 33,
+          "controlChange2": 32
+         },
+         null,
+         {
+          "pitch": 61,
+          "velocity": 31,
+          "duration": "8n",
+          "controlVoltage1": 0.27447490971510047,
+          "controlChange1": 94,
+          "controlChange2": 105
+         },
+         null,
+         {
+          "pitch": 58,
+          "velocity": 66,
+          "duration": "8n",
+          "controlVoltage1": 0.9891169518358287,
+          "controlChange1": 53,
+          "controlChange2": 80
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         {
+          "pitch": 56,
+          "velocity": 85,
+          "duration": "8n",
+          "controlVoltage1": 0.9830609383163305,
+          "controlChange1": 65,
+          "controlChange2": 83
          },
          null,
          null,
          null,
+         {
+          "pitch": 51,
+          "velocity": 86,
+          "duration": "8n",
+          "controlVoltage1": 0.05194749451504954,
+          "controlChange1": 71,
+          "controlChange2": 27
+         },
          null,
          null,
          null,
          {
-          "pitch": 48,
-          "velocity": 87,
+          "pitch": 53,
+          "velocity": 125,
           "duration": "8n",
-          "controlVoltage1": 0.23892907925831763,
-          "controlChange1": 40,
-          "controlChange2": 36
+          "controlVoltage1": 0.24923604049155967,
+          "controlChange1": 111,
+          "controlChange2": 19
          },
          null,
          {
-          "pitch": 48,
-          "velocity": 80,
+          "pitch": 51,
+          "velocity": 119,
           "duration": "8n",
-          "controlVoltage1": 0.36793657680652814,
-          "controlChange1": 14,
-          "controlChange2": 55
+          "controlVoltage1": 0.43174532275517175,
+          "controlChange1": 18,
+          "controlChange2": 18
+         },
+         null,
+         null,
+         {
+          "pitch": 58,
+          "velocity": 92,
+          "duration": "8n",
+          "controlVoltage1": 0.3724106046116038,
+          "controlChange1": 103,
+          "controlChange2": 43
          },
          null,
          null
         ],
         [
          {
+          "pitch": 56,
+          "velocity": 104,
+          "duration": "8n",
+          "controlVoltage1": 0.45860983887571316,
+          "controlChange1": 90,
+          "controlChange2": 82
+         },
+         {
+          "pitch": 58,
+          "velocity": 105,
+          "duration": "8n",
+          "controlVoltage1": 0.7122472524595569,
+          "controlChange1": 40,
+          "controlChange2": 28
+         },
+         {
+          "pitch": 62,
+          "velocity": 28,
+          "duration": "8n",
+          "controlVoltage1": 0.4607233406168505,
+          "controlChange1": 81,
+          "controlChange2": 30
+         },
+         {
           "pitch": 64,
+          "velocity": 51,
+          "duration": "8n",
+          "controlVoltage1": 0.6291861836043833,
+          "controlChange1": 29,
+          "controlChange2": 87
+         },
+         {
+          "pitch": 51,
+          "velocity": 50,
+          "duration": "8n",
+          "controlVoltage1": 0.6868380913518146,
+          "controlChange1": 24,
+          "controlChange2": 24
+         },
+         {
+          "pitch": 57,
+          "velocity": 52,
+          "duration": "8n",
+          "controlVoltage1": 0.16439690486012304,
+          "controlChange1": 44,
+          "controlChange2": 69
+         },
+         {
+          "pitch": 61,
+          "velocity": 94,
+          "duration": "8n",
+          "controlVoltage1": 0.9983662995373366,
+          "controlChange1": 84,
+          "controlChange2": 60
+         },
+         {
+          "pitch": 63,
+          "velocity": 61,
+          "duration": "8n",
+          "controlVoltage1": 0.10509755260318654,
+          "controlChange1": 112,
+          "controlChange2": 21
+         },
+         {
+          "pitch": 57,
           "velocity": 108,
           "duration": "8n",
-          "controlVoltage1": 0.07407753370129555,
-          "controlChange1": 101,
-          "controlChange2": 17
+          "controlVoltage1": 0.5409083792133542,
+          "controlChange1": 24,
+          "controlChange2": 66
+         },
+         {
+          "pitch": 59,
+          "velocity": 24,
+          "duration": "8n",
+          "controlVoltage1": 0.45412240057511566,
+          "controlChange1": 105,
+          "controlChange2": 24
          },
          null,
          null,
-         null,
-         null,
+         {
+          "pitch": 59,
+          "velocity": 115,
+          "duration": "8n",
+          "controlVoltage1": 0.4447978493319429,
+          "controlChange1": 16,
+          "controlChange2": 58
+         },
          null,
          null,
          {
           "pitch": 61,
-          "velocity": 25,
+          "velocity": 68,
           "duration": "8n",
-          "controlVoltage1": 0.033518568516774705,
-          "controlChange1": 23,
-          "controlChange2": 51
-         },
-         null,
-         {
-          "pitch": 62,
-          "velocity": 98,
-          "duration": "8n",
-          "controlVoltage1": 0.3321949049438828,
-          "controlChange1": 31,
-          "controlChange2": 35
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 107,
-          "duration": "8n",
-          "controlVoltage1": 0.34976411374068017,
-          "controlChange1": 24,
-          "controlChange2": 36
-         },
-         null
+          "controlVoltage1": 0.5425218404244645,
+          "controlChange1": 99,
+          "controlChange2": 34
+         }
         ],
         [
+         null,
+         null,
          {
-          "pitch": 50,
-          "velocity": 26,
+          "pitch": 51,
+          "velocity": 111,
           "duration": "8n",
-          "controlVoltage1": 0.45029969572794704,
-          "controlChange1": 90,
-          "controlChange2": 57
+          "controlVoltage1": 0.8339325714049013,
+          "controlChange1": 94,
+          "controlChange2": 33
+         },
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 58,
+          "duration": "8n",
+          "controlVoltage1": 0.856177950707047,
+          "controlChange1": 76,
+          "controlChange2": 82
          },
          null,
          null,
          null,
-         null,
-         null,
          {
-          "pitch": 50,
-          "velocity": 60,
+          "pitch": 54,
+          "velocity": 81,
           "duration": "8n",
-          "controlVoltage1": 0.8688401073904237,
-          "controlChange1": 19,
-          "controlChange2": 107
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 61,
-          "velocity": 60,
-          "duration": "8n",
-          "controlVoltage1": 0.3525878287724611,
+          "controlVoltage1": 0.6913787802077647,
           "controlChange1": 77,
-          "controlChange2": 81
+          "controlChange2": 111
          },
          null,
          null,
          null,
          {
           "pitch": 56,
-          "velocity": 96,
+          "velocity": 99,
           "duration": "8n",
-          "controlVoltage1": 0.47524052992175037,
-          "controlChange1": 94,
-          "controlChange2": 96
+          "controlVoltage1": 0.061566706171466645,
+          "controlChange1": 49,
+          "controlChange2": 112
          },
+         null,
          null
         ],
         [
-         {
-          "pitch": 64,
-          "velocity": 43,
-          "duration": "8n",
-          "controlVoltage1": 0.30739917349954315,
-          "controlChange1": 99,
-          "controlChange2": 27
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 114,
-          "duration": "8n",
-          "controlVoltage1": 0.9405326326666124,
-          "controlChange1": 78,
-          "controlChange2": 64
-         },
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 110,
-          "duration": "8n",
-          "controlVoltage1": 0.02828361995090911,
-          "controlChange1": 76,
-          "controlChange2": 17
-         },
-         null,
-         null,
-         null,
-         null,
          null,
          null,
          {
           "pitch": 48,
-          "velocity": 116,
+          "velocity": 55,
           "duration": "8n",
-          "controlVoltage1": 0.5429632247049814,
-          "controlChange1": 110,
-          "controlChange2": 47
+          "controlVoltage1": 0.5100553678696014,
+          "controlChange1": 48,
+          "controlChange2": 60
+         },
+         null,
+         {
+          "pitch": 49,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.6459898596408573,
+          "controlChange1": 16,
+          "controlChange2": 77
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 49,
+          "velocity": 81,
+          "duration": "8n",
+          "controlVoltage1": 0.3548070332959059,
+          "controlChange1": 102,
+          "controlChange2": 62
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 38,
+          "duration": "8n",
+          "controlVoltage1": 0.6484563890291739,
+          "controlChange1": 79,
+          "controlChange2": 56
          }
         ],
         [
          null,
+         null,
          {
-          "pitch": 62,
-          "velocity": 62,
+          "pitch": 54,
+          "velocity": 97,
           "duration": "8n",
-          "controlVoltage1": 0.9994723736585036,
-          "controlChange1": 51,
-          "controlChange2": 85
+          "controlVoltage1": 0.5791181924483113,
+          "controlChange1": 24,
+          "controlChange2": 62
          },
-         null,
-         null,
          null,
          {
           "pitch": 48,
-          "velocity": 50,
+          "velocity": 67,
           "duration": "8n",
-          "controlVoltage1": 0.14675380597598253,
-          "controlChange1": 49,
-          "controlChange2": 75
-         },
-         null,
-         null,
-         {
-          "pitch": 60,
-          "velocity": 43,
-          "duration": "8n",
-          "controlVoltage1": 0.09265104449171635,
-          "controlChange1": 25,
-          "controlChange2": 40
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 50,
-          "velocity": 115,
-          "duration": "8n",
-          "controlVoltage1": 0.6454522056707084,
-          "controlChange1": 15,
-          "controlChange2": 59
-         },
-         null
-        ],
-        [
-         null,
-         null,
-         {
-          "pitch": 62,
-          "velocity": 114,
-          "duration": "8n",
-          "controlVoltage1": 0.6486478413747745,
-          "controlChange1": 36,
-          "controlChange2": 31
-         },
-         null,
-         null,
-         {
-          "pitch": 64,
-          "velocity": 94,
-          "duration": "8n",
-          "controlVoltage1": 0.15066100455474896,
-          "controlChange1": 53,
+          "controlVoltage1": 0.10119690845267448,
+          "controlChange1": 59,
           "controlChange2": 57
          },
          null,
          null,
          null,
          {
-          "pitch": 60,
-          "velocity": 108,
+          "pitch": 51,
+          "velocity": 88,
           "duration": "8n",
-          "controlVoltage1": 0.5322773920947232,
-          "controlChange1": 52,
-          "controlChange2": 86
+          "controlVoltage1": 0.839978383730495,
+          "controlChange1": 75,
+          "controlChange2": 44
          },
          null,
          null,
          null,
          null,
          null,
+         null,
          {
-          "pitch": 50,
-          "velocity": 113,
+          "pitch": 53,
+          "velocity": 126,
           "duration": "8n",
-          "controlVoltage1": 0.06298650446209941,
-          "controlChange1": 75,
-          "controlChange2": 60
+          "controlVoltage1": 0.22181877113254567,
+          "controlChange1": 89,
+          "controlChange2": 44
          }
         ],
         [
          null,
-         null,
          {
-          "pitch": 62,
-          "velocity": 33,
+          "pitch": 63,
+          "velocity": 117,
           "duration": "8n",
-          "controlVoltage1": 0.9718173062121676,
-          "controlChange1": 36,
+          "controlVoltage1": 0.4314870724256463,
+          "controlChange1": 80,
           "controlChange2": 48
          },
          null,
          null,
          null,
          null,
-         {
-          "pitch": 64,
-          "velocity": 104,
-          "duration": "8n",
-          "controlVoltage1": 0.2981226110592978,
-          "controlChange1": 103,
-          "controlChange2": 81
-         },
-         null,
          null,
          {
-          "pitch": 50,
-          "velocity": 102,
+          "pitch": 49,
+          "velocity": 79,
           "duration": "8n",
-          "controlVoltage1": 0.36823324022667414,
-          "controlChange1": 47,
-          "controlChange2": 89
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 48,
-          "velocity": 24,
-          "duration": "8n",
-          "controlVoltage1": 0.45991439723488203,
-          "controlChange1": 73,
-          "controlChange2": 103
-         }
-        ],
-        [
-         null,
-         null,
-         null,
-         {
-          "pitch": 48,
-          "velocity": 80,
-          "duration": "8n",
-          "controlVoltage1": 0.5015186006694676,
-          "controlChange1": 45,
-          "controlChange2": 66
+          "controlVoltage1": 0.4228394957482893,
+          "controlChange1": 64,
+          "controlChange2": 70
          },
          {
-          "pitch": 56,
-          "velocity": 31,
+          "pitch": 63,
+          "velocity": 49,
           "duration": "8n",
-          "controlVoltage1": 0.8547926919450177,
-          "controlChange1": 96,
-          "controlChange2": 109
+          "controlVoltage1": 0.21901332327407141,
+          "controlChange1": 36,
+          "controlChange2": 102
          },
-         null,
-         null,
          null,
          null,
          null,
          null,
          {
           "pitch": 56,
-          "velocity": 53,
+          "velocity": 43,
           "duration": "8n",
-          "controlVoltage1": 0.7713023725197914,
-          "controlChange1": 51,
-          "controlChange2": 39
+          "controlVoltage1": 0.43485231361409826,
+          "controlChange1": 49,
+          "controlChange2": 52
          },
-         {
-          "pitch": 56,
-          "velocity": 105,
-          "duration": "8n",
-          "controlVoltage1": 0.1441716572555789,
-          "controlChange1": 83,
-          "controlChange2": 107
-         },
-         null,
          null,
          null
+        ],
+        [
+         {
+          "pitch": 53,
+          "velocity": 110,
+          "duration": "8n",
+          "controlVoltage1": 0.7161323993427349,
+          "controlChange1": 14,
+          "controlChange2": 54
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 104,
+          "duration": "8n",
+          "controlVoltage1": 0.8506481187214538,
+          "controlChange1": 22,
+          "controlChange2": 58
+         },
+         null,
+         null,
+         {
+          "pitch": 53,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.12577423048373393,
+          "controlChange1": 17,
+          "controlChange2": 29
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 54,
+          "velocity": 76,
+          "duration": "8n",
+          "controlVoltage1": 0.8639583184166912,
+          "controlChange1": 23,
+          "controlChange2": 101
+         }
         ]
        ],
        "graphData": {
+        "0": 0,
+        "1": 1,
         "probability": 0.5,
         "linear": [
-         [
-          7
-         ],
-         [
-          1,
-          1
-         ]
+         2
         ],
         "markov": [
          [
-          0.7550792365370551,
-          0.8713255155478186,
-          0.7799061053543277,
-          0.954558586511409,
-          0.2241415907707367,
-          0.8268675163521562,
-          0.6600936448930337,
-          0.9087792610864476
+          0.7836763581405579,
+          0.7951113781342454,
+          0.8255783103080319,
+          0.8671171659891248,
+          0.323136505877778,
+          0.8437319353407284,
+          0.8918178509887444,
+          0.15851653708861502
          ],
          [
-          0.9872791459424319,
-          0.3430331634108681,
-          0.31767980309906707,
-          0.335135650952441,
-          0.3107318020750891,
-          0.49475723225317436,
-          0.21618842772403069,
-          0.6139509250161992
+          0.32720852657059707,
+          0.45408872899372743,
+          0.6319231387936839,
+          0.23839353541113284,
+          0.6791633277638824,
+          0.3157245945738105,
+          0.36609014838394893,
+          0.814167769251136
          ],
          [
-          0.6234682474781159,
-          0.5028652547455308,
-          0.044738154042791356,
-          0.4837377002362364,
-          0.6562442541346181,
-          0.5501414694264835,
-          0.2445090241925818,
-          0.5918457042206999
+          0.207129866893226,
+          0.4755941965744157,
+          0.919438500259202,
+          0.8054598024517639,
+          0.9528619120629285,
+          0.012193694387570453,
+          0.030536657264246703,
+          0.1834959725816192
          ],
          [
-          0.1957920895998022,
-          0.17704755454782073,
-          0.27717487396451723,
-          0.11927439394210615,
-          0.22679893449982358,
-          0.18373417277746396,
-          0.17045149361121825,
-          0.9139278434103626
+          0.9146322907167204,
+          0.5276330794264967,
+          0.2297490394334334,
+          0.7129241236655901,
+          0.08637513164904531,
+          0.5643912453109263,
+          0.17618291568474675,
+          0.6310830123454643
          ],
          [
-          0.9482698604466024,
-          0.012446402374066023,
-          0.4212518488717705,
-          0.33650436436720055,
-          0.4558078902341509,
-          0.9973994679296319,
-          0.03545290506443788,
-          0.5210327525243283
+          0.39080384881904195,
+          0.21197108245994922,
+          0.9122531554211708,
+          0.4642388575730201,
+          0.9046488803052268,
+          0.5728788503180715,
+          0.1837442485016607,
+          0.3776737768487768
          ],
          [
-          0.4482399362478089,
-          0.4390609903983609,
-          0.6336423916507563,
-          0.7199049628772283,
-          0.6564764491503461,
-          0.48781057153636276,
-          0.267470663491028,
-          0.9528475024984804
+          0.24033593627518823,
+          0.36007088360441153,
+          0.013197468374071208,
+          0.9224805530479729,
+          0.11119286040045329,
+          0.993562141707184,
+          0.7646259209717818,
+          0.972582122276638
          ],
          [
-          0.40618863409551187,
-          0.6759872126793107,
-          0.8209515320933001,
-          0.6342187575001956,
-          0.24882916619382311,
-          0.4395023229646613,
-          0.6436189937323513,
-          0.46389332662450555
+          0.17161535957529916,
+          0.7879528238172646,
+          0.349412766753477,
+          0.9636747301616713,
+          0.5621732544752507,
+          0.25027390683939266,
+          0.17236941805316097,
+          0.796029908812435
          ],
          [
-          0.8548455324113602,
-          0.8131473465951391,
-          0.1571434898221351,
-          0.018215245379943346,
-          0.1861960522925974,
-          0.13678013352595864,
-          0.8371810195967269,
-          0.3937593352233546
+          0.7634011466979103,
+          0.7414438471864453,
+          0.15246693164982061,
+          0.1631588656149947,
+          0.15589775629260538,
+          0.8912600143289042,
+          0.07615558488870033,
+          0.41976181313764815
          ]
         ],
         "evolve": {
@@ -2019,125 +2154,44 @@
         [
          {
           "pitch": 36,
-          "velocity": 56,
-          "duration": "8n",
-          "controlVoltage1": 0.44181121139408197,
-          "controlChange1": 21,
-          "controlChange2": 33
-         },
-         {
-          "pitch": 36,
-          "velocity": 108,
-          "duration": "8n",
-          "controlVoltage1": 0.3234028459962348,
-          "controlChange1": 100,
-          "controlChange2": 71
-         },
-         {
-          "pitch": 36,
-          "velocity": 38,
-          "duration": "8n",
-          "controlVoltage1": 0.3927402157306845,
-          "controlChange1": 98,
-          "controlChange2": 12
-         },
-         null,
-         {
-          "pitch": 36,
-          "velocity": 73,
-          "duration": "8n",
-          "controlVoltage1": 0.06179193016415385,
-          "controlChange1": 80,
-          "controlChange2": 107
-         },
-         {
-          "pitch": 36,
-          "velocity": 104,
-          "duration": "8n",
-          "controlVoltage1": 0.423107522497737,
-          "controlChange1": 59,
-          "controlChange2": 85
-         },
-         {
-          "pitch": 36,
-          "velocity": 41,
-          "duration": "8n",
-          "controlVoltage1": 0.0740753414722477,
-          "controlChange1": 105,
-          "controlChange2": 53
-         },
-         null,
-         {
-          "pitch": 36,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.3282296157743454,
-          "controlChange1": 48,
-          "controlChange2": 47
-         },
-         {
-          "pitch": 36,
           "velocity": 48,
           "duration": "8n",
-          "controlVoltage1": 0.16890309866943376,
-          "controlChange1": 67,
-          "controlChange2": 71
-         },
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 110,
-          "duration": "8n",
-          "controlVoltage1": 0.24965940067228742,
-          "controlChange1": 29,
-          "controlChange2": 102
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 51,
-          "duration": "8n",
-          "controlVoltage1": 0.9366406740856899,
-          "controlChange1": 67,
-          "controlChange2": 90
+          "controlVoltage1": 0.8484106003601566,
+          "controlChange1": 73,
+          "controlChange2": 100
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 114,
+          "velocity": 75,
           "duration": "8n",
-          "controlVoltage1": 0.07643401934668814,
-          "controlChange1": 15,
-          "controlChange2": 53
+          "controlVoltage1": 0.49866846439573664,
+          "controlChange1": 63,
+          "controlChange2": 99
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 85,
+          "velocity": 53,
           "duration": "8n",
-          "controlVoltage1": 0.6968938738676578,
-          "controlChange1": 29,
-          "controlChange2": 42
+          "controlVoltage1": 0.05365946654835607,
+          "controlChange1": 112,
+          "controlChange2": 46
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 117,
+          "velocity": 57,
           "duration": "8n",
-          "controlVoltage1": 0.2772553180576347,
-          "controlChange1": 29,
-          "controlChange2": 43
+          "controlVoltage1": 0.800987539597612,
+          "controlChange1": 85,
+          "controlChange2": 79
          },
          null,
          null,
@@ -2146,44 +2200,44 @@
         [
          {
           "pitch": 36,
-          "velocity": 32,
+          "velocity": 66,
           "duration": "8n",
-          "controlVoltage1": 0.13097409327860698,
-          "controlChange1": 67,
-          "controlChange2": 109
+          "controlVoltage1": 0.8702920564673899,
+          "controlChange1": 99,
+          "controlChange2": 32
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 100,
+          "velocity": 84,
           "duration": "8n",
-          "controlVoltage1": 0.5553294057620495,
-          "controlChange1": 89,
-          "controlChange2": 50
+          "controlVoltage1": 0.8302106269571963,
+          "controlChange1": 111,
+          "controlChange2": 18
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 27,
+          "velocity": 46,
           "duration": "8n",
-          "controlVoltage1": 0.5068855428429819,
-          "controlChange1": 94,
-          "controlChange2": 83
+          "controlVoltage1": 0.14600968239312828,
+          "controlChange1": 33,
+          "controlChange2": 40
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 27,
+          "velocity": 78,
           "duration": "8n",
-          "controlVoltage1": 0.8380387406077825,
-          "controlChange1": 77,
-          "controlChange2": 34
+          "controlVoltage1": 0.9796750237759513,
+          "controlChange1": 102,
+          "controlChange2": 18
          },
          null,
          null,
@@ -2192,56 +2246,56 @@
         [
          {
           "pitch": 36,
-          "velocity": 25,
+          "velocity": 36,
           "duration": "8n",
-          "controlVoltage1": 0.5920089711480108,
+          "controlVoltage1": 0.744085228167886,
+          "controlChange1": 28,
+          "controlChange2": 74
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 70,
+          "duration": "8n",
+          "controlVoltage1": 0.11322025542423986,
+          "controlChange1": 47,
+          "controlChange2": 61
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 78,
+          "duration": "8n",
+          "controlVoltage1": 0.45578283441421363,
+          "controlChange1": 50,
+          "controlChange2": 87
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 50,
+          "duration": "8n",
+          "controlVoltage1": 0.3697580843575139,
+          "controlChange1": 98,
+          "controlChange2": 80
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         {
+          "pitch": 36,
+          "velocity": 34,
+          "duration": "8n",
+          "controlVoltage1": 0.9699061748879678,
           "controlChange1": 71,
-          "controlChange2": 58
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 71,
-          "duration": "8n",
-          "controlVoltage1": 0.8542017816985479,
-          "controlChange1": 24,
-          "controlChange2": 104
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 114,
-          "duration": "8n",
-          "controlVoltage1": 0.09867746665194588,
-          "controlChange1": 34,
-          "controlChange2": 103
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 97,
-          "duration": "8n",
-          "controlVoltage1": 0.5989077480788685,
-          "controlChange1": 38,
-          "controlChange2": 30
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 82,
-          "duration": "8n",
-          "controlVoltage1": 0.5135105654241405,
-          "controlChange1": 80,
           "controlChange2": 51
          },
          null,
@@ -2249,137 +2303,45 @@
          null,
          {
           "pitch": 36,
-          "velocity": 55,
+          "velocity": 83,
           "duration": "8n",
-          "controlVoltage1": 0.87310611815296,
-          "controlChange1": 31,
-          "controlChange2": 30
+          "controlVoltage1": 0.44372018976594174,
+          "controlChange1": 21,
+          "controlChange2": 43
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 25,
+          "velocity": 126,
           "duration": "8n",
-          "controlVoltage1": 0.2997072376595411,
-          "controlChange1": 29,
-          "controlChange2": 25
+          "controlVoltage1": 0.31566826782244806,
+          "controlChange1": 92,
+          "controlChange2": 92
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 118,
+          "velocity": 26,
           "duration": "8n",
-          "controlVoltage1": 0.8737766860978948,
-          "controlChange1": 13,
-          "controlChange2": 46
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 109,
-          "duration": "8n",
-          "controlVoltage1": 0.6043002438310623,
-          "controlChange1": 103,
-          "controlChange2": 109
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 117,
-          "duration": "8n",
-          "controlVoltage1": 0.4360952977607624,
-          "controlChange1": 52,
+          "controlVoltage1": 0.891305236318374,
+          "controlChange1": 27,
           "controlChange2": 95
          },
          null,
          null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 49,
-          "duration": "8n",
-          "controlVoltage1": 0.6674638092625,
-          "controlChange1": 43,
-          "controlChange2": 31
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 28,
-          "duration": "8n",
-          "controlVoltage1": 0.9524612473866869,
-          "controlChange1": 33,
-          "controlChange2": 17
-         },
-         null,
-         null,
          null
         ],
         [
          {
           "pitch": 36,
-          "velocity": 71,
+          "velocity": 91,
           "duration": "8n",
-          "controlVoltage1": 0.939768975045159,
-          "controlChange1": 101,
-          "controlChange2": 89
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 51,
-          "duration": "8n",
-          "controlVoltage1": 0.3735124037740567,
-          "controlChange1": 15,
-          "controlChange2": 98
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 43,
-          "duration": "8n",
-          "controlVoltage1": 0.5109457904634442,
-          "controlChange1": 40,
-          "controlChange2": 82
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 96,
-          "duration": "8n",
-          "controlVoltage1": 0.6374838100145237,
-          "controlChange1": 58,
-          "controlChange2": 31
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 89,
-          "duration": "8n",
-          "controlVoltage1": 0.6576090120008293,
-          "controlChange1": 97,
+          "controlVoltage1": 0.15968782804939874,
+          "controlChange1": 37,
           "controlChange2": 62
          },
          null,
@@ -2387,33 +2349,178 @@
          null,
          {
           "pitch": 36,
-          "velocity": 123,
+          "velocity": 94,
           "duration": "8n",
-          "controlVoltage1": 0.4977235882730362,
-          "controlChange1": 67,
-          "controlChange2": 91
+          "controlVoltage1": 0.11494526113542292,
+          "controlChange1": 90,
+          "controlChange2": 111
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 30,
+          "velocity": 98,
           "duration": "8n",
-          "controlVoltage1": 0.5364060742947996,
-          "controlChange1": 69,
-          "controlChange2": 37
+          "controlVoltage1": 0.43335668053459986,
+          "controlChange1": 45,
+          "controlChange2": 71
          },
          null,
          null,
          null,
          {
           "pitch": 36,
-          "velocity": 106,
+          "velocity": 66,
           "duration": "8n",
-          "controlVoltage1": 0.3878337419943827,
-          "controlChange1": 102,
-          "controlChange2": 109
+          "controlVoltage1": 0.4547726040576472,
+          "controlChange1": 16,
+          "controlChange2": 94
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         {
+          "pitch": 36,
+          "velocity": 96,
+          "duration": "8n",
+          "controlVoltage1": 0.3220366427504786,
+          "controlChange1": 58,
+          "controlChange2": 73
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 68,
+          "duration": "8n",
+          "controlVoltage1": 0.358270240414595,
+          "controlChange1": 28,
+          "controlChange2": 38
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 116,
+          "duration": "8n",
+          "controlVoltage1": 0.5169242453735912,
+          "controlChange1": 92,
+          "controlChange2": 110
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 45,
+          "duration": "8n",
+          "controlVoltage1": 0.011095623015705991,
+          "controlChange1": 36,
+          "controlChange2": 26
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         {
+          "pitch": 36,
+          "velocity": 94,
+          "duration": "8n",
+          "controlVoltage1": 0.14279894653358416,
+          "controlChange1": 82,
+          "controlChange2": 106
+         },
+         null,
+         {
+          "pitch": 36,
+          "velocity": 127,
+          "duration": "8n",
+          "controlVoltage1": 0.09910924784848274,
+          "controlChange1": 73,
+          "controlChange2": 52
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.7199063686129292,
+          "controlChange1": 42,
+          "controlChange2": 90
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 119,
+          "duration": "8n",
+          "controlVoltage1": 0.15779634111717167,
+          "controlChange1": 49,
+          "controlChange2": 50
+         },
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 78,
+          "duration": "8n",
+          "controlVoltage1": 0.46790680120473227,
+          "controlChange1": 59,
+          "controlChange2": 13
+         }
+        ],
+        [
+         {
+          "pitch": 36,
+          "velocity": 74,
+          "duration": "8n",
+          "controlVoltage1": 0.2694422778629877,
+          "controlChange1": 109,
+          "controlChange2": 60
+         },
+         null,
+         {
+          "pitch": 36,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.11386985305798314,
+          "controlChange1": 38,
+          "controlChange2": 40
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 108,
+          "duration": "8n",
+          "controlVoltage1": 0.4200066896632917,
+          "controlChange1": 19,
+          "controlChange2": 73
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 36,
+          "velocity": 60,
+          "duration": "8n",
+          "controlVoltage1": 0.9245069206865908,
+          "controlChange1": 13,
+          "controlChange2": 73
          },
          null,
          null,
@@ -2421,94 +2528,93 @@
         ]
        ],
        "graphData": {
-        "0": 1,
-        "1": 2,
-        "2": 1,
-        "3": 3,
+        "0": 6,
+        "1": 7,
         "probability": 0.5,
         "linear": [
-         0
+         6,
+         7
         ],
         "markov": [
          [
-          0.41207695693370194,
-          0.09705778045276259,
-          0.6071062025424057,
-          0.765849739639094,
-          0.8966303161046243,
-          0.24189780566810226,
-          0.3776434031623115,
-          0.19360067625377053
+          0.010946790553964636,
+          0.48984655268025845,
+          0.08030288408778441,
+          0.0710273349992745,
+          0.0791827493487014,
+          0.22189353818491875,
+          0.8626650816967159,
+          0.17450505137747152
          ],
          [
-          0.7439251150552819,
-          0.09243869346003541,
-          0.5715206077993324,
-          0.44150316971270787,
-          0.4167801553342396,
-          0.9650925408072661,
-          0.5815962645583761,
-          0.49857297869645145
+          0.022183228124802667,
+          0.9213150549747833,
+          0.5795021895875669,
+          0.5634596850961944,
+          0.3195994967816276,
+          0.5687782539251569,
+          0.42448171208267893,
+          0.49359957820120637
          ],
          [
-          0.033697588823248026,
-          0.5195838201299758,
-          0.20212749776944294,
-          0.18090849987599134,
-          0.29195774149629483,
-          0.055150142244437594,
-          0.12310014096075306,
-          0.5485094142462181
+          0.887728237501517,
+          0.030781132610730566,
+          0.4685869013119659,
+          0.9276482476740211,
+          0.5024650186959017,
+          0.26245538389663503,
+          0.02621725904231731,
+          0.6788688994222603
          ],
          [
-          0.7507076922667066,
-          0.2708989283243757,
-          0.548576341129932,
-          0.03572895924565955,
-          0.7899931440190742,
-          0.12587799056575832,
-          0.8069749488928419,
-          0.04188697071670666
+          0.3969114719050806,
+          0.27329877603894226,
+          0.4569408400250492,
+          0.12046838732558673,
+          0.10774643185327148,
+          0.4406607727051899,
+          0.6851738138741508,
+          0.6889427229681375
          ],
          [
-          0.21755241427579142,
-          0.07968829890234774,
-          0.9152916717418471,
-          0.2939780255726614,
-          0.6996211176116027,
-          0.49722551049496366,
-          0.9021016236359631,
-          0.9728134336967791
+          0.6510022537252229,
+          0.37427933654511647,
+          0.4488598442867191,
+          0.3457743354197278,
+          0.34180680777576766,
+          0.39446096167300637,
+          0.19337819226643527,
+          0.4045665153420517
          ],
          [
-          0.35476132128196913,
-          0.9514877142230576,
-          0.6167001232372433,
-          0.647939924511894,
-          0.45090707091833937,
-          0.11777575761637782,
-          0.2274793017102943,
-          0.14693188286792846
+          0.6188426782155447,
+          0.729180302385328,
+          0.09558892713664102,
+          0.4374852148001096,
+          0.30150962349531785,
+          0.03312122397761108,
+          0.249353708686874,
+          0.015171374884335398
          ],
          [
-          0.9454243077143847,
-          0.8349507990311757,
-          0.512924593591956,
-          0.5878626205369675,
-          0.03732333182034808,
-          0.20978131792537402,
-          0.48428419904699194,
-          0.8516394553511368
+          0.9743052452565957,
+          0.08653222004466121,
+          0.8017382110985285,
+          0.9058255187426221,
+          0.9040493589359653,
+          0.14936837165039818,
+          0.008866893284107391,
+          0.011849750794599379
          ],
          [
-          0.39677286546883406,
-          0.596977355473719,
-          0.9949564064373682,
-          0.5106501421123395,
-          0.7845230977173105,
-          0.5851290892890426,
-          0.6473598279701582,
-          0.5862957858765536
+          0.7186161715783506,
+          0.49593326922489456,
+          0.5950502267498612,
+          0.4558164282100119,
+          0.21099586176720098,
+          0.02086606991892026,
+          0.5599979487710502,
+          0.24759998042076048
          ]
         ],
         "evolve": {
@@ -2545,74 +2651,10 @@
          null,
          {
           "pitch": 38,
-          "velocity": 99,
+          "velocity": 72,
           "duration": "8n",
-          "controlVoltage1": 0.7874691285189181,
-          "controlChange1": 87,
-          "controlChange2": 13
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 94,
-          "duration": "8n",
-          "controlVoltage1": 0.8329171163233502,
-          "controlChange1": 31,
-          "controlChange2": 42
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 96,
-          "duration": "8n",
-          "controlVoltage1": 0.7042954639134307,
-          "controlChange1": 49,
-          "controlChange2": 25
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.6714720441852298,
-          "controlChange1": 79,
-          "controlChange2": 99
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.8703572907513784,
-          "controlChange1": 110,
+          "controlVoltage1": 0.41011368400396697,
+          "controlChange1": 30,
           "controlChange2": 89
          },
          null,
@@ -2624,10 +2666,42 @@
          null,
          {
           "pitch": 38,
-          "velocity": 95,
+          "velocity": 119,
           "duration": "8n",
-          "controlVoltage1": 0.298104358141857,
-          "controlChange1": 88,
+          "controlVoltage1": 0.7200682880000535,
+          "controlChange1": 75,
+          "controlChange2": 18
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 28,
+          "duration": "8n",
+          "controlVoltage1": 0.3236058702057538,
+          "controlChange1": 82,
+          "controlChange2": 79
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 98,
+          "duration": "8n",
+          "controlVoltage1": 0.7392801545357881,
+          "controlChange1": 32,
           "controlChange2": 16
          },
          null,
@@ -2641,11 +2715,11 @@
          null,
          {
           "pitch": 38,
-          "velocity": 116,
+          "velocity": 53,
           "duration": "8n",
-          "controlVoltage1": 0.5234704199239253,
-          "controlChange1": 39,
-          "controlChange2": 24
+          "controlVoltage1": 0.593615799402289,
+          "controlChange1": 12,
+          "controlChange2": 18
          },
          null,
          null,
@@ -2656,43 +2730,11 @@
          null,
          {
           "pitch": 38,
-          "velocity": 41,
+          "velocity": 59,
           "duration": "8n",
-          "controlVoltage1": 0.9978142931331113,
-          "controlChange1": 52,
-          "controlChange2": 83
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.6849175456894829,
-          "controlChange1": 71,
-          "controlChange2": 56
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 73,
-          "duration": "8n",
-          "controlVoltage1": 0.29272279133411194,
-          "controlChange1": 110,
-          "controlChange2": 16
+          "controlVoltage1": 0.37981809240444075,
+          "controlChange1": 64,
+          "controlChange2": 65
          },
          null,
          null,
@@ -2705,46 +2747,14 @@
          null,
          {
           "pitch": 38,
-          "velocity": 89,
+          "velocity": 101,
           "duration": "8n",
-          "controlVoltage1": 0.7292289254850806,
-          "controlChange1": 50,
-          "controlChange2": 44
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 30,
-          "duration": "8n",
-          "controlVoltage1": 0.8916330574113618,
-          "controlChange1": 40,
+          "controlVoltage1": 0.3397658320584165,
+          "controlChange1": 91,
           "controlChange2": 69
          },
          null,
          null,
-         null
-        ],
-        [
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 55,
-          "duration": "8n",
-          "controlVoltage1": 0.7584076043630945,
-          "controlChange1": 79,
-          "controlChange2": 12
-         },
-         null,
-         null,
          null,
          null,
          null,
@@ -2752,11 +2762,11 @@
          null,
          {
           "pitch": 38,
-          "velocity": 97,
+          "velocity": 26,
           "duration": "8n",
-          "controlVoltage1": 0.04756457505868594,
-          "controlChange1": 112,
-          "controlChange2": 14
+          "controlVoltage1": 0.9052205761713357,
+          "controlChange1": 43,
+          "controlChange2": 53
          },
          null,
          null,
@@ -2769,26 +2779,122 @@
          null,
          {
           "pitch": 38,
-          "velocity": 113,
+          "velocity": 79,
           "duration": "8n",
-          "controlVoltage1": 0.23535441254269274,
-          "controlChange1": 93,
-          "controlChange2": 60
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 38,
-          "velocity": 63,
-          "duration": "8n",
-          "controlVoltage1": 0.33284456437805976,
+          "controlVoltage1": 0.8073155179506255,
           "controlChange1": 69,
-          "controlChange2": 97
+          "controlChange2": 79
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 125,
+          "duration": "8n",
+          "controlVoltage1": 0.9156518394250857,
+          "controlChange1": 94,
+          "controlChange2": 106
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 111,
+          "duration": "8n",
+          "controlVoltage1": 0.37887663540414707,
+          "controlChange1": 50,
+          "controlChange2": 50
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 65,
+          "duration": "8n",
+          "controlVoltage1": 0.3443323009500112,
+          "controlChange1": 26,
+          "controlChange2": 91
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 76,
+          "duration": "8n",
+          "controlVoltage1": 0.8458817176891982,
+          "controlChange1": 102,
+          "controlChange2": 83
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 104,
+          "duration": "8n",
+          "controlVoltage1": 0.9764877133690366,
+          "controlChange1": 62,
+          "controlChange2": 50
+         },
+         null,
+         null,
+         null
+        ],
+        [
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 92,
+          "duration": "8n",
+          "controlVoltage1": 0.1122061846634026,
+          "controlChange1": 78,
+          "controlChange2": 39
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 38,
+          "velocity": 122,
+          "duration": "8n",
+          "controlVoltage1": 0.5250698762380108,
+          "controlChange1": 17,
+          "controlChange2": 18
          },
          null,
          null,
@@ -2799,89 +2905,89 @@
         "probability": 0.5,
         "linear": [
          [
-          5
+          7
          ]
         ],
         "markov": [
          [
-          0.08469600649707787,
-          0.12152222309201255,
-          0.5431085224056513,
-          0.8356748301150192,
-          0.3793871523024879,
-          0.442188491525205,
-          0.35737900026083014,
-          0.3734641489748911
+          0.4753801697626985,
+          0.9863258072080956,
+          0.3701073064258562,
+          0.4273939051872462,
+          0.310324401365879,
+          0.16391542055286612,
+          0.3506754015393039,
+          0.750469510349199
          ],
          [
-          0.37091165946802773,
-          0.28470906361603543,
-          0.631061282388867,
-          0.6245953682858911,
-          0.4794356264267625,
-          0.5848331866750756,
-          0.24092234575250937,
-          0.351096590578468
+          0.5413598833848632,
+          0.7231918482342401,
+          0.9059823398961027,
+          0.05515683587196918,
+          0.5573579557441701,
+          0.11918325322420587,
+          0.06108420785115154,
+          0.04933820331312999
          ],
          [
-          0.5211059336839512,
-          0.488373243081649,
-          0.07855056158526885,
-          0.6114596160712067,
-          0.6737127113432577,
-          0.30559793004014524,
-          0.08941583817817134,
-          0.973938015911233
+          0.8237203707473006,
+          0.31429428979073437,
+          0.0006433130870155956,
+          0.21741002195169545,
+          0.0720754395265768,
+          0.6959670587947129,
+          0.49287064378074175,
+          0.529399662082144
          ],
          [
-          0.9989187617656758,
-          0.25876376332168327,
-          0.4416025674842139,
-          0.8879470461356909,
-          0.5112672983571007,
-          0.5747891762811126,
-          0.8046719155965818,
-          0.5352423579021826
+          0.8818856567627571,
+          0.0016685230317290412,
+          0.905720855513273,
+          0.5021659822304421,
+          0.8067888945349442,
+          0.04280582435138469,
+          0.7724723246417007,
+          0.7809567964482493
          ],
          [
-          0.8162296906365485,
-          0.7543477430176635,
-          0.6993771527927146,
-          0.02621171938734501,
-          0.2533246200876673,
-          0.023442825875844342,
-          0.4578347564446483,
-          0.8584031340196807
+          0.23448326699796085,
+          0.13923624784496602,
+          0.638459471590938,
+          0.7985244733404828,
+          0.9140912083529904,
+          0.965455699635775,
+          0.5235019439345492,
+          0.4710105744667934
          ],
          [
-          0.8167599659335858,
-          0.6076035899992813,
-          0.01595157636118416,
-          0.8379353933589959,
-          0.6078264424332247,
-          0.19264372325028933,
-          0.9248303514593208,
-          0.751575945830754
+          0.3803141638459411,
+          0.7045312231278742,
+          0.4122194160510555,
+          0.27893039312521783,
+          0.20844724319670327,
+          0.03739501222125741,
+          0.45990688639804844,
+          0.3251099271579845
          ],
          [
-          0.046273980382712354,
-          0.7090704945125783,
-          0.1020471371941174,
-          0.10534151820544069,
-          0.18698061542805045,
-          0.7859974698889296,
-          0.5008933599811614,
-          0.1357714643681336
+          0.6054168666125239,
+          0.5920798998953154,
+          0.9925903071034423,
+          0.3660981659971432,
+          0.539662127952433,
+          0.1927392454566066,
+          0.8160895334865419,
+          0.8343391980199484
          ],
          [
-          0.26533480056537306,
-          0.14087736553576757,
-          0.7449347820988261,
-          0.4034839563715955,
-          0.9632503796977396,
-          0.7407337222315802,
-          0.536886781063926,
-          0.3395396993647093
+          0.6960550483747385,
+          0.42104584755084673,
+          0.5013410194575658,
+          0.24218426353711386,
+          0.7726088735243706,
+          0.03871423517227801,
+          0.9737176067440367,
+          0.6492118000661806
          ]
         ],
         "evolve": {
@@ -2915,517 +3021,11 @@
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 74,
+          "velocity": 122,
           "duration": "8n",
-          "controlVoltage1": 0.8250924768311723,
-          "controlChange1": 22,
-          "controlChange2": 71
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 74,
-          "duration": "8n",
-          "controlVoltage1": 0.8250924768311723,
-          "controlChange1": 22,
-          "controlChange2": 71
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 74,
-          "duration": "8n",
-          "controlVoltage1": 0.8250924768311723,
-          "controlChange1": 22,
-          "controlChange2": 71
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 74,
-          "duration": "8n",
-          "controlVoltage1": 0.8250924768311723,
-          "controlChange1": 22,
-          "controlChange2": 71
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 55,
-          "duration": "8n",
-          "controlVoltage1": 0.4278567287832633,
-          "controlChange1": 112,
-          "controlChange2": 54
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 55,
-          "duration": "8n",
-          "controlVoltage1": 0.4278567287832633,
-          "controlChange1": 112,
-          "controlChange2": 54
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 31,
-          "duration": "8n",
-          "controlVoltage1": 0.690676684245692,
-          "controlChange1": 12,
-          "controlChange2": 15
-         },
-         null,
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 55,
-          "duration": "8n",
-          "controlVoltage1": 0.1589836431984777,
-          "controlChange1": 94,
-          "controlChange2": 46
-         },
-         null,
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 72,
-          "duration": "8n",
-          "controlVoltage1": 0.20619267347865144,
-          "controlChange1": 15,
-          "controlChange2": 23
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 72,
-          "duration": "8n",
-          "controlVoltage1": 0.20619267347865144,
-          "controlChange1": 15,
-          "controlChange2": 23
-         }
-        ],
-        [
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 90,
-          "duration": "8n",
-          "controlVoltage1": 0.15385351835999161,
-          "controlChange1": 61,
-          "controlChange2": 56
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 90,
-          "duration": "8n",
-          "controlVoltage1": 0.15385351835999161,
-          "controlChange1": 61,
-          "controlChange2": 56
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 90,
-          "duration": "8n",
-          "controlVoltage1": 0.15385351835999161,
-          "controlChange1": 61,
-          "controlChange2": 56
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 102,
-          "duration": "8n",
-          "controlVoltage1": 0.3010883386754495,
-          "controlChange1": 14,
-          "controlChange2": 48
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 102,
-          "duration": "8n",
-          "controlVoltage1": 0.3010883386754495,
-          "controlChange1": 14,
-          "controlChange2": 48
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 102,
-          "duration": "8n",
-          "controlVoltage1": 0.3010883386754495,
-          "controlChange1": 14,
-          "controlChange2": 48
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 102,
-          "duration": "8n",
-          "controlVoltage1": 0.3010883386754495,
-          "controlChange1": 14,
-          "controlChange2": 48
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 61,
-          "duration": "8n",
-          "controlVoltage1": 0.9398420850402989,
-          "controlChange1": 35,
-          "controlChange2": 43
-         },
-         null,
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 38,
-          "duration": "8n",
-          "controlVoltage1": 0.9676299800355754,
-          "controlChange1": 17,
-          "controlChange2": 95
-         }
-        ],
-        [
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 126,
-          "duration": "8n",
-          "controlVoltage1": 0.2138997153133826,
-          "controlChange1": 47,
-          "controlChange2": 41
-         },
-         null,
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 99,
-          "duration": "8n",
-          "controlVoltage1": 0.4709078670373634,
-          "controlChange1": 24,
-          "controlChange2": 19
-         },
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.08778901110918258,
-          "controlChange1": 55,
-          "controlChange2": 37
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.08778901110918258,
-          "controlChange1": 55,
-          "controlChange2": 37
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.08778901110918258,
-          "controlChange1": 55,
-          "controlChange2": 37
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 118,
-          "duration": "8n",
-          "controlVoltage1": 0.7127985789678215,
-          "controlChange1": 76,
-          "controlChange2": 109
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 118,
-          "duration": "8n",
-          "controlVoltage1": 0.7127985789678215,
-          "controlChange1": 76,
-          "controlChange2": 109
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 36,
-          "duration": "8n",
-          "controlVoltage1": 0.633843472334348,
-          "controlChange1": 112,
-          "controlChange2": 99
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 36,
-          "duration": "8n",
-          "controlVoltage1": 0.633843472334348,
-          "controlChange1": 112,
-          "controlChange2": 99
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 36,
-          "duration": "8n",
-          "controlVoltage1": 0.633843472334348,
-          "controlChange1": 112,
-          "controlChange2": 99
-         }
-        ],
-        [
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 126,
-          "duration": "8n",
-          "controlVoltage1": 0.35070051514790235,
-          "controlChange1": 97,
-          "controlChange2": 85
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 126,
-          "duration": "8n",
-          "controlVoltage1": 0.35070051514790235,
-          "controlChange1": 97,
-          "controlChange2": 85
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 119,
-          "duration": "8n",
-          "controlVoltage1": 0.9375992197264427,
-          "controlChange1": 46,
-          "controlChange2": 56
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 119,
-          "duration": "8n",
-          "controlVoltage1": 0.9375992197264427,
-          "controlChange1": 46,
-          "controlChange2": 56
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 119,
-          "duration": "8n",
-          "controlVoltage1": 0.9375992197264427,
-          "controlChange1": 46,
-          "controlChange2": 56
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 119,
-          "duration": "8n",
-          "controlVoltage1": 0.9375992197264427,
-          "controlChange1": 46,
-          "controlChange2": 56
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 31,
-          "duration": "8n",
-          "controlVoltage1": 0.463972827613778,
-          "controlChange1": 62,
-          "controlChange2": 35
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 31,
-          "duration": "8n",
-          "controlVoltage1": 0.463972827613778,
-          "controlChange1": 62,
-          "controlChange2": 35
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 31,
-          "duration": "8n",
-          "controlVoltage1": 0.463972827613778,
-          "controlChange1": 62,
-          "controlChange2": 35
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 31,
-          "duration": "8n",
-          "controlVoltage1": 0.463972827613778,
-          "controlChange1": 62,
-          "controlChange2": 35
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.400656563361653,
-          "controlChange1": 40,
-          "controlChange2": 21
-         },
-         null
-        ],
-        [
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.8469115413189765,
-          "controlChange1": 17,
-          "controlChange2": 51
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.8469115413189765,
-          "controlChange1": 17,
-          "controlChange2": 51
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.8469115413189765,
-          "controlChange1": 17,
-          "controlChange2": 51
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.8469115413189765,
-          "controlChange1": 17,
-          "controlChange2": 51
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 115,
-          "duration": "8n",
-          "controlVoltage1": 0.43257678427019863,
-          "controlChange1": 73,
-          "controlChange2": 76
-         },
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 85,
-          "duration": "8n",
-          "controlVoltage1": 0.12029699040213693,
-          "controlChange1": 49,
-          "controlChange2": 53
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 85,
-          "duration": "8n",
-          "controlVoltage1": 0.12029699040213693,
-          "controlChange1": 49,
-          "controlChange2": 53
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 104,
-          "duration": "8n",
-          "controlVoltage1": 0.9884373130731581,
-          "controlChange1": 106,
-          "controlChange2": 64
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 34,
-          "duration": "8n",
-          "controlVoltage1": 0.9816121674197313,
-          "controlChange1": 18,
-          "controlChange2": 53
-         },
-         null,
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 113,
-          "duration": "8n",
-          "controlVoltage1": 0.11144331086986448,
-          "controlChange1": 88,
-          "controlChange2": 75
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 113,
-          "duration": "8n",
-          "controlVoltage1": 0.11144331086986448,
-          "controlChange1": 88,
-          "controlChange2": 75
-         },
-         null,
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 73,
-          "duration": "8n",
-          "controlVoltage1": 0.4467575160790416,
-          "controlChange1": 58,
-          "controlChange2": 70
+          "controlVoltage1": 0.4301433220029267,
+          "controlChange1": 16,
+          "controlChange2": 59
          },
          null,
          null,
@@ -3435,9 +3035,393 @@
           "pitch": 39,
           "velocity": 63,
           "duration": "8n",
-          "controlVoltage1": 0.7710471098991971,
+          "controlVoltage1": 0.039506495829827015,
+          "controlChange1": 16,
+          "controlChange2": 52
+         },
+         null,
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 84,
+          "duration": "8n",
+          "controlVoltage1": 0.3857600085979236,
+          "controlChange1": 45,
+          "controlChange2": 67
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 41,
+          "duration": "8n",
+          "controlVoltage1": 0.1214155352352666,
           "controlChange1": 78,
-          "controlChange2": 65
+          "controlChange2": 31
+         },
+         null,
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 51,
+          "duration": "8n",
+          "controlVoltage1": 0.6105923557282107,
+          "controlChange1": 64,
+          "controlChange2": 68
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 51,
+          "duration": "8n",
+          "controlVoltage1": 0.6105923557282107,
+          "controlChange1": 64,
+          "controlChange2": 68
+         }
+        ],
+        [
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 77,
+          "duration": "8n",
+          "controlVoltage1": 0.56997596430386,
+          "controlChange1": 51,
+          "controlChange2": 71
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 77,
+          "duration": "8n",
+          "controlVoltage1": 0.56997596430386,
+          "controlChange1": 51,
+          "controlChange2": 71
+         },
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 39,
+          "duration": "8n",
+          "controlVoltage1": 0.5475287565329312,
+          "controlChange1": 38,
+          "controlChange2": 30
+         },
+         null,
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 30,
+          "duration": "8n",
+          "controlVoltage1": 0.46503856945936417,
+          "controlChange1": 48,
+          "controlChange2": 103
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 93,
+          "duration": "8n",
+          "controlVoltage1": 0.9160950717455669,
+          "controlChange1": 13,
+          "controlChange2": 111
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 57,
+          "duration": "8n",
+          "controlVoltage1": 0.9148565188123141,
+          "controlChange1": 28,
+          "controlChange2": 92
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 81,
+          "duration": "8n",
+          "controlVoltage1": 0.3703939625166772,
+          "controlChange1": 88,
+          "controlChange2": 102
+         },
+         null
+        ],
+        [
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 97,
+          "duration": "8n",
+          "controlVoltage1": 0.739996379777542,
+          "controlChange1": 34,
+          "controlChange2": 66
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 69,
+          "duration": "8n",
+          "controlVoltage1": 0.723155683736856,
+          "controlChange1": 93,
+          "controlChange2": 25
+         },
+         null,
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 42,
+          "duration": "8n",
+          "controlVoltage1": 0.6927557538869102,
+          "controlChange1": 38,
+          "controlChange2": 63
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 42,
+          "duration": "8n",
+          "controlVoltage1": 0.6927557538869102,
+          "controlChange1": 38,
+          "controlChange2": 63
+         },
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 117,
+          "duration": "8n",
+          "controlVoltage1": 0.13916266470089567,
+          "controlChange1": 66,
+          "controlChange2": 60
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 117,
+          "duration": "8n",
+          "controlVoltage1": 0.13916266470089567,
+          "controlChange1": 66,
+          "controlChange2": 60
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 117,
+          "duration": "8n",
+          "controlVoltage1": 0.13916266470089567,
+          "controlChange1": 66,
+          "controlChange2": 60
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 117,
+          "duration": "8n",
+          "controlVoltage1": 0.13916266470089567,
+          "controlChange1": 66,
+          "controlChange2": 60
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 104,
+          "duration": "8n",
+          "controlVoltage1": 0.4366771732362218,
+          "controlChange1": 40,
+          "controlChange2": 87
+         },
+         null
+        ],
+        [
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 63,
+          "duration": "8n",
+          "controlVoltage1": 0.8752166098904228,
+          "controlChange1": 76,
+          "controlChange2": 78
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 63,
+          "duration": "8n",
+          "controlVoltage1": 0.8752166098904228,
+          "controlChange1": 76,
+          "controlChange2": 78
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 63,
+          "duration": "8n",
+          "controlVoltage1": 0.8752166098904228,
+          "controlChange1": 76,
+          "controlChange2": 78
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 63,
+          "duration": "8n",
+          "controlVoltage1": 0.8752166098904228,
+          "controlChange1": 76,
+          "controlChange2": 78
+         },
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 117,
+          "duration": "8n",
+          "controlVoltage1": 0.1351406448970629,
+          "controlChange1": 53,
+          "controlChange2": 35
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 87,
+          "duration": "8n",
+          "controlVoltage1": 0.9386970326975528,
+          "controlChange1": 73,
+          "controlChange2": 57
+         },
+         null,
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 113,
+          "duration": "8n",
+          "controlVoltage1": 0.050940174942910144,
+          "controlChange1": 101,
+          "controlChange2": 69
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 113,
+          "duration": "8n",
+          "controlVoltage1": 0.050940174942910144,
+          "controlChange1": 101,
+          "controlChange2": 69
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 113,
+          "duration": "8n",
+          "controlVoltage1": 0.050940174942910144,
+          "controlChange1": 101,
+          "controlChange2": 69
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 113,
+          "duration": "8n",
+          "controlVoltage1": 0.050940174942910144,
+          "controlChange1": 101,
+          "controlChange2": 69
+         }
+        ],
+        [
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.37521256973201234,
+          "controlChange1": 105,
+          "controlChange2": 52
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.37521256973201234,
+          "controlChange1": 105,
+          "controlChange2": 52
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.37521256973201234,
+          "controlChange1": 105,
+          "controlChange2": 52
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 82,
+          "duration": "8n",
+          "controlVoltage1": 0.37521256973201234,
+          "controlChange1": 105,
+          "controlChange2": 52
+         },
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 111,
+          "duration": "8n",
+          "controlVoltage1": 0.5271161689296147,
+          "controlChange1": 108,
+          "controlChange2": 53
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 111,
+          "duration": "8n",
+          "controlVoltage1": 0.5271161689296147,
+          "controlChange1": 108,
+          "controlChange2": 53
+         },
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 25,
+          "duration": "8n",
+          "controlVoltage1": 0.09823396535007367,
+          "controlChange1": 25,
+          "controlChange2": 14
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 103,
+          "duration": "8n",
+          "controlVoltage1": 0.07583493214687764,
+          "controlChange1": 111,
+          "controlChange2": 32
          },
          null,
          null,
@@ -3447,286 +3431,421 @@
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 86,
+          "velocity": 57,
           "duration": "8n",
-          "controlVoltage1": 0.24722613317939723,
-          "controlChange1": 77,
-          "controlChange2": 20
+          "controlVoltage1": 0.5317030828888387,
+          "controlChange1": 30,
+          "controlChange2": 94
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 86,
+          "velocity": 57,
           "duration": "8n",
-          "controlVoltage1": 0.24722613317939723,
-          "controlChange1": 77,
-          "controlChange2": 20
+          "controlVoltage1": 0.5317030828888387,
+          "controlChange1": 30,
+          "controlChange2": 94
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 86,
+          "velocity": 57,
           "duration": "8n",
-          "controlVoltage1": 0.24722613317939723,
-          "controlChange1": 77,
-          "controlChange2": 20
+          "controlVoltage1": 0.5317030828888387,
+          "controlChange1": 30,
+          "controlChange2": 94
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 86,
+          "velocity": 57,
           "duration": "8n",
-          "controlVoltage1": 0.24722613317939723,
-          "controlChange1": 77,
-          "controlChange2": 20
+          "controlVoltage1": 0.5317030828888387,
+          "controlChange1": 30,
+          "controlChange2": 94
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 87,
+          "duration": "8n",
+          "controlVoltage1": 0.9630843864116547,
+          "controlChange1": 81,
+          "controlChange2": 62
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 87,
+          "duration": "8n",
+          "controlVoltage1": 0.9630843864116547,
+          "controlChange1": 81,
+          "controlChange2": 62
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 87,
+          "duration": "8n",
+          "controlVoltage1": 0.9630843864116547,
+          "controlChange1": 81,
+          "controlChange2": 62
          },
          null,
          null,
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 36,
+          "velocity": 117,
           "duration": "8n",
-          "controlVoltage1": 0.6782034724751074,
-          "controlChange1": 98,
-          "controlChange2": 26
+          "controlVoltage1": 0.3398805424295741,
+          "controlChange1": 101,
+          "controlChange2": 81
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 36,
+          "velocity": 117,
           "duration": "8n",
-          "controlVoltage1": 0.6782034724751074,
-          "controlChange1": 98,
-          "controlChange2": 26
+          "controlVoltage1": 0.3398805424295741,
+          "controlChange1": 101,
+          "controlChange2": 81
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 50,
+          "velocity": 117,
           "duration": "8n",
-          "controlVoltage1": 0.0014348014552869603,
-          "controlChange1": 112,
+          "controlVoltage1": 0.3398805424295741,
+          "controlChange1": 101,
+          "controlChange2": 81
+         },
+         null,
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 66,
+          "duration": "8n",
+          "controlVoltage1": 0.1942999573272539,
+          "controlChange1": 84,
+          "controlChange2": 62
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 66,
+          "duration": "8n",
+          "controlVoltage1": 0.1942999573272539,
+          "controlChange1": 84,
+          "controlChange2": 62
+         }
+        ],
+        [
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 115,
+          "duration": "8n",
+          "controlVoltage1": 0.5270302748103182,
+          "controlChange1": 44,
+          "controlChange2": 40
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 115,
+          "duration": "8n",
+          "controlVoltage1": 0.5270302748103182,
+          "controlChange1": 44,
           "controlChange2": 40
          },
          null,
          null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 44,
+          "duration": "8n",
+          "controlVoltage1": 0.23540680557327853,
+          "controlChange1": 68,
+          "controlChange2": 43
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 44,
+          "duration": "8n",
+          "controlVoltage1": 0.23540680557327853,
+          "controlChange1": 68,
+          "controlChange2": 43
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 44,
+          "duration": "8n",
+          "controlVoltage1": 0.23540680557327853,
+          "controlChange1": 68,
+          "controlChange2": 43
+         },
+         null,
          null,
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 126,
+          "velocity": 63,
           "duration": "8n",
-          "controlVoltage1": 0.4005830156381933,
-          "controlChange1": 77,
-          "controlChange2": 85
+          "controlVoltage1": 0.6527729417312911,
+          "controlChange1": 81,
+          "controlChange2": 68
          },
          null,
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 99,
+          "velocity": 30,
           "duration": "8n",
-          "controlVoltage1": 0.3490069843476895,
-          "controlChange1": 45,
-          "controlChange2": 97
+          "controlVoltage1": 0.8699970011931384,
+          "controlChange1": 74,
+          "controlChange2": 78
          },
-         null
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 30,
+          "duration": "8n",
+          "controlVoltage1": 0.8699970011931384,
+          "controlChange1": 74,
+          "controlChange2": 78
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 30,
+          "duration": "8n",
+          "controlVoltage1": 0.8699970011931384,
+          "controlChange1": 74,
+          "controlChange2": 78
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 30,
+          "duration": "8n",
+          "controlVoltage1": 0.8699970011931384,
+          "controlChange1": 74,
+          "controlChange2": 78
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 107,
+          "duration": "8n",
+          "controlVoltage1": 0.25746304076086113,
+          "controlChange1": 27,
+          "controlChange2": 91
+         }
         ],
         [
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 47,
+          "velocity": 83,
           "duration": "8n",
-          "controlVoltage1": 0.8940782796635158,
-          "controlChange1": 53,
-          "controlChange2": 53
+          "controlVoltage1": 0.5226211876581803,
+          "controlChange1": 101,
+          "controlChange2": 58
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 47,
+          "velocity": 83,
           "duration": "8n",
-          "controlVoltage1": 0.8940782796635158,
-          "controlChange1": 53,
-          "controlChange2": 53
+          "controlVoltage1": 0.5226211876581803,
+          "controlChange1": 101,
+          "controlChange2": 58
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 47,
+          "velocity": 83,
           "duration": "8n",
-          "controlVoltage1": 0.8940782796635158,
-          "controlChange1": 53,
-          "controlChange2": 53
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 47,
-          "duration": "8n",
-          "controlVoltage1": 0.8940782796635158,
-          "controlChange1": 53,
-          "controlChange2": 53
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 49,
-          "duration": "8n",
-          "controlVoltage1": 0.6392526094504518,
-          "controlChange1": 48,
-          "controlChange2": 94
-         },
-         null,
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 53,
-          "duration": "8n",
-          "controlVoltage1": 0.8199321865051727,
-          "controlChange1": 36,
-          "controlChange2": 23
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 53,
-          "duration": "8n",
-          "controlVoltage1": 0.8199321865051727,
-          "controlChange1": 36,
-          "controlChange2": 23
+          "controlVoltage1": 0.5226211876581803,
+          "controlChange1": 101,
+          "controlChange2": 58
          },
          null,
          null,
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 59,
+          "velocity": 97,
           "duration": "8n",
-          "controlVoltage1": 0.4736389515657766,
-          "controlChange1": 27,
-          "controlChange2": 47
+          "controlVoltage1": 0.26159966124429435,
+          "controlChange1": 15,
+          "controlChange2": 91
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 59,
+          "velocity": 97,
           "duration": "8n",
-          "controlVoltage1": 0.4736389515657766,
-          "controlChange1": 27,
-          "controlChange2": 47
+          "controlVoltage1": 0.26159966124429435,
+          "controlChange1": 15,
+          "controlChange2": 91
          },
          {
           "2": "16n",
           "pitch": 39,
-          "velocity": 59,
+          "velocity": 97,
           "duration": "8n",
-          "controlVoltage1": 0.4736389515657766,
-          "controlChange1": 27,
-          "controlChange2": 47
-         },
-         {
-          "2": "16n",
-          "pitch": 39,
-          "velocity": 59,
-          "duration": "8n",
-          "controlVoltage1": 0.4736389515657766,
-          "controlChange1": 27,
-          "controlChange2": 47
+          "controlVoltage1": 0.26159966124429435,
+          "controlChange1": 15,
+          "controlChange2": 91
          },
          null,
-         null
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 97,
+          "duration": "8n",
+          "controlVoltage1": 0.6997720693538605,
+          "controlChange1": 41,
+          "controlChange2": 41
+         },
+         null,
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 56,
+          "duration": "8n",
+          "controlVoltage1": 0.2991939802767596,
+          "controlChange1": 18,
+          "controlChange2": 51
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 56,
+          "duration": "8n",
+          "controlVoltage1": 0.2991939802767596,
+          "controlChange1": 18,
+          "controlChange2": 51
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 56,
+          "duration": "8n",
+          "controlVoltage1": 0.2991939802767596,
+          "controlChange1": 18,
+          "controlChange2": 51
+         },
+         {
+          "2": "16n",
+          "pitch": 39,
+          "velocity": 71,
+          "duration": "8n",
+          "controlVoltage1": 0.6915504423880903,
+          "controlChange1": 61,
+          "controlChange2": 54
+         }
         ]
        ],
        "graphData": {
         "probability": 0.5,
         "linear": [
          [
-          0
+          1,
+          3
+         ],
+         [
+          0,
+          2
          ]
         ],
         "markov": [
          [
-          0.9774655272119506,
-          0.0977092661666017,
-          0.06987082290548519,
-          0.9228027965578787,
-          0.9549323108379144,
-          0.21679099870693563,
-          0.7297636898576545,
-          0.1901951313715151
+          0.018457263702251314,
+          0.8896423414744097,
+          0.6761277529078653,
+          0.8196096539524205,
+          0.5633922126353179,
+          0.29970736089960015,
+          0.3101133526668658,
+          0.4691832599501997
          ],
          [
-          0.23055866369513622,
-          0.28634461985103443,
-          0.9668422543518116,
-          0.41455059978833786,
-          0.05481633407446984,
-          0.9791831639931903,
-          0.04221106489731352,
-          0.35356757343028455
+          0.3887389730689561,
+          0.3835434384706846,
+          0.3668958415379029,
+          0.5636599573271062,
+          0.022696381791230236,
+          0.6709089028101927,
+          0.8367680401576041,
+          0.33426981248004006
          ],
          [
-          0.5623699709438719,
-          0.4371474845075882,
-          0.6648029357366414,
-          0.9898307030808302,
-          0.21529604736470498,
-          0.7711703686210454,
-          0.0030651622944735113,
-          0.6136174946069328
+          0.624524282162654,
+          0.7435599913401578,
+          0.25290696344888275,
+          0.2331996873227291,
+          0.7426372507526018,
+          0.25677344491353726,
+          0.35272188178643726,
+          0.44237510627278387
          ],
          [
-          0.270000559425031,
-          0.037992050101099295,
-          0.9171004556435383,
-          0.5772807923227603,
-          0.3801702575498258,
-          0.08514229020492836,
-          0.5519957947304575,
-          0.49313784100542035
+          0.0653686508277127,
+          0.6640243749599426,
+          0.10225565150144567,
+          0.703667813935875,
+          0.7232304670444254,
+          0.10063706088726865,
+          0.011136068847684921,
+          0.5187225827090947
          ],
          [
-          0.3240838795859913,
-          0.9524943695012698,
-          0.26042289976431765,
-          0.290941183302281,
-          0.5435586580855694,
-          0.0813366439861678,
-          0.5675174032927526,
-          0.8743783694910991
+          0.5134172450369219,
+          0.9190535662147721,
+          0.6217407838249229,
+          0.40069455478865956,
+          0.4521016067340702,
+          0.2865714526652161,
+          0.5063837984655284,
+          0.3341952459511264
          ],
          [
-          0.5020123468401287,
-          0.7950012465129923,
-          0.8892511918256374,
-          0.9218214847263071,
-          0.923002478309926,
-          0.4696098033273082,
-          0.15453259663288454,
-          0.020502011506155826
+          0.4290099778942391,
+          0.5585605589752187,
+          0.7609664652480679,
+          0.334790632101974,
+          0.17570361262385692,
+          0.6472549210168608,
+          0.3429094378526185,
+          0.9180176505157409
          ],
          [
-          0.3219732876570409,
-          0.13356145234302064,
-          0.03346035220595267,
-          0.46623296271494463,
-          0.18663814786997013,
-          0.9427793374891247,
-          0.2232846681059888,
-          0.7964962148946237
+          0.9860761070977893,
+          0.32471916058866945,
+          0.7350507230209999,
+          0.10430930069903988,
+          0.6302105495961612,
+          0.856115124519754,
+          0.9580716730994394,
+          0.3170534544490302
          ],
          [
-          0.7265885077460184,
-          0.5535161959791055,
-          0.5266605854172774,
-          0.15157447205365138,
-          0.9792323389525255,
-          0.10544929273676029,
-          0.004571213057360968,
-          0.5959318032637617
+          0.49955592873396637,
+          0.11816085216074312,
+          0.40432539659626654,
+          0.7705786851992518,
+          0.2883179918037664,
+          0.5131891948465683,
+          0.49365505478380345,
+          0.457513864015217
          ]
         ],
         "evolve": {
@@ -3758,143 +3877,38 @@
        "sequenceData": [
         [
          null,
+         null,
+         null,
          {
           "pitch": 42,
-          "velocity": 43,
+          "velocity": 31,
           "duration": "8n",
-          "controlVoltage1": 0.7374809729158678,
-          "controlChange1": 91,
-          "controlChange2": 42
+          "controlVoltage1": 0.7116014320109187,
+          "controlChange1": 35,
+          "controlChange2": 86
          },
          null,
-         null,
-         null,
-         null,
          {
           "pitch": 42,
-          "velocity": 106,
+          "velocity": 56,
           "duration": "8n",
-          "controlVoltage1": 0.988260005790913,
-          "controlChange1": 65,
-          "controlChange2": 31
-         },
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 37,
-          "duration": "8n",
-          "controlVoltage1": 0.5759935058488963,
-          "controlChange1": 29,
-          "controlChange2": 82
+          "controlVoltage1": 0.0827984764060734,
+          "controlChange1": 33,
+          "controlChange2": 83
          },
          null,
          null,
          {
           "pitch": 42,
-          "velocity": 106,
+          "velocity": 26,
           "duration": "8n",
-          "controlVoltage1": 0.8995203502378777,
-          "controlChange1": 45,
-          "controlChange2": 84
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 42,
-          "velocity": 62,
-          "duration": "8n",
-          "controlVoltage1": 0.9571061862820329,
-          "controlChange1": 85,
-          "controlChange2": 46
+          "controlVoltage1": 0.3128509157842807,
+          "controlChange1": 32,
+          "controlChange2": 20
          },
          null,
          null,
          null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 97,
-          "duration": "8n",
-          "controlVoltage1": 0.008205031790213368,
-          "controlChange1": 104,
-          "controlChange2": 60
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 93,
-          "duration": "8n",
-          "controlVoltage1": 0.8719688523994931,
-          "controlChange1": 59,
-          "controlChange2": 66
-         },
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 101,
-          "duration": "8n",
-          "controlVoltage1": 0.661597663038789,
-          "controlChange1": 43,
-          "controlChange2": 37
-         },
-         null
-        ],
-        [
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 111,
-          "duration": "8n",
-          "controlVoltage1": 0.03081102947812231,
-          "controlChange1": 90,
-          "controlChange2": 90
-         },
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 113,
-          "duration": "8n",
-          "controlVoltage1": 0.11143610559879225,
-          "controlChange1": 72,
-          "controlChange2": 106
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 123,
-          "duration": "8n",
-          "controlVoltage1": 0.026899244340460537,
-          "controlChange1": 68,
-          "controlChange2": 27
-         },
-         null,
-         {
-          "pitch": 42,
-          "velocity": 37,
-          "duration": "8n",
-          "controlVoltage1": 0.784104800809833,
-          "controlChange1": 96,
-          "controlChange2": 34
-         },
-         null,
-         null,
-         null
-        ],
-        [
          null,
          null,
          null,
@@ -3902,55 +3916,227 @@
           "pitch": 42,
           "velocity": 125,
           "duration": "8n",
-          "controlVoltage1": 0.054091343200819875,
-          "controlChange1": 30,
-          "controlChange2": 110
-         },
-         null,
+          "controlVoltage1": 0.5790687133754349,
+          "controlChange1": 55,
+          "controlChange2": 43
+         }
+        ],
+        [
          {
           "pitch": 42,
-          "velocity": 97,
+          "velocity": 104,
           "duration": "8n",
-          "controlVoltage1": 0.6983801668002305,
-          "controlChange1": 58,
-          "controlChange2": 83
+          "controlVoltage1": 0.2704120049373593,
+          "controlChange1": 87,
+          "controlChange2": 65
          },
          null,
          null,
-         {
-          "pitch": 42,
-          "velocity": 95,
-          "duration": "8n",
-          "controlVoltage1": 0.5969352802845165,
-          "controlChange1": 43,
-          "controlChange2": 34
-         },
+         null,
          null,
          null,
          null,
          {
           "pitch": 42,
-          "velocity": 68,
+          "velocity": 107,
           "duration": "8n",
-          "controlVoltage1": 0.5864934163244668,
-          "controlChange1": 61,
-          "controlChange2": 29
+          "controlVoltage1": 0.8836580574457331,
+          "controlChange1": 18,
+          "controlChange2": 33
+         },
+         null,
+         {
+          "pitch": 42,
+          "velocity": 39,
+          "duration": "8n",
+          "controlVoltage1": 0.10371933928245247,
+          "controlChange1": 33,
+          "controlChange2": 73
          },
          null,
          null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 33,
+          "duration": "8n",
+          "controlVoltage1": 0.2767257429838317,
+          "controlChange1": 95,
+          "controlChange2": 46
+         },
          null
         ],
         [
          null,
          null,
+         {
+          "pitch": 42,
+          "velocity": 71,
+          "duration": "8n",
+          "controlVoltage1": 0.9870963263571462,
+          "controlChange1": 108,
+          "controlChange2": 79
+         },
+         null,
+         null,
          null,
          {
           "pitch": 42,
-          "velocity": 46,
+          "velocity": 120,
           "duration": "8n",
-          "controlVoltage1": 0.6980347970554048,
-          "controlChange1": 99,
-          "controlChange2": 28
+          "controlVoltage1": 0.3494315202775009,
+          "controlChange1": 102,
+          "controlChange2": 102
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 38,
+          "duration": "8n",
+          "controlVoltage1": 0.8991609133036429,
+          "controlChange1": 48,
+          "controlChange2": 94
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 114,
+          "duration": "8n",
+          "controlVoltage1": 0.9956539688310677,
+          "controlChange1": 21,
+          "controlChange2": 66
+         }
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 64,
+          "duration": "8n",
+          "controlVoltage1": 0.3396479829593204,
+          "controlChange1": 100,
+          "controlChange2": 104
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 51,
+          "duration": "8n",
+          "controlVoltage1": 0.2475259910508789,
+          "controlChange1": 28,
+          "controlChange2": 17
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 116,
+          "duration": "8n",
+          "controlVoltage1": 0.597459179739908,
+          "controlChange1": 42,
+          "controlChange2": 101
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 100,
+          "duration": "8n",
+          "controlVoltage1": 0.09711349891956367,
+          "controlChange1": 80,
+          "controlChange2": 68
+         },
+         null
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 127,
+          "duration": "8n",
+          "controlVoltage1": 0.6014264710133561,
+          "controlChange1": 103,
+          "controlChange2": 54
+         },
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 104,
+          "duration": "8n",
+          "controlVoltage1": 0.45262758396176617,
+          "controlChange1": 23,
+          "controlChange2": 61
+         },
+         null,
+         {
+          "pitch": 42,
+          "velocity": 40,
+          "duration": "8n",
+          "controlVoltage1": 0.4766562123508067,
+          "controlChange1": 51,
+          "controlChange2": 66
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 96,
+          "duration": "8n",
+          "controlVoltage1": 0.7493534030872859,
+          "controlChange1": 110,
+          "controlChange2": 31
+         }
+        ],
+        [
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 56,
+          "duration": "8n",
+          "controlVoltage1": 0.6762620689383976,
+          "controlChange1": 33,
+          "controlChange2": 107
+         },
+         null,
+         {
+          "pitch": 42,
+          "velocity": 121,
+          "duration": "8n",
+          "controlVoltage1": 0.45535626684089014,
+          "controlChange1": 100,
+          "controlChange2": 112
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 79,
+          "duration": "8n",
+          "controlVoltage1": 0.6536465694407798,
+          "controlChange1": 73,
+          "controlChange2": 69
          },
          null,
          null,
@@ -3958,81 +4144,82 @@
           "pitch": 42,
           "velocity": 45,
           "duration": "8n",
-          "controlVoltage1": 0.15240021358180167,
-          "controlChange1": 111,
-          "controlChange2": 31
+          "controlVoltage1": 0.41979430915141047,
+          "controlChange1": 22,
+          "controlChange2": 33
          },
          null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 112,
-          "duration": "8n",
-          "controlVoltage1": 0.660562360678117,
-          "controlChange1": 98,
-          "controlChange2": 77
-         },
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 40,
-          "duration": "8n",
-          "controlVoltage1": 0.8211883591491225,
-          "controlChange1": 27,
-          "controlChange2": 46
-         },
          null
         ],
         [
-         null,
-         {
-          "pitch": 42,
-          "velocity": 98,
-          "duration": "8n",
-          "controlVoltage1": 0.03786141991822456,
-          "controlChange1": 107,
-          "controlChange2": 90
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 53,
-          "duration": "8n",
-          "controlVoltage1": 0.2204601906606487,
-          "controlChange1": 62,
-          "controlChange2": 67
-         },
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 80,
-          "duration": "8n",
-          "controlVoltage1": 0.5864423979608728,
-          "controlChange1": 27,
-          "controlChange2": 91
-         },
-         null,
          null,
          {
           "pitch": 42,
           "velocity": 79,
           "duration": "8n",
-          "controlVoltage1": 0.8100228585383931,
-          "controlChange1": 79,
-          "controlChange2": 35
+          "controlVoltage1": 0.02200532700569524,
+          "controlChange1": 71,
+          "controlChange2": 101
          },
          null,
-         null
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 46,
+          "duration": "8n",
+          "controlVoltage1": 0.10330541732416632,
+          "controlChange1": 76,
+          "controlChange2": 84
+         },
+         null,
+         {
+          "pitch": 42,
+          "velocity": 81,
+          "duration": "8n",
+          "controlVoltage1": 0.713993251718515,
+          "controlChange1": 51,
+          "controlChange2": 86
+         },
+         null,
+         null,
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 111,
+          "duration": "8n",
+          "controlVoltage1": 0.33831696377701514,
+          "controlChange1": 22,
+          "controlChange2": 69
+         }
         ],
         [
+         null,
+         {
+          "pitch": 42,
+          "velocity": 61,
+          "duration": "8n",
+          "controlVoltage1": 0.3984477889159814,
+          "controlChange1": 60,
+          "controlChange2": 31
+         },
+         null,
+         null,
+         null,
+         {
+          "pitch": 42,
+          "velocity": 100,
+          "duration": "8n",
+          "controlVoltage1": 0.6911375080983948,
+          "controlChange1": 39,
+          "controlChange2": 30
+         },
+         null,
+         null,
          null,
          null,
          null,
@@ -4040,88 +4227,20 @@
           "pitch": 42,
           "velocity": 36,
           "duration": "8n",
-          "controlVoltage1": 0.8350115300940875,
-          "controlChange1": 105,
-          "controlChange2": 51
+          "controlVoltage1": 0.37657297382960997,
+          "controlChange1": 82,
+          "controlChange2": 75
          },
+         null,
+         null,
          {
           "pitch": 42,
-          "velocity": 99,
+          "velocity": 56,
           "duration": "8n",
-          "controlVoltage1": 0.6881637594705987,
-          "controlChange1": 70,
+          "controlVoltage1": 0.4303483512883084,
+          "controlChange1": 53,
           "controlChange2": 40
          },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 95,
-          "duration": "8n",
-          "controlVoltage1": 0.7000516309366565,
-          "controlChange1": 63,
-          "controlChange2": 110
-         },
-         null,
-         {
-          "pitch": 42,
-          "velocity": 54,
-          "duration": "8n",
-          "controlVoltage1": 0.6195655674642022,
-          "controlChange1": 65,
-          "controlChange2": 84
-         },
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 42,
-          "velocity": 25,
-          "duration": "8n",
-          "controlVoltage1": 0.6311722067562127,
-          "controlChange1": 65,
-          "controlChange2": 80
-         },
-         null,
-         null,
-         null,
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 25,
-          "duration": "8n",
-          "controlVoltage1": 0.8788742082939212,
-          "controlChange1": 25,
-          "controlChange2": 58
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 42,
-          "velocity": 86,
-          "duration": "8n",
-          "controlVoltage1": 0.24969120635483022,
-          "controlChange1": 55,
-          "controlChange2": 83
-         },
-         null,
-         {
-          "pitch": 42,
-          "velocity": 68,
-          "duration": "8n",
-          "controlVoltage1": 0.29363147936298106,
-          "controlChange1": 34,
-          "controlChange2": 40
-         },
-         null,
          null
         ]
        ],
@@ -4129,90 +4248,89 @@
         "probability": 0.5,
         "linear": [
          [
-          7,
-          3
+          6
          ]
         ],
         "markov": [
          [
-          0.4774587152286702,
-          0.9053707233364459,
-          0.8100463620622504,
-          0.2817219678299161,
-          0.13078943911862106,
-          0.2518915444569714,
-          0.44762542488291857,
-          0.8002664283856866
+          0.2711760815999602,
+          0.5739901427951926,
+          0.886122892485959,
+          0.555480746449494,
+          0.48184156916155896,
+          0.3235415992732509,
+          0.465450122486915,
+          0.4293831006773934
          ],
          [
-          0.0013596504734589843,
-          0.7788646705061235,
-          0.011675268934076444,
-          0.14500679179043252,
-          0.08090735447662367,
-          0.540279225236225,
-          0.511403092399237,
-          0.08200468168640884
+          0.7633136573593358,
+          0.3734506412914691,
+          0.0006874699013705854,
+          0.173330958371136,
+          0.4448832758237009,
+          0.9723362235202553,
+          0.5316286068763902,
+          0.4032586930826565
          ],
          [
-          0.2220724554433564,
-          0.3774453685345309,
-          0.8386833122944011,
-          0.8477088360910585,
-          0.3985933276277793,
-          0.6893589645237104,
-          0.4787002713526429,
-          0.5464034402078839
+          0.19421325150105684,
+          0.8432432504901166,
+          0.27165423162878466,
+          0.9398302430019145,
+          0.3641572530910946,
+          0.01055380454022048,
+          0.6577109100197602,
+          0.2236097359542164
          ],
          [
-          0.9932019662319325,
-          0.1208666931937008,
-          0.7206125733617004,
-          0.33756580656112334,
-          0.6873252442847122,
-          0.10417708572361795,
-          0.4523333269375829,
-          0.27949167353878246
+          0.5881576568680209,
+          0.9651637784934848,
+          0.7267496983579389,
+          0.6045211972363129,
+          0.40346617151914677,
+          0.3705376924202479,
+          0.19385725880565996,
+          0.30352503281756227
          ],
          [
-          0.7364853531668463,
-          0.8560278450381686,
-          0.4483944386014176,
-          0.4837646326621843,
-          0.147369753683392,
-          0.679467319568493,
-          0.1929901137629646,
-          0.0853548453035704
+          0.585399809064574,
+          0.8858473856973543,
+          0.9445262660586451,
+          0.8122225700893029,
+          0.194787185005308,
+          0.9129986278661353,
+          0.19494944159394212,
+          0.11873076987330955
          ],
          [
-          0.4118451505022134,
-          0.749542663889126,
-          0.029327492080773787,
-          0.7676162099119479,
-          0.2605216474240859,
-          0.47890771021566203,
-          0.0407121414985776,
-          0.18732373423903392
+          0.36072496151823197,
+          0.7962862765213032,
+          0.935645520554945,
+          0.29361761716771073,
+          0.621451753104066,
+          0.7805124879713501,
+          0.7691277111993131,
+          0.23262515844417542
          ],
          [
-          0.3115330004333352,
-          0.9218681851937536,
-          0.1566119859954045,
-          0.5806307620684263,
-          0.7658022284901478,
-          0.9714030852053075,
-          0.29314101840919515,
-          0.6394851333260276
+          0.3780295392275288,
+          0.9639266624834169,
+          0.17121487456199147,
+          0.06843515047356008,
+          0.9322497346328782,
+          0.7044739819953358,
+          0.4086991971388918,
+          0.05463437347651334
          ],
          [
-          0.2637038655291113,
-          0.1572554691924526,
-          0.20526794568754436,
-          0.4683591759054433,
-          0.5553168881254078,
-          0.40217313936420074,
-          0.9548536633521221,
-          0.7940559693789142
+          0.5117696692328491,
+          0.2159817522087477,
+          0.10843926914286173,
+          0.9389659075402388,
+          0.1281581345334859,
+          0.7256160359594341,
+          0.843173535430157,
+          0.06299568031333824
          ]
         ],
         "evolve": {
@@ -4232,473 +4350,7 @@
       {},
       {},
       {},
-      {
-       "sequenceData": [
-        [
-         {
-          "pitch": 36,
-          "velocity": 56,
-          "duration": "8n",
-          "controlVoltage1": 0.44181121139408197,
-          "controlChange1": 21,
-          "controlChange2": 33
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 73,
-          "duration": "8n",
-          "controlVoltage1": 0.06179193016415385,
-          "controlChange1": 80,
-          "controlChange2": 107
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 87,
-          "duration": "8n",
-          "controlVoltage1": 0.3282296157743454,
-          "controlChange1": 48,
-          "controlChange2": 47
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 110,
-          "duration": "8n",
-          "controlVoltage1": 0.24965940067228742,
-          "controlChange1": 29,
-          "controlChange2": 102
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 51,
-          "duration": "8n",
-          "controlVoltage1": 0.9366406740856899,
-          "controlChange1": 67,
-          "controlChange2": 90
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 114,
-          "duration": "8n",
-          "controlVoltage1": 0.07643401934668814,
-          "controlChange1": 15,
-          "controlChange2": 53
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 85,
-          "duration": "8n",
-          "controlVoltage1": 0.6968938738676578,
-          "controlChange1": 29,
-          "controlChange2": 42
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 117,
-          "duration": "8n",
-          "controlVoltage1": 0.2772553180576347,
-          "controlChange1": 29,
-          "controlChange2": 43
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 32,
-          "duration": "8n",
-          "controlVoltage1": 0.13097409327860698,
-          "controlChange1": 67,
-          "controlChange2": 109
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 100,
-          "duration": "8n",
-          "controlVoltage1": 0.5553294057620495,
-          "controlChange1": 89,
-          "controlChange2": 50
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 27,
-          "duration": "8n",
-          "controlVoltage1": 0.5068855428429819,
-          "controlChange1": 94,
-          "controlChange2": 83
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 27,
-          "duration": "8n",
-          "controlVoltage1": 0.8380387406077825,
-          "controlChange1": 77,
-          "controlChange2": 34
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 25,
-          "duration": "8n",
-          "controlVoltage1": 0.5920089711480108,
-          "controlChange1": 71,
-          "controlChange2": 58
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 71,
-          "duration": "8n",
-          "controlVoltage1": 0.8542017816985479,
-          "controlChange1": 24,
-          "controlChange2": 104
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 114,
-          "duration": "8n",
-          "controlVoltage1": 0.09867746665194588,
-          "controlChange1": 34,
-          "controlChange2": 103
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 97,
-          "duration": "8n",
-          "controlVoltage1": 0.5989077480788685,
-          "controlChange1": 38,
-          "controlChange2": 30
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 82,
-          "duration": "8n",
-          "controlVoltage1": 0.5135105654241405,
-          "controlChange1": 80,
-          "controlChange2": 51
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 55,
-          "duration": "8n",
-          "controlVoltage1": 0.87310611815296,
-          "controlChange1": 31,
-          "controlChange2": 30
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 25,
-          "duration": "8n",
-          "controlVoltage1": 0.2997072376595411,
-          "controlChange1": 29,
-          "controlChange2": 25
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 118,
-          "duration": "8n",
-          "controlVoltage1": 0.8737766860978948,
-          "controlChange1": 13,
-          "controlChange2": 46
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 109,
-          "duration": "8n",
-          "controlVoltage1": 0.6043002438310623,
-          "controlChange1": 103,
-          "controlChange2": 109
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 117,
-          "duration": "8n",
-          "controlVoltage1": 0.4360952977607624,
-          "controlChange1": 52,
-          "controlChange2": 95
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 49,
-          "duration": "8n",
-          "controlVoltage1": 0.6674638092625,
-          "controlChange1": 43,
-          "controlChange2": 31
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 28,
-          "duration": "8n",
-          "controlVoltage1": 0.9524612473866869,
-          "controlChange1": 33,
-          "controlChange2": 17
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 71,
-          "duration": "8n",
-          "controlVoltage1": 0.939768975045159,
-          "controlChange1": 101,
-          "controlChange2": 89
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 51,
-          "duration": "8n",
-          "controlVoltage1": 0.3735124037740567,
-          "controlChange1": 15,
-          "controlChange2": 98
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 43,
-          "duration": "8n",
-          "controlVoltage1": 0.5109457904634442,
-          "controlChange1": 40,
-          "controlChange2": 82
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 96,
-          "duration": "8n",
-          "controlVoltage1": 0.6374838100145237,
-          "controlChange1": 58,
-          "controlChange2": 31
-         },
-         null,
-         null,
-         null
-        ],
-        [
-         {
-          "pitch": 36,
-          "velocity": 89,
-          "duration": "8n",
-          "controlVoltage1": 0.6576090120008293,
-          "controlChange1": 97,
-          "controlChange2": 62
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 123,
-          "duration": "8n",
-          "controlVoltage1": 0.4977235882730362,
-          "controlChange1": 67,
-          "controlChange2": 91
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 30,
-          "duration": "8n",
-          "controlVoltage1": 0.5364060742947996,
-          "controlChange1": 69,
-          "controlChange2": 37
-         },
-         null,
-         null,
-         null,
-         {
-          "pitch": 36,
-          "velocity": 106,
-          "duration": "8n",
-          "controlVoltage1": 0.3878337419943827,
-          "controlChange1": 102,
-          "controlChange2": 109
-         },
-         null,
-         null,
-         null
-        ]
-       ],
-       "graphData": {
-        "0": 1,
-        "1": 2,
-        "2": 1,
-        "3": 3,
-        "probability": 0.5,
-        "linear": [
-         0
-        ],
-        "markov": [
-         [
-          0.6510262659323915,
-          0.9546135545648502,
-          0.1414578074421724,
-          0.1612646531723223,
-          0.15231348725187033,
-          0.8674200040135336,
-          0.2701066170899713,
-          0.11202690832347528
-         ],
-         [
-          0.3327896111725479,
-          0.7199221253336683,
-          0.8493582577286312,
-          0.4834954013345303,
-          0.627737042256207,
-          0.9900523309385583,
-          0.9893631207189653,
-          0.2876740291180262
-         ],
-         [
-          0.2970951751241031,
-          0.17410819376391706,
-          0.49223036901093553,
-          0.019805588174875988,
-          0.5850654759557672,
-          0.7875727053135111,
-          0.933770995923316,
-          0.9158915638105172
-         ],
-         [
-          0.8275841447059862,
-          0.44954687682343875,
-          0.8910498364981043,
-          0.2742022273592608,
-          0.9721866243010178,
-          0.43544414704925405,
-          0.9774478068114676,
-          0.3914554388967797
-         ],
-         [
-          0.63240221488958,
-          0.9377719827144635,
-          0.9098171625682583,
-          0.5057365177154982,
-          0.9329611858254072,
-          0.746887187374301,
-          0.24271161449608813,
-          0.7424991441815254
-         ],
-         [
-          0.24938830814120339,
-          0.3615009945605785,
-          0.6090906260043516,
-          0.04259499337067996,
-          0.9037917196419001,
-          0.05303610078758081,
-          0.08468701485504626,
-          0.7177805290116424
-         ],
-         [
-          0.8480196938982876,
-          0.9787841697051594,
-          0.600116433872135,
-          0.42022370400795794,
-          0.8564468585639302,
-          0.49157858849010316,
-          0.3636991074871485,
-          0.08235665543057635
-         ],
-         [
-          0.7944507688257147,
-          0.6239356908084501,
-          0.9051552555114271,
-          0.9214899814776245,
-          0.5154451712499923,
-          0.2009264653177456,
-          0.4597229084603296,
-          0.9994684167551529
-         ]
-        ],
-        "evolve": {
-         "probability": 0.5
-        }
-       }
-      },
+      {},
       {},
       {},
       {}

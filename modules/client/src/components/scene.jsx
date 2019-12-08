@@ -20,7 +20,7 @@ export default function SceneView({ location }) {
         return (
           <NavButton
             key={i}
-            style={{ width: w }}
+            style={{ width: w, maxWidth: w }}
             active={trackId === i}
             selected={
               sceneId - 1 === performance.selectedScene &&

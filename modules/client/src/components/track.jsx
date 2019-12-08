@@ -1,50 +1,49 @@
 import "./scene-options.scss";
 
 import React from "react";
+import { useSelector } from "react-redux";
 import { Route, Switch } from "react-router";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 
+import { makePerformanceSelector } from "../store/selectors";
+import NavButton from "./nav-button";
+import SectionBox from "./section-box";
 import TrackOptions from "./track-options";
 import TrackSequenceData from "./track-sequence-data";
 
 export default function Track({ match: { params } }) {
   const { perfId, sceneId, trackId } = params;
+  const { track } = useSelector(makePerformanceSelector(params));
+  const { name } = track;
 
   return (
-    <div>
-      <div>
-        <h2>{`Track ${trackId}`}</h2>
-      </div>
+    <SectionBox title={name}>
       <div className="track-tab-container">
-        <NavLink
-          className="track-tab color-tone1"
-          to={`/performances/${perfId}/scene/${sceneId}/track/${trackId}/options`}
-          activeClassName="track-tab-route color-white"
-        >
-          <h3>OPTIONS</h3>
-        </NavLink>
-        <NavLink
-          className="track-tab color-tone1"
-          to={`/performances/${perfId}/scene/${sceneId}/track/${trackId}/`}
-          activeClassName="track-tab-route color-white"
-        >
-          <h3>SEQUENCE DATA</h3>
-        </NavLink>
+        <NavButton
+          text="OPTIONS"
+          route={`/performances/${perfId}/scene/${sceneId}/track/${trackId}/options`}
+        />
+        <NavButton
+          text="SEQUENCE DATA"
+          route={`/performances/${perfId}/scene/${sceneId}/track/${trackId}/sequences`}
+        />
       </div>
       <div>
         <Switch>
-          <Switch>
-            <Route
-              path="/performances/:perfId/scene/:sceneId/track/:trackId/options"
-              component={TrackOptions}
-            />
-            <Route
-              path="/performances/:perfId/scene/:sceneId/track/:trackId"
-              component={TrackSequenceData}
-            />
-          </Switch>
+          <Route
+            path="/performances/:perfId/scene/:sceneId/track/:trackId/options"
+            component={TrackOptions}
+          />
+          <Route
+            path="/performances/:perfId/scene/:sceneId/track/:trackId/sequences"
+            component={TrackSequenceData}
+          />
+          <Redirect
+            from="/performances/:perfId/scene/:sceneId/track/:trackId"
+            to="/performances/:perfId/scene/:sceneId/track/:trackId/sequences"
+          />
         </Switch>
       </div>
-    </div>
+    </SectionBox>
   );
 }

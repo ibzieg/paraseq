@@ -22,7 +22,7 @@ export default function TrackSummary({ index, first, track }) {
       }}
     >
       <h4>{changedPropsCount > 0 ? `Δ${changedPropsCount}` : "{}"}</h4>
-      <h4>{changedProps.toString()}</h4>
+      <h4>{changedProps.join(" ")}</h4>
     </span>
   );
 }

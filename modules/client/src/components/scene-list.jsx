@@ -37,37 +37,4 @@ export default function SceneList({ perfId }) {
       ))}
     </div>
   );
-  /*
-  return (
-    <div className="scene-list-container">
-      {scenes.map((value, index) => (
-        <div className="performance-tab-wrapper">
-          <NavLink
-            key={index}
-            className={`scene-tab ${
-              performance.selectedScene === index
-                ? "scene-tab-selected"
-                : "scene-tab-unselected"
-            }`}
-            to={`/performances/${perfId}/scene/${index + 1}`}
-            activeClassName="scene-tab-active"
-          >
-            <div>
-              <h3>{`SCENE ${index + 1}`}</h3>
-            </div>
-          </NavLink>
-          <Route
-            path="/"
-            location={{
-              ...location,
-              perfId: perfId,
-              sceneId: index + 1
-            }}
-            component={Scene}
-          />
-        </div>
-      ))}
-    </div>
-  );
-  */
 }
